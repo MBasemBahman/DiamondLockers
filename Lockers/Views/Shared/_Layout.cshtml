@@ -18,32 +18,7 @@
     <link rel="stylesheet" href="~/assets/lib/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/assets/lib/lightGallery-master/lightGallery-master/dist/css/lightgallery.css" />
     <link rel="stylesheet" href="~/assets/styles/en/styles.min.css" asp-append-version="true" />
-    <style>
-        .photo__item img {
-            max-height: 918px;
-        }
-
-        .about-card {
-            border-radius: 20px;
-        }
-
-        .navbar-brand img, .logo-mop {
-            width: 150% !important;
-            max-width: 150% !important;
-        }
-
-        .primary-color {
-            color: #997757;
-        }
-
-        .card-item {
-            padding: 2%;
-        }
-
-        .about-icon img {
-            max-width: 50px !important;
-        }
-    </style>
+  
 </head>
 <body>
     <div class="lockers">
@@ -96,7 +71,14 @@
         <div id="contact" class="contact-us">
             <div class="container">
                 <div class="main-touch">
-                    <div class="row align-items-center">
+                    <div class="text-center">
+
+                         <div class="contact-photo">
+                                    <img src="~/assets/images/contact-photo.png" alt="" class="img-fluid" />
+                        </div>
+
+                    </div>
+                    <div class="row">
                         <div class="col-lg-6">
                             <div class="get-in-touch">
                                 <h2>Get in touch</h2>
@@ -104,12 +86,8 @@
                                     Contact us today. Let us help you better manage your security, storage, and data.
                                 </h3>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="ours-contact">
-                                <div class="contact-photo">
-                                    <img src="~/assets/images/contact-photo.png" alt="" class="img-fluid" />
-                                </div>
+                              <div class="ours-contact">
+                               
                                 <div class="soical-contact">
                                     <img src="~/assets/images/mail.png" alt="" class="img-fluid" />
                                     <div class="des">
@@ -128,6 +106,39 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main-form">
+                                <label for=""> Type</label>
+                                  
+                                <select class="form-select" aria-label="Default select example">
+                                                <option selected>Open </option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                </select>
+
+                                <label for=""> Name</label>
+                                <input type="text" name="name" value="" class="form-control" placeholder="Your Name" />
+                                <label for=""> Phone</label>
+                                <input type="phone" name="name" value="" class="form-control" placeholder="Your phone" />
+                                <label for=""> Email</label>
+                                <input type="email" name="name" value="" class="form-control" placeholder="Your Email" />
+
+                                <label for=""> service</label>
+                                  
+                                <select class="form-select" aria-label="Default select example">
+                                                <option selected>service 1 </option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                </select>
+
+                                <label for="floatingTextarea">Message</label>
+                                <textarea class="form-control" placeholder="Message" id="floatingTextarea" rows="8"></textarea>
+
+                            </div>
+                          
                         </div>
                     </div>
                 </div>
