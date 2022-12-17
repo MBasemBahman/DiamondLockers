@@ -1,0 +1,160 @@
+﻿@{
+    string active = (string)ViewBag.Avtive;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Smart lockers,Smart storage,e lockers,storage alternatives,office storage solutions,face recognition locker,touchless lockers,digital locker,smart locker companies,locker technology,intelligent storage system,contactless storage,smart self storage,what is a smart locker,how to increase storage security" />
+    <meta name="description" content="An intelligent locker is a secure storage space that uses innovative technology to automate and streamline your locker management. Still using time-consuming traditional lockers? Maybe it’s time to upgrade to Diamond Lockers." />
+    <title>@ViewData["Title"] - Diamond Lockers</title>
+    <link rel="icon" type="image/x-icon" href="~/assets/images/fav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/lib/lightGallery-master/lightGallery-master/dist/css/lightgallery.css" />
+    <link rel="stylesheet" href="~/assets/styles/en/styles.min.css" asp-append-version="true" />
+    <style>
+        .photo__item img {
+            max-height: 918px;
+        }
+
+        .about-card {
+            border-radius: 20px;
+        }
+
+        .navbar-brand img, .logo-mop {
+            width: 150% !important;
+            max-width: 150% !important;
+        }
+
+        .primary-color {
+            color: #997757;
+        }
+
+        .card-item {
+            padding: 2%;
+        }
+
+        .about-icon img {
+            max-width: 50px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="lockers">
+
+        <div class="menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-xl navbar-light">
+                    <a class="navbar-brand" asp-action="Index" asp-controller="Home">
+                        <img src="~/assets/images/logo.png" alt="" class="img-fluid" />
+                    </a>
+                    <button class="navbar-toggler nav-icon" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="mobile-logo">
+                            <a asp-action="Index" asp-controller="Home">
+                                <img src="~/assets/images/logo.png" alt=""
+                                     class="img-fluid logo-mop d-xl-none d-lg-block" />
+                            </a>
+                        </div>
+
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link @(active == "Home"? "active": "" )" aria-current="page" asp-action="Index" asp-controller="Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="features">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">Our Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(active == "About"? "active": "" )" asp-action="Index" asp-controller="Home" asp-fragment="about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-fragment="contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <div id="contact" class="contact-us">
+            <div class="container">
+                <div class="main-touch">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="get-in-touch">
+                                <h2>Get in touch</h2>
+                                <h3>
+                                    Contact us today. Let us help you better manage your security, storage, and data.
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="ours-contact">
+                                <div class="contact-photo">
+                                    <img src="~/assets/images/contact-photo.png" alt="" class="img-fluid" />
+                                </div>
+                                <div class="soical-contact">
+                                    <img src="~/assets/images/mail.png" alt="" class="img-fluid" />
+                                    <div class="des">
+                                        <h2>E-Mail</h2>
+                                        <a href="mailto:support@diamondlockers.com">support@diamondlockers.com</a>
+                                    </div>
+                                </div>
+                                <div class="soical-contact">
+                                    <img src="~/assets/images/location.png" alt="" class="img-fluid" />
+                                    <div class="des">
+                                        <h2>Our Office Location</h2>
+                                        <p>
+                                            The Interior Design Studio Company <br />
+                                            The Courtyard, ​Al Quoz 1,​ Colorado, ​ USA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <p>© @DateTime.UtcNow.Year Copyright. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/assets/lib/jquery/jquery.min.js"></script>
+    <script src="~/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/lib/lightGallery-master/lightGallery-master/dist/lightgallery.min.js"></script>
+    <script src="~/assets/lib/mixitup/mixitup.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+      <script src="~/assets/lib/Counter-Up-master/jquery.counterup.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+            integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+            integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+            crossorigin="anonymous"></script>
+    <script src="~/assets/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
