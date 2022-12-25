@@ -15,16 +15,28 @@ namespace Lockers.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Avtive = "Home";
+            ViewBag.Active = "Home";
 
             return View();
         }
 
         public IActionResult About()
         {
-            ViewBag.Avtive = "About";
+            ViewBag.Active = "About";
 
             return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(ContactForm model)
+        {
+
+            return Ok();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

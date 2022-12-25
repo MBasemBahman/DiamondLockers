@@ -1,5 +1,6 @@
-﻿@{
-    string active = (string)ViewBag.Avtive;
+﻿@model ContactForm
+@{
+    string active = (string)ViewBag.Active;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +22,14 @@
     <style>
         .form-control, .form-select {
             border-radius: 5px;
+        }
+
+        .text-danger{
+            color: red !important;
+        }
+
+        .text-success{
+            color: green !important;
         }
     </style>
 </head>
@@ -99,42 +108,69 @@
                                         <a href="mailto:support@diamondlockers.com">support@diamondlockers.com</a>
                                     </div>
                                 </div>
-                                <div class="soical-contact">
-                                    <img src="~/assets/images/location.png" alt="" class="img-fluid" />
-                                    <div class="des">
-                                        <h2>Our Office Location</h2>
-                                        <p>
-                                            The Interior Design Studio Company <br />
-                                            The Courtyard, ​Al Quoz 1,​ Colorado, ​ USA
-                                        </p>
-                                    </div>
-                                </div>
+                                @*<div class="soical-contact">
+                                        <img src="~/assets/images/location.png" alt="" class="img-fluid" />
+                                        <div class="des">
+                                            <h2>Our Office Location</h2>
+                                            <p>
+                                                The Interior Design Studio Company <br />
+                                                The Courtyard, ​Al Quoz 1,​ Colorado, ​ USA
+                                            </p>
+                                        </div>
+                                    </div>*@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form action="#" class="main-form border border-2 border-dark rounded p-20">
-                                <label for=""> Type</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option value="Individuals" selected>Individuals </option>
+                            <form asp-action="Contact" id="contactForm" class="main-form border border-2 border-dark rounded p-20">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <label asp-for="Type"> Type</label>
+                                <select asp-for="Type" class="form-select" aria-label="Type">
+                                    <option value="Individuals">Individuals </option>
                                     <option value="Companies">Companies</option>
                                 </select>
-                                <label for=""> Name</label>
-                                <input type="text" name="name" value="" class="form-control" placeholder="Your Name" />
-                                <label for=""> Phone</label>
-                                <input type="tel" name="name" value="" class="form-control" placeholder="Your phone" />
-                                <label for=""> Email</label>
-                                <input type="email" name="name" value="" class="form-control" placeholder="Your Email" />
-                                <label for=""> Service</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option value="1" selected>Service One</option>
-                                    <option value="2">Service Two</option>
-                                    <option value="3">Service Three</option>
-                                </select>
-                                <label for="floatingTextarea">Message</label>
-                                <textarea class="form-control" placeholder="Message" id="floatingTextarea" rows="3"></textarea>
-                                <button type="submit" class="btn btn-primary text-white">Submit</button>
-                            </form>
 
+                                <label asp-for="Name">
+                                    Name
+                                    <span class="text-danger"> *</span>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </label>
+                                <input type="text" asp-for="Name" class="form-control" placeholder="Your Name" required />
+
+                                <label asp-for="Phone">
+                                    Phone
+                                    <span class="text-danger"> *</span>
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </label>
+                                <input type="tel" asp-for="Phone" class="form-control" placeholder="Your Phone" required />
+
+                                <label asp-for="Email">
+                                    Email
+                                    <span class="text-danger"> *</span>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </label>
+                                <input type="email" asp-for="Email" class="form-control" placeholder="Your Email" required />
+
+                                <label asp-for="Service">
+                                    Service
+                                </label>
+                                <select asp-for="Service" class="form-select" aria-label="Service">
+                                    <option value="Rent">Rent</option>
+                                    <option value="Buy">Buy</option>
+                                    <option value="Enquiry">Enquiry</option>
+                                </select>
+
+                                <label asp-for="Message">
+                                    Message
+                                    <span class="text-danger"> *</span>
+                                    <span asp-validation-for="Message" class="text-danger"></span>
+                                </label>
+                                <textarea class="form-control" placeholder="Message" asp-for="Message" rows="3" required></textarea>
+
+                                <button type="button" class="btn btn-primary text-white mb-10" onclick="formSubmit()">Submit</button>
+                                <p id="successMsg" class="text-success">Message sent successfully!</p>
+                                <p id="errorMsg" class="text-danger">Something wrong please try again!</p>
+                                <p id="incompleteMsg" class="text-danger">Please complete the form!</p>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -146,7 +182,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="~/assets/lib/jquery/jquery.min.js"></script>
     <script src="~/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -161,6 +196,52 @@
             integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
             crossorigin="anonymous"></script>
     <script src="~/assets/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            hideMessages();
+        });
+
+        function hideMessages() {
+            $('#successMsg').hide();
+            $('#incompleteMsg').hide();
+            $('#errorMsg').hide();
+        }
+        function formSubmit() {
+
+            var formId = "#contactForm";
+
+            jQuery.validator.messages.required = "";
+
+            if (!$(formId).valid()) {
+                $('#incompleteMsg').fadeIn('slow');
+                $('#incompleteMsg').delay(3000).fadeOut('slow');
+                return;
+            }
+
+            //Set the URL.
+            var url = $(formId).attr("action");
+
+            var data = $(formId).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: url,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                data: data,
+                success: function () {
+                    $(formId)[0].reset();
+                    $('#successMsg').fadeIn('slow');
+                    $('#successMsg').delay(3000).fadeOut('slow');
+                },
+                error: function () {
+                    $('#errorMsg').fadeIn('slow');
+                    $('#errorMsg').delay(3000).fadeOut('slow');
+                }
+            })
+        }
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
