@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About Us" xml:space="preserve">
+    <value>عن دايومند لوكرز</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>شراء</value>
+  </data>
+  <data name="Companies" xml:space="preserve">
+    <value>شركات</value>
+  </data>
+  <data name="Contact Us" xml:space="preserve">
+    <value>إتصل بنا</value>
+  </data>
+  <data name="Contact us today. Let us help you better manage your security, storage, and data." xml:space="preserve">
+    <value>اتصل بنا اليوم. لنساعدك فى تحسين إدارة أماناتك ومساحتك وبياناتك</value>
+  </data>
+  <data name="Copyright. All Rights Reserved" xml:space="preserve">
+    <value>حقوق النشر. كل الحقوق محفوظة</value>
+  </data>
   <data name="Culture" xml:space="preserve">
     <value>EN</value>
   </data>
@@ -126,10 +144,73 @@
   <data name="Diamond Lockers" xml:space="preserve">
     <value>دايومند لوكرز</value>
   </data>
+  <data name="E-Mail" xml:space="preserve">
+    <value>الإيميل</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>الإيميل</value>
+  </data>
+  <data name="Enquiry" xml:space="preserve">
+    <value>استفسار</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>الخصائص</value>
+  </data>
   <data name="font" xml:space="preserve">
     <value>Cairo</value>
   </data>
+  <data name="Get in touch" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>الرئيسيه</value>
+  </data>
+  <data name="Individuals" xml:space="preserve">
+    <value>أفراد</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="Message sent successfully!" xml:space="preserve">
+    <value>تم ارسال الرسالة بنجاح!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Our Products" xml:space="preserve">
+    <value>منتجاتنا</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>التليفون</value>
+  </data>
+  <data name="Please complete the form!" xml:space="preserve">
+    <value>يرجى ملء النموذج!</value>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>إيجار</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>الخدمه</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>الخدمات</value>
+  </data>
+  <data name="Something wrong please try again!" xml:space="preserve">
+    <value>خطأ ما الرجاء المحاولة مرة أخرى!</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="Your Email" xml:space="preserve">
+    <value>إيميلك</value>
+  </data>
+  <data name="Your Name" xml:space="preserve">
+    <value>اسمك</value>
+  </data>
+  <data name="Your Phone" xml:space="preserve">
+    <value>رقم تليفونك</value>
   </data>
 </root>
