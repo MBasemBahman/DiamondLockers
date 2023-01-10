@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = Localizer.Get("Home");
 }
 
 <div class="clients-work">
@@ -7,7 +7,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="clients-des">
-                    <h2>Your <span class="primary-color">Diamonds</span>  are in secured <span class="primary-color">Lockers</span>!</h2>
+                    <h2>@Localizer.Get("Your") <span class="primary-color">@Localizer.Get("Diamonds")</span>  @Localizer.Get("are in secured") <span class="primary-color">@Localizer.Get("Lockers")</span>!</h2>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -30,8 +30,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/24-hours.png" alt="" />
                     </div>
-                    <h2>AVAILABILITY </h2>
-                    <p>24 / 7 lockers at your service</p>
+                    <h2>@Localizer.Get("AVAILABILITY") </h2>
+                    <p>@Localizer.Get("24 / 7 lockers at your service")</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -39,8 +39,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/water.png" alt="" />
                     </div>
-                    <h2>Non-contact </h2>
-                    <p>Intelligent lockers are hygienic and clean</p>
+                    <h2>@Localizer.Get("Non-contact") </h2>
+                    <p>@Localizer.Get("Intelligent lockers are hygienic and clean")</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -48,8 +48,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/save-money.png" alt="" />
                     </div>
-                    <h2>COST REDUCTION </h2>
-                    <p>Unneeded human presence</p>
+                    <h2>@Localizer.Get("COST REDUCTION") </h2>
+                    <p>@Localizer.Get("Unneeded human presence")</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -57,8 +57,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/shield.png" alt="" />
                     </div>
-                    <h2>Safety</h2>
-                    <p>Integrated camera surveillance as needed</p>
+                    <h2>@Localizer.Get("Safety")</h2>
+                    <p>@Localizer.Get("Integrated camera surveillance as needed")</p>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
 </div>
 
 <div class="teams"></div>
-<div class="our-project">
+<div id="services" class="our-project">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mx-auto">
@@ -74,11 +74,11 @@
                     <div class="col-md-4">
                         <div class="project-item">
                             <div class="project-title">
-                                <h2>01</h2>
-                                <h3>Rent or Buy?</h3>
+                                <h2>@Localizer.Get("01")</h2>
+                                <h3>@Localizer.Get("Rent or Buy or Enquiry?")</h3>
                             </div>
                             <p>
-                                Our team will be glad to support you with this decision
+                                @Localizer.Get("Our team will be glad to support you with this decision")
                                 <br />
                                 <br />
                                 <br />
@@ -90,28 +90,27 @@
                     <div class=" col-md-4">
                         <div class="project-item">
                             <div class="project-title">
-                                <h2>02</h2>
-                                <h3>After Sale Service</h3>
+                                <h2>@Localizer.Get("02")</h2>
+                                <h3>@Localizer.Get("After Sale Service")</h3>
                             </div>
                             <p>
-                                - 2 years warranty <br />
-                                - Delivery to your location <br />
-                                - Installation <br />
-                                - Staff training <br />
-                                - Maintenance <br />
-                                - Spare parts
+                                - @Localizer.Get("2 years warranty") <br />
+                                - @Localizer.Get("Delivery to your location") <br />
+                                - @Localizer.Get("Installation") <br />
+                                - @Localizer.Get("Staff training") <br />
+                                - @Localizer.Get("Maintenance") <br />
+                                - @Localizer.Get("Spare parts")
                             </p>
                         </div>
                     </div>
                     <div class=" col-md-4">
                         <div class="project-item">
                             <div class="project-title">
-                                <h2>03</h2>
-                                <h3>Guaranteed Safe & Secured</h3>
+                                <h2>@Localizer.Get("03")</h2>
+                                <h3>@Localizer.Get("Guaranteed Safe & Secured")</h3>
                             </div>
                             <p>
-                                Guaranteed Safe & Secured
-                                <br />
+                                @Localizer.Get("If anything (non-consumable) goes wrong, we will cover your loss")
                                 <br />
                                 <br />
                                 <br />
@@ -133,17 +132,17 @@
                     <div class="col-lg-6">
                         <div class="service-deitals">
                             <h2>
-                                Our clients love the customizable <span class="primary-color">feature</span>  and <span class="primary-color">colors</span> of their Diamond Lockers
+                                @Localizer.Get("Our clients love the customizable")<span class="primary-color">@Localizer.Get("feature")</span>  @Localizer.Get("and") <span class="primary-color">@Localizer.Get("colors")</span> @Localizer.Get("of their Diamond Lockers")
                             </h2>
                             <div class="mt-md-50 mt-20">
                                 <p>
-                                    Diamond Lockers allows you to keep reliable cloud-based records with multiple data options. Options include what is stored, who has access, and when to permit access.
+                                    @Localizer.Get("Diamond Lockers allows you to keep reliable cloud-based records with multiple data options. Options include what is stored, who has access, and when to permit access.")
                                     <br />
                                     <br />
-                                    Our facial recognition self-service lockers have large-scale applications.
+                                    @Localizer.Get("Our facial recognition self-service lockers have large-scale applications.")
                                     <br />
                                     <br />
-                                    Business usage includes:
+                                    @Localizer.Get("Business usage includes:")
                                     <div class="business-types">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-6">
@@ -151,7 +150,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-building"></i>
                                                     </div>
-                                                    <span> Apartment Buildings</span>
+                                                    <span>  @Localizer.Get("Apartment Buildings")</span>
 
                                                 </div>
 
@@ -161,7 +160,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-sharp fa-solid fa-plane-departure"></i>
                                                     </div>
-                                                    <span> Airports</span>
+                                                    <span> @Localizer.Get("Airports")</span>
 
                                                 </div>
 
@@ -171,7 +170,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-briefcase"></i>
                                                     </div>
-                                                    <span> Offices</span>
+                                                    <span> @Localizer.Get("Offices")</span>
 
                                                 </div>
 
@@ -181,7 +180,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-graduation-cap"></i>
                                                     </div>
-                                                    <span> Universities</span>
+                                                    <span> @Localizer.Get("Universities")</span>
 
                                                 </div>
 
@@ -191,7 +190,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-building-columns"></i>
                                                     </div>
-                                                    <span>  Government Institutions</span>
+                                                    <span>  @Localizer.Get("Government Institutions")</span>
 
                                                 </div>
 
@@ -201,7 +200,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-shop"></i>
                                                     </div>
-                                                    <span> Supermarkets</span>
+                                                    <span> @Localizer.Get("Supermarkets")</span>
 
                                                 </div>
 
@@ -211,7 +210,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-cart-shopping"></i>
                                                     </div>
-                                                    <span>Shopping Malls</span>
+                                                    <span>@Localizer.Get("Shopping Malls")</span>
 
                                                 </div>
 
@@ -221,7 +220,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-water-ladder"></i>
                                                     </div>
-                                                    <span> Recreation Centers</span>
+                                                    <span> @Localizer.Get("Recreation Centers")</span>
 
                                                 </div>
 
@@ -231,7 +230,7 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-boxes-stacked"></i>
                                                     </div>
-                                                    <span> Parcel Pickup and Delivery</span>
+                                                    <span> @Localizer.Get("Parcel Pickup and Delivery")</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -251,125 +250,165 @@
     </div>
 </div>
 <div id="products" class="gallery text-center">
-    <h2>Our Products</h2>
+    <h2>@Localizer.Get("Our Products")</h2>
     <div class="container mt-30">
         <div class="row">
-            <h6 class="mb-30">Filter by category</h6>
+            <h6 class="mb-30">@Localizer.Get("Filter by category")</h6>
             <div class="controls">
-                <button type="button" class="control" data-filter="all">All</button>
-                <button type="button" class="control" data-filter=".smart">Smart Lockers</button>
-                <button type="button" class="control" data-filter=".parcel">Parcel Lockers</button>
+                <button type="button" class="control" data-filter="all">@Localizer.Get("All")</button>
+                <button type="button" class="control" data-filter=".smart">@Localizer.Get("Smart Lockers")</button>
+                <button type="button" class="control" data-filter=".parcel">@Localizer.Get("Parcel Lockers")</button>
             </div>
         </div>
-        <div class="row  mt-40">
-            <h6 class="mb-30">Filter by size</h6>
-            <div class="controls">
-                <button type="button" class="control" data-filter="all">All</button>
-                <button type="button" class="control" data-filter=".size-6">6</button>
-                <button type="button" class="control" data-filter=".size-12">12</button>
-                <button type="button" class="control" data-filter=".size-24">24</button>
-                <button type="button" class="control" data-filter=".size-36">36</button>
-                <button type="button" class="control" data-filter=".size-48">48</button>
-            </div>
-        </div>
-        <div class="row  mt-40">
-            <h6 class="mb-30">Filter by color</h6>
-            <div class="controls">
-                <button type="button" class="control" data-filter="all">All</button>
-                <button type="button" class="control" data-filter=".green">Green</button>
-                <button type="button" class="control" data-filter=".blue">Blue</button>
-                <button type="button" class="control" data-filter=".red">Red</button>
-                <button type="button" class="control" data-filter=".yellow">Yellow</button>
-                <button type="button" class="control" data-filter=".white">White</button>
-                <button type="button" class="control" data-filter=".orange">Orange</button>
-                <button type="button" class="control" data-filter=".brown">Brown</button>
-            </div>
-        </div>
+        @*<div class="row  mt-40">
+                <h6 class="mb-30">Filter by size</h6>
+                <div class="controls">
+                    <button type="button" class="control" data-filter="all">All</button>
+                    <button type="button" class="control" data-filter=".size-6">6</button>
+                    <button type="button" class="control" data-filter=".size-12">12</button>
+                    <button type="button" class="control" data-filter=".size-24">24</button>
+                    <button type="button" class="control" data-filter=".size-36">36</button>
+                    <button type="button" class="control" data-filter=".size-48">48</button>
+                </div>
+            </div>*@
+        @*<div class="row  mt-40">
+                <h6 class="mb-30">Filter by color</h6>
+                <div class="controls">
+                    <button type="button" class="control" data-filter="all">All</button>
+                    <button type="button" class="control" data-filter=".green">Green</button>
+                    <button type="button" class="control" data-filter=".blue">Blue</button>
+                    <button type="button" class="control" data-filter=".red">Red</button>
+                    <button type="button" class="control" data-filter=".yellow">Yellow</button>
+                    <button type="button" class="control" data-filter=".white">White</button>
+                    <button type="button" class="control" data-filter=".orange">Orange</button>
+                    <button type="button" class="control" data-filter=".brown">Brown</button>
+                </div>
+            </div>*@
         <div class="filterContainer photo__gallery">
+            <div class="card-item mix white parcel size-6 size-12 size-24 size-36 size-48">
+                <a href="~/assets/images/products/Parcel2.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel2.jpg" alt="@Localizer.Get("Parcel locker sets")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel locker sets")</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item mix white parcel size-6 size-12 size-24 size-36 size-48">
+                <a href="~/assets/images/products/Parcel3.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel3.jpg" alt="@Localizer.Get("Parcel locker Control unit")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel locker Control unit")</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item mix white parcel size-6 size-12 size-24 size-36 size-48">
+                <a href="~/assets/images/products/Parcel6.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel6.jpg" alt="@Localizer.Get("Parcel tower")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel tower")</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item mix white parcel size-6 size-12 size-24 size-36 size-48">
+                <a href="~/assets/images/products/Parcel7.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel7.jpg" alt="@Localizer.Get("Parcel tower")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel tower")</h2>
+                    </div>
+                </a>
+            </div>
             <div class="card-item mix white smart size-6 size-12 size-24 size-36 size-48">
-                <a href="~/assets/images/products/Facial_White.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Facial_White.png" alt="Facial White" class="img-fluid" />
+                <a href="~/assets/images/products/Refrigerator3.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Refrigerator3.jpg" alt="@Localizer.Get("Refrigerator locker")" class="img-fluid" />
                     <div class="des">
-                        <h2>Facial White</h2>
+                        <h2>@Localizer.Get("Refrigerator locker")</h2>
                     </div>
                 </a>
             </div>
-            <div class="card-item mix blue smart">
-                <a href="~/assets/images/products/Bar Code_Blue.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Bar Code_Blue.png" alt="Bar Code Blue" class="img-fluid" />
-                    <div class="des">
-                        <h2>Bar Code Blue</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix green smart">
-                <a href="~/assets/images/products/Bar code_Light Green.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Bar code_Light Green.png" alt="Bar Code Green"
-                         class="img-fluid" />
-                    <div class="des">
-                        <h2>Bar Code Green</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix orange smart">
-                <a href="~/assets/images/products/Fingerprint_Orange.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Fingerprint_Orange.png" alt="Fingerprint Orange"
-                         class="img-fluid" />
-                    <div class="des">
-                        <h2>Fingerprint Orange</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix red smart">
-                <a href="~/assets/images/products/Fingerprint_Red.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Fingerprint_Red.png" alt="Fingerprint Red"
-                         class="img-fluid" />
-                    <div class="des">
-                        <h2>Fingerprint Red</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix brown smart">
-                <a href="~/assets/images/products/Passpord_Brown.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Passpord_Brown.png" alt="Passpord Brown"
-                         class="img-fluid" />
-                    <div class="des">
-                        <h2>Passpord Brown</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix blue smart">
-                <a href="~/assets/images/products/Passpord_Cyan.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Passpord_Cyan.png" alt="Passpord Cyan" class="img-fluid" />
-                    <div class="des">
-                        <h2>Passpord Cyan</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix green smart">
-                <a href="~/assets/images/products/RFID_Green.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/RFID_Green.png" alt="RFID Green" class="img-fluid" />
-                    <div class="des">
-                        <h2>RFID Green</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix blue smart">
-                <a href="~/assets/images/products/RFID_Sky Blue.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/RFID_Sky Blue.png" alt="RFID Sky Blue" class="img-fluid" />
-                    <div class="des">
-                        <h2>RFID Sky Blue</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix yellow smart">
-                <a href="~/assets/images/products/RFID_Yellow.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/RFID_Yellow.png" alt="RFID Yellow" class="img-fluid" />
-                    <div class="des">
-                        <h2>RFID Yellow</h2>
-                    </div>
-                </a>
-            </div>
+            @*<div class="card-item mix white smart size-6 size-12 size-24 size-36 size-48">
+                    <a href="~/assets/images/products/Facial_White.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Facial_White.png" alt="Facial White" class="img-fluid" />
+                        <div class="des">
+                            <h2>Facial White</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix blue smart">
+                    <a href="~/assets/images/products/Bar Code_Blue.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Bar Code_Blue.png" alt="Bar Code Blue" class="img-fluid" />
+                        <div class="des">
+                            <h2>Bar Code Blue</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix green smart">
+                    <a href="~/assets/images/products/Bar code_Light Green.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Bar code_Light Green.png" alt="Bar Code Green"
+                             class="img-fluid" />
+                        <div class="des">
+                            <h2>Bar Code Green</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix orange smart">
+                    <a href="~/assets/images/products/Fingerprint_Orange.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Fingerprint_Orange.png" alt="Fingerprint Orange"
+                             class="img-fluid" />
+                        <div class="des">
+                            <h2>Fingerprint Orange</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix red smart">
+                    <a href="~/assets/images/products/Fingerprint_Red.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Fingerprint_Red.png" alt="Fingerprint Red"
+                             class="img-fluid" />
+                        <div class="des">
+                            <h2>Fingerprint Red</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix brown smart">
+                    <a href="~/assets/images/products/Passpord_Brown.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Passpord_Brown.png" alt="Passpord Brown"
+                             class="img-fluid" />
+                        <div class="des">
+                            <h2>Passpord Brown</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix blue smart">
+                    <a href="~/assets/images/products/Passpord_Cyan.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/Passpord_Cyan.png" alt="Passpord Cyan" class="img-fluid" />
+                        <div class="des">
+                            <h2>Passpord Cyan</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix green smart">
+                    <a href="~/assets/images/products/RFID_Green.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/RFID_Green.png" alt="RFID Green" class="img-fluid" />
+                        <div class="des">
+                            <h2>RFID Green</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix blue smart">
+                    <a href="~/assets/images/products/RFID_Sky Blue.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/RFID_Sky Blue.png" alt="RFID Sky Blue" class="img-fluid" />
+                        <div class="des">
+                            <h2>RFID Sky Blue</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-item mix yellow smart">
+                    <a href="~/assets/images/products/RFID_Yellow.png" class="photo__item d-block w-100">
+                        <img src="~/assets/images/products/RFID_Yellow.png" alt="RFID Yellow" class="img-fluid" />
+                        <div class="des">
+                            <h2>RFID Yellow</h2>
+                        </div>
+                    </a>
+                </div>*@
         </div>
     </div>
 </div>
@@ -380,11 +419,11 @@
                 <div class="larg-circle">
                     <img src="~/assets/images/about-circle-photo.jpg" alt="" class="img-fluid" />
                     <div class="circle-des">
-                        <h2>About Us</h2>
+                        <h2>@Localizer.Get("About Us")</h2>
                         <p>
-                            Streamlined operations and better inventory control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia
+                            @Localizer.Get("Streamlined operations and better inventory control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia")
                         </p>
-                        <div class="cus__btn"><a asp-action="about" asp-controller="Home"> learn More</a></div>
+                        <div class="cus__btn"><a asp-action="about" asp-controller="Home"> @Localizer.Get("learn More")</a></div>
                     </div>
                 </div>
             </div>
@@ -398,19 +437,17 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-card">
-                        <h2>Mission</h2>
+                        <h2>@Localizer.Get("Mission")</h2>
                         <p>
-                            To offer accessible, safe, and efficient state-of-the-art technology without
-                            compromising customer service.
+                            @Localizer.Get("To offer accessible, safe, and efficient state-of-the-art technology without\r\n                            compromising customer service.")
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="about-card">
-                        <h2>Vision</h2>
+                        <h2>@Localizer.Get("Vision")</h2>
                         <p>
-                            To be Saudi Arabia's number-one choice for innovation in intelligent storage locker
-                            solutions.
+                            @Localizer.Get("To be Saudi Arabia's number-one choice for innovation in intelligent storage locker\r\n                            solutions.")
                         </p>
                     </div>
                 </div>
@@ -426,8 +463,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-6">
                             <div class="couter-des">
-                                <h2 class="num"><span class="numCounter">166</span>+</h2>
-                                <p>Our current team count, ​vulputate enim nulla aliquet</p>
+                                <h2 class="num"><span class="numCounter">@Localizer.Get("166")</span>+</h2>
+                                <p>@Localizer.Get("Our current team count, ​vulputate enim nulla aliquet")</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-6">

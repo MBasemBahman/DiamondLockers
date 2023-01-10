@@ -1,4 +1,5 @@
 ﻿using Lockers.Models;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -37,6 +38,22 @@ namespace Lockers.Controllers
         {
 
             return Ok();
+        }
+
+        [Route(nameof(Culture))]
+        public IActionResult Culture(string culture)
+        {
+            if (string.IsNullOrWhiteSpace(culture))
+            {
+                culture = "ar";
+            }
+
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(
+                    new RequestCulture(culture: "en", uiCulture: culture)));
+
+            return Request.Headers["Referer"].Any() ? Redirect(Request.Headers["Referer"].ToString()) : RedirectToAction(nameof(Index));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

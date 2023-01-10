@@ -10,27 +10,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Smart lockers,Smart storage,e lockers,storage alternatives,office storage solutions,face recognition locker,touchless lockers,digital locker,smart locker companies,locker technology,intelligent storage system,contactless storage,smart self storage,what is a smart locker,how to increase storage security" />
     <meta name="description" content="An intelligent locker is a secure storage space that uses innovative technology to automate and streamline your locker management. Still using time-consuming traditional lockers? Maybe it’s time to upgrade to Diamond Lockers." />
-    <title>@ViewData["Title"] - Diamond Lockers</title>
+    <title>@ViewData["Title"] - @Localizer.Get("Diamond Lockers")</title>
     <link rel="icon" type="image/x-icon" href="~/assets/images/fav.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="~/assets/lib/lightGallery-master/lightGallery-master/dist/css/lightgallery.css" />
-    <link rel="stylesheet" href="~/assets/styles/en/styles.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/assets/styles/en/styles.min.css" />
     <style>
         .form-control, .form-select {
             border-radius: 5px;
         }
 
-        .text-danger{
+        .text-danger {
             color: red !important;
         }
 
-        .text-success{
+        .text-success {
             color: green !important;
         }
+        @if (Localizer.Get("font") == "Cairo")
+        {
+            <Text>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        </Text>
+        }
+
     </style>
 </head>
 <body>
@@ -59,19 +69,26 @@
 
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link @(active == "Home"? "active": "" )" aria-current="page" asp-action="Index" asp-controller="Home">Home</a>
+                                <a class="nav-link @(active == "Home"? "active": "" )" aria-current="page" asp-action="Index" asp-controller="Home">@Localizer.Get("Home")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="features">Features</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="features">@Localizer.Get("Features")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">Our Products</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="services">@Localizer.Get("Services")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link @(active == "About"? "active": "" )" asp-action="Index" asp-controller="Home" asp-fragment="about">About Us</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">@Localizer.Get("Our Products")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-fragment="contact">Contact Us</a>
+                                <a class="nav-link @(active == "About"? "active": "" )" asp-action="Index" asp-controller="Home" asp-fragment="about">@Localizer.Get("About Us")</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-fragment="contact">@Localizer.Get("Contact Us")</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-action="Culture" asp-controller="Home" asp-route-culture="@Localizer.Get("CultureVal")">@Localizer.Get("Culture")</a>
                             </li>
                         </ul>
                     </div>
@@ -94,9 +111,9 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="get-in-touch">
-                                <h2>Get in touch</h2>
+                                <h2>@Localizer.Get("Get in touch")</h2>
                                 <h3>
-                                    Contact us today. Let us help you better manage your security, storage, and data.
+                                    @Localizer.Get("Contact us today. Let us help you better manage your security, storage, and data.")
                                 </h3>
                             </div>
                             <div class="ours-contact">
@@ -104,7 +121,7 @@
                                 <div class="soical-contact">
                                     <img src="~/assets/images/mail.png" alt="" class="img-fluid" />
                                     <div class="des">
-                                        <h2>E-Mail</h2>
+                                        <h2>@Localizer.Get("E-Mail")</h2>
                                         <a href="mailto:support@diamondlockers.com">support@diamondlockers.com</a>
                                     </div>
                                 </div>
@@ -123,53 +140,53 @@
                         <div class="col-lg-6">
                             <form asp-action="Contact" id="contactForm" class="main-form border border-2 border-dark rounded p-20">
                                 <div asp-validation-summary="All" class="text-danger"></div>
-                                <label asp-for="Type"> Type</label>
+                                <label asp-for="Type"> @Localizer.Get("Type")</label>
                                 <select asp-for="Type" class="form-select" aria-label="Type">
-                                    <option value="Individuals">Individuals </option>
-                                    <option value="Companies">Companies</option>
+                                    <option value="Individuals">@Localizer.Get("Individuals") </option>
+                                    <option value="Companies">@Localizer.Get("Companies")</option>
                                 </select>
 
                                 <label asp-for="Name">
-                                    Name
+                                    @Localizer.Get("Name")
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Name" class="text-danger"></span>
                                 </label>
-                                <input type="text" asp-for="Name" class="form-control" placeholder="Your Name" required />
+                                <input type="text" asp-for="Name" class="form-control" placeholder="@Localizer.Get("Your Name")" required />
 
                                 <label asp-for="Phone">
-                                    Phone
+                                    @Localizer.Get("Phone")
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Phone" class="text-danger"></span>
                                 </label>
-                                <input type="tel" asp-for="Phone" class="form-control" placeholder="Your Phone" required />
+                                <input type="tel" asp-for="Phone" class="form-control" placeholder="@Localizer.Get("Your Phone")" required />
 
                                 <label asp-for="Email">
-                                    Email
+                                    @Localizer.Get("Email")
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </label>
-                                <input type="email" asp-for="Email" class="form-control" placeholder="Your Email" required />
+                                <input type="email" asp-for="Email" class="form-control" placeholder="@Localizer.Get("Your Email")" required />
 
                                 <label asp-for="Service">
-                                    Service
+                                    @Localizer.Get("Service")
                                 </label>
                                 <select asp-for="Service" class="form-select" aria-label="Service">
-                                    <option value="Rent">Rent</option>
-                                    <option value="Buy">Buy</option>
-                                    <option value="Enquiry">Enquiry</option>
+                                    <option value="Rent">@Localizer.Get("Rent")</option>
+                                    <option value="Buy">@Localizer.Get("Buy")</option>
+                                    <option value="Enquiry">@Localizer.Get("Enquiry")</option>
                                 </select>
 
                                 <label asp-for="Message">
-                                    Message
+                                    @Localizer.Get("Message")
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Message" class="text-danger"></span>
                                 </label>
-                                <textarea class="form-control" placeholder="Message" asp-for="Message" rows="3" required></textarea>
+                                <textarea class="form-control" placeholder="@Localizer.Get("Message")" asp-for="Message" rows="3" required></textarea>
 
-                                <button type="button" class="btn btn-primary text-white mb-10" onclick="formSubmit()">Submit</button>
-                                <p id="successMsg" class="text-success">Message sent successfully!</p>
-                                <p id="errorMsg" class="text-danger">Something wrong please try again!</p>
-                                <p id="incompleteMsg" class="text-danger">Please complete the form!</p>
+                                <button type="button" class="btn btn-primary text-white mb-10" onclick="formSubmit()">@Localizer.Get("Submit")</button>
+                                <p id="successMsg" class="text-success">@Localizer.Get("Message sent successfully!")</p>
+                                <p id="errorMsg" class="text-danger">@Localizer.Get("Something wrong please try again!")</p>
+                                <p id="incompleteMsg" class="text-danger">@Localizer.Get("Please complete the form!")</p>
                             </form>
                         </div>
                     </div>
@@ -178,7 +195,7 @@
         </div>
         <div class="copy-right">
             <div class="container">
-                <p>© @DateTime.UtcNow.Year Copyright. All Rights Reserved</p>
+                <p>© @DateTime.UtcNow.Year @Localizer.Get("Copyright. All Rights Reserved")</p>
             </div>
         </div>
     </div>
