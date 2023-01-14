@@ -35,7 +35,7 @@ $anotherFont: "Oswald", sans-serif;
 
 @import "../../lib/bootstrap/scss/bootstrap.scss";
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Cairo", sans-serif;
   direction: rtl;
   text-align: right;
 }
@@ -43,6 +43,13 @@ body {
 a {
   text-decoration: none;
   @include transition(0.3s all ease-in-out);
+}
+@mixin lineNum($num) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
 }
 .under-line {
   color: $secondary;
@@ -87,6 +94,67 @@ a {
     }
   }
 }
+.form-control {
+  padding: 10px 15px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  color: #55565a;
+  background-color: #ffff;
+  border-radius: 5px;
+  @include media-breakpoint-down(sm) {
+    padding: 12px 13px;
+    font-size: 16px;
+    margin: 12px 0px;
+  }
+  &::placeholder {
+    font-family: "Cairo", sans-serif;
+    color: #676767;
+  }
+  &:focus {
+    outline: none;
+    // box-shadow: 0 3px 15px rgba($third, 0.2);
+    box-shadow: none;
+    border-color: #997757;
+    background-color: $white;
+  }
+}
+
+.form-select {
+  padding: 10px 15px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  color: #55565a;
+  background-color: #ffff;
+  border-radius: 5px;
+  background-position: left 0.75rem center;
+  width: 100%;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 12px 13px;
+    font-size: 16px;
+    margin: 12px 0px;
+  }
+  &::placeholder {
+    font-family: "Cairo", sans-serif;
+    color: #676767;
+  }
+  &:focus {
+    outline: none;
+    // box-shadow: 0 3px 15px rgba($third, 0.2);
+    box-shadow: none !important;
+    border-color: #997757;
+    background-color: $white;
+  }
+}
+.text-danger {
+  color: red !important;
+}
+
+.text-success {
+  color: green !important;
+}
 //////// start menu
 .menu {
   position: fixed;
@@ -102,7 +170,10 @@ a {
     }
 
     .navbar-brand {
-      width: 120px;
+      width: 180px;
+      @include media-breakpoint-down(md) {
+        width: 140px;
+      }
       img {
         width: 100%;
       }
@@ -132,6 +203,8 @@ a {
       right: 15px;
     }
     .navbar-nav {
+      margin-right: auto;
+      margin-left: 0;
       .nav-item {
         font-size: 20px;
         color: $secondary;
@@ -321,6 +394,10 @@ a {
       width: 350px;
       height: 200px;
     }
+    @include media-breakpoint-down(sm) {
+      width: 270px;
+      height: 200px;
+    }
     img {
       width: 100%;
     }
@@ -358,8 +435,10 @@ a {
       font-size: 25px;
       margin-top: 30px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 0px;
       text-transform: uppercase;
+      min-height: 60px;
+      @include lineNum(2);
       @include media-breakpoint-down(lg) {
         font-size: 20px;
       }
@@ -367,6 +446,8 @@ a {
     p {
       font-weight: 600;
       margin-top: 20px;
+      min-height: 48px;
+      @include lineNum(2);
     }
   }
 }
@@ -440,6 +521,37 @@ a {
         display: none;
       }
     }
+    .business-types {
+      .type {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        .type-icon {
+          background-color: $primary;
+          width: 35px;
+          height: 35px;
+          flex: 0 0 35px;
+          max-width: 35px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          @include media-breakpoint-down(lg) {
+            margin-left: 5px;
+          }
+          i {
+            color: $white;
+          }
+        }
+        span {
+          font-size: 12px;
+          @include media-breakpoint-down(md) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
   }
   .service-photo {
     width: 323px;
@@ -461,7 +573,6 @@ a {
     }
   }
 }
-// start gallery
 // start gallery
 .gallery {
   margin-top: 100px;
@@ -504,33 +615,35 @@ a {
   }
   .mix,
   .gap {
-    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    width: calc(100% / 2 - (((2 - 1) * 1rem) / 2));
     display: inline-block;
-    vertical-align:top;
+    vertical-align: top;
   }
-  .control{
+  .control {
     background-color: #997757;
-    color: #FFF;
+    color: #fff;
     border-radius: 5px;
     font-weight: 500;
     padding: 3px 15px;
     border: none;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    &:hover{
+    &:hover {
       background-color: #c9c3b0 !important;
       color: #fff;
     }
   }
 }
-
+.lg-inner {
+  direction: ltr !important;
+}
 /* 3 Columns */
 
 @media screen and (min-width: 541px) {
-  .gallery{
+  .gallery {
     .mix,
     .gap {
-        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+      width: calc(100% / 3 - (((3 - 1) * 1rem) / 3));
     }
   }
 }
@@ -571,6 +684,12 @@ a {
         flex: 0 0 350px;
         max-width: 350px;
       }
+      @include media-breakpoint-down(sm) {
+        width: 300px;
+        height: 300px;
+        flex: 0 0 300px;
+        max-width: 300px;
+      }
     }
 
     .circle-des {
@@ -584,7 +703,7 @@ a {
       @include media-breakpoint-down(md) {
         position: relative;
         padding: 10px;
-        width: 350px;
+        width: 300px;
       }
       h2 {
         font-size: 35px;
@@ -608,6 +727,21 @@ a {
     background-color: $primary;
     margin-left: 0;
     margin-right: auto;
+    position: relative;
+    img {
+      width: 100px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      z-index: 99;
+      transform: translate(50%, -50%);
+      @include media-breakpoint-down(lg) {
+        width: 50px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 30px;
+      }
+    }
     @include media-breakpoint-down(lg) {
       width: 150px;
       height: 150px;
@@ -730,6 +864,24 @@ a {
     @include media-breakpoint-down(lg) {
       padding: 0;
     }
+    .contact-photo {
+      width: 700px;
+      margin: 0 auto 50px auto;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 35px;
+        width: 500px;
+        height: 290px;
+        margin: 0 auto;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+        width: auto;
+        height: auto;
+      }
+      img {
+        width: 100%;
+      }
+    }
     .get-in-touch {
       padding: 30px;
       @include media-breakpoint-down(lg) {
@@ -761,15 +913,22 @@ a {
       h3 {
         font-size: 20px;
         font-weight: 600;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         @include media-breakpoint-down(lg) {
-          font-size: 18px;
-          margin-bottom: 30px;
-        }
-        @include media-breakpoint-down(md) {
           font-size: 18px;
           margin-bottom: 20px;
         }
+        @include media-breakpoint-down(md) {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .main-form {
+      label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #997757;
       }
     }
   }
@@ -781,23 +940,7 @@ a {
     @include media-breakpoint-down(md) {
       padding: 20px;
     }
-    .contact-photo {
-      margin-bottom: 50px;
-      @include media-breakpoint-down(lg) {
-        margin-bottom: 35px;
-        width: 500px;
-        height: 290px;
-        margin: 0 auto;
-      }
-      @include media-breakpoint-down(md) {
-        margin-bottom: 30px;
-        width: auto;
-        height: auto;
-      }
-      img {
-        width: 100%;
-      }
-    }
+
     .soical-contact {
       display: flex;
       margin-bottom: 40px;
@@ -846,3 +989,32 @@ a {
     margin-bottom: 0;
   }
 }
+
+// style index
+.photo__item img {
+  max-height: 918px;
+}
+
+.about-card {
+  border-radius: 20px;
+}
+
+// .navbar-brand img,
+// .logo-mop {
+//   width: 150% !important;
+//   max-width: 150% !important;
+// }
+
+.primary-color {
+  color: #997757;
+}
+
+.card-item {
+  padding: 2%;
+}
+
+.about-icon img {
+  max-width: 50px !important;
+}
+
+//

@@ -98,14 +98,14 @@ a {
   margin-bottom: 20px;
   color: #55565a;
   background-color: #ffff;
-  border-radius: 0;
+  border-radius: 5px;
   @include media-breakpoint-down(sm) {
     padding: 12px 13px;
     font-size: 16px;
     margin: 12px 0px;
   }
   &::placeholder {
-    font-family: "Lato", sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #676767;
   }
   &:focus {
@@ -123,7 +123,7 @@ a {
   margin-bottom: 20px;
   color: #55565a;
   background-color: #ffff;
-  border-radius: 0;
+  border-radius: 5px;
   width: 100%;
   @include media-breakpoint-down(md) {
     width: 100%;
@@ -134,7 +134,7 @@ a {
     margin: 12px 0px;
   }
   &::placeholder {
-    font-family: "Lato", sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #676767;
   }
   &:focus {
@@ -144,6 +144,13 @@ a {
     border-color: #997757;
     background-color: $white;
   }
+}
+.text-danger {
+  color: red !important;
+}
+
+.text-success {
+  color: green !important;
 }
 //////// start menu
 .menu {
@@ -160,7 +167,10 @@ a {
     }
 
     .navbar-brand {
-      width: 120px;
+      width: 180px;
+      @include media-breakpoint-down(md) {
+        width: 140px;
+      }
       img {
         width: 100%;
       }
@@ -190,6 +200,8 @@ a {
       left: 15px;
     }
     .navbar-nav {
+      margin-left: auto;
+      margin-right: 0;
       .nav-item {
         font-size: 20px;
         color: $secondary;
@@ -982,11 +994,11 @@ a {
   border-radius: 20px;
 }
 
-.navbar-brand img,
-.logo-mop {
-  width: 150% !important;
-  max-width: 150% !important;
-}
+// .navbar-brand img,
+// .logo-mop {
+//   width: 150% !important;
+//   max-width: 150% !important;
+// }
 
 .primary-color {
   color: #997757;

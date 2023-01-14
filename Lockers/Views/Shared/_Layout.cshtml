@@ -19,19 +19,9 @@
           rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="~/assets/lib/lightGallery-master/lightGallery-master/dist/css/lightgallery.css" />
-    <link rel="stylesheet" href="~/assets/styles/en/styles.min.css" />
+    <link rel="stylesheet" href="~/assets/styles/ar/styles.min.css" />
     <style>
-        .form-control, .form-select {
-            border-radius: 5px;
-        }
-
-        .text-danger {
-            color: red !important;
-        }
-
-        .text-success {
-            color: green !important;
-        }
+   
         @if (Localizer.Get("CultureState") == "ar")
         {
             <Text>
@@ -67,7 +57,7 @@
                             </a>
                         </div>
 
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link @(active == "Home"? "active": "" )" aria-current="page" asp-action="Index" asp-controller="Home">@Localizer.Get("Home")</a>
                             </li>
