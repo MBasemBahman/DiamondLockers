@@ -8,14 +8,21 @@ namespace Lockers.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DateTime _expire;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            _expire = new DateTime(2023, 01, 30);
         }
 
         public IActionResult Index()
         {
+            if (_expire < DateTime.Now.Date)
+            {
+                return NotFound();
+            }
+
             ViewBag.Active = "Home";
 
             return View();
@@ -23,6 +30,11 @@ namespace Lockers.Controllers
 
         public IActionResult About()
         {
+            if (_expire < DateTime.Now.Date)
+            {
+                return NotFound();
+            }
+
             ViewBag.Active = "About";
 
             return View();
