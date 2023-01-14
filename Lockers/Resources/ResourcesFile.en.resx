@@ -120,6 +120,9 @@
   <data name="Culture" xml:space="preserve">
     <value>AR</value>
   </data>
+  <data name="CultureState" xml:space="preserve">
+    <value>en</value>
+  </data>
   <data name="CultureVal" xml:space="preserve">
     <value>ar</value>
   </data>

@@ -7,7 +7,25 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="clients-des">
-                    <h2>@Localizer.Get("Your") <span class="primary-color">@Localizer.Get("Diamonds")</span>  @Localizer.Get("are in secured") <span class="primary-color">@Localizer.Get("Lockers")</span>!</h2>
+                    @if (Localizer.Get("CultureState") == "ar")
+                    {
+                        <h2>
+                            <span class="primary-color">ألماساتك</span>
+                            في
+                            <span class="primary-color">خزائن</span>
+                            أمنة!
+                        </h2>
+
+                    }
+                    else
+                    {
+                        <h2>
+                            Your
+                            <span class="primary-color">Diamonds</span>
+                            are in secured
+                            <span class="primary-color">Lockers</span>!
+                        </h2>
+                    }
                 </div>
             </div>
             <div class="col-lg-6">
@@ -75,7 +93,7 @@
                         <div class="project-item">
                             <div class="project-title">
                                 <h2>@Localizer.Get("01")</h2>
-                                <h3>@Localizer.Get("Rent or Buy or Enquiry?")</h3>
+                                <h3>@Localizer.Get("Rent or Buy?")</h3>
                             </div>
                             <p>
                                 @Localizer.Get("Our team will be glad to support you with this decision")
@@ -84,6 +102,10 @@
                                 <br />
                                 <br />
                                 <br />
+                                @if (Localizer.Get("CultureState") == "ar")
+                                {
+                                    <br />
+                                }
                             </p>
                         </div>
                     </div>
@@ -116,6 +138,10 @@
                                 <br />
                                 <br />
                                 <br />
+                                @if (Localizer.Get("CultureState") == "ar")
+                                {
+                                    <br />
+                                }
                             </p>
                         </div>
                     </div>
@@ -131,15 +157,42 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="service-deitals">
-                            <h2>
-                                @Localizer.Get("Our clients love the customizable")<span class="primary-color">@Localizer.Get("feature")</span>  @Localizer.Get("and") <span class="primary-color">@Localizer.Get("colors")</span> @Localizer.Get("of their Diamond Lockers")
-                            </h2>
+                            @if (Localizer.Get("CultureState") == "ar")
+                            {
+                                <h2>
+                                    يفضل عملاء دايموند لوكرز تخصيص
+                                    <span class="primary-color">ألوان</span>  و
+                                    <span class="primary-color">خصائص</span>
+                                    <span class="primary-color">لخزائنهم</span>
+                                </h2>
+                            }
+                            else
+                            {
+                                <h2>
+                                    @Localizer.Get("Our clients love the customizable")<span class="primary-color">@Localizer.Get("feature")</span>  @Localizer.Get("and") <span class="primary-color">@Localizer.Get("colors")</span> @Localizer.Get("of their Diamond ")
+                                    <span class="primary-color">@Localizer.Get("Lockers")</span>
+                                </h2>
+                            }
                             <div class="mt-md-50 mt-20">
                                 <p>
                                     @Localizer.Get("Diamond Lockers allows you to keep reliable cloud-based records with multiple data options. Options include what is stored, who has access, and when to permit access.")
                                     <br />
                                     <br />
-                                    @Localizer.Get("Our facial recognition self-service lockers have large-scale applications.")
+                                    @if (Localizer.Get("CultureState") == "ar")
+                                    {
+                                        <Text>
+                                        إن
+                                        <span class="primary-color">@Localizer.Get(" خزائن ")</span>
+                                        الاستخدام الذاتي المدعمة بخاصية بصمة الوجه تتمتع بشريحة كبيرة من المستخدمين.
+                                        </Text>
+
+                                    }
+                                    else
+                                    {
+                                        @Localizer.Get("Our facial recognition self-service")
+                                        <span class="primary-color">@Localizer.Get(" lockers ")</span>
+                                        @Localizer.Get("have large-scale applications.")
+                                    }
                                     <br />
                                     <br />
                                     @Localizer.Get("Business usage includes:")
@@ -439,7 +492,7 @@
                     <div class="about-card">
                         <h2>@Localizer.Get("Mission")</h2>
                         <p>
-                            @Localizer.Get("To offer accessible, safe, and efficient state-of-the-art technology without\r\n                            compromising customer service.")
+                            @Localizer.Get("To offer accessible, safe, and efficient state-of-the-art technology without compromising customer service.")
                         </p>
                     </div>
                 </div>
@@ -447,7 +500,12 @@
                     <div class="about-card">
                         <h2>@Localizer.Get("Vision")</h2>
                         <p>
-                            @Localizer.Get("To be Saudi Arabia's number-one choice for innovation in intelligent storage locker\r\n                            solutions.")
+                            @Localizer.Get("To be Saudi Arabia's number-one choice for innovation in intelligent storage locker solutions.")
+                            @if (Localizer.Get("CultureState") == "ar")
+                            {
+                                <br />
+                                <br />
+                            }
                         </p>
                     </div>
                 </div>

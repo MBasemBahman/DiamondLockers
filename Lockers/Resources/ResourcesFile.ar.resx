@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="2 years warranty" xml:space="preserve">
+    <value>ضمان عامين</value>
+  </data>
+  <data name="24 / 7 lockers at your service" xml:space="preserve">
+    <value>24/7 الخزائن في خدمتك</value>
+  </data>
   <data name="About Us" xml:space="preserve">
     <value>عن دايومند لوكرز</value>
+  </data>
+  <data name="After Sale Service" xml:space="preserve">
+    <value>خدمات مع بعد البيع</value>
+  </data>
+  <data name="Airports" xml:space="preserve">
+    <value>المطارات</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="Apartment Buildings" xml:space="preserve">
+    <value>الشقق السكنية</value>
+  </data>
+  <data name="AVAILABILITY" xml:space="preserve">
+    <value>الإتاحة</value>
+  </data>
+  <data name="Business usage includes:" xml:space="preserve">
+    <value>على سبيل المثال:</value>
   </data>
   <data name="Buy" xml:space="preserve">
     <value>شراء</value>
@@ -135,14 +159,26 @@
   <data name="Copyright. All Rights Reserved" xml:space="preserve">
     <value>حقوق النشر. كل الحقوق محفوظة</value>
   </data>
+  <data name="COST REDUCTION" xml:space="preserve">
+    <value>تكلفة أقل</value>
+  </data>
   <data name="Culture" xml:space="preserve">
     <value>EN</value>
+  </data>
+  <data name="CultureState" xml:space="preserve">
+    <value>ar</value>
   </data>
   <data name="CultureVal" xml:space="preserve">
     <value>en</value>
   </data>
+  <data name="Delivery to your location" xml:space="preserve">
+    <value>توصيل لمكانك</value>
+  </data>
   <data name="Diamond Lockers" xml:space="preserve">
     <value>دايومند لوكرز</value>
+  </data>
+  <data name="Diamond Lockers allows you to keep reliable cloud-based records with multiple data options. Options include what is stored, who has access, and when to permit access." xml:space="preserve">
+    <value>تستطيع فى دايموند لوكرز عن طريق عدة اختيارات تخص البيانات أن تحتفظ بالسجلات الموثقة للبيانات فى قاعدة البيانات الالكترونية. وتتمثل الاختبارات فى ما هو الشيئ الذي تم تخزينة, ومن يصل إليه, ومتى يسمح بالوصول إليه.</value>
   </data>
   <data name="E-Mail" xml:space="preserve">
     <value>الإيميل</value>
@@ -156,17 +192,44 @@
   <data name="Features" xml:space="preserve">
     <value>الخصائص</value>
   </data>
+  <data name="Filter by category" xml:space="preserve">
+    <value>النوع</value>
+  </data>
   <data name="font" xml:space="preserve">
     <value>Cairo</value>
   </data>
   <data name="Get in touch" xml:space="preserve">
     <value>تواصل معنا</value>
   </data>
+  <data name="Government Institutions" xml:space="preserve">
+    <value>المؤسسات الخكومية</value>
+  </data>
+  <data name="Guaranteed Safe &amp; Secured" xml:space="preserve">
+    <value>أمان وحماية مضمونة</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>الرئيسيه</value>
   </data>
+  <data name="If anything (non-consumable) goes wrong, we will cover your loss" xml:space="preserve">
+    <value>اذا لم تنل مرادك, فنحن متكلفون بتعويضك</value>
+  </data>
   <data name="Individuals" xml:space="preserve">
     <value>أفراد</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>تركيب</value>
+  </data>
+  <data name="Integrated camera surveillance as needed" xml:space="preserve">
+    <value>كاميرات مراقبة متكاملة حسب الحاجة</value>
+  </data>
+  <data name="Intelligent lockers are hygienic and clean" xml:space="preserve">
+    <value>الخزائن الذكية صحية ونظيفة</value>
+  </data>
+  <data name="learn More" xml:space="preserve">
+    <value>للمزيد</value>
+  </data>
+  <data name="Maintenance" xml:space="preserve">
+    <value>صيانة</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>الرسالة</value>
@@ -174,11 +237,29 @@
   <data name="Message sent successfully!" xml:space="preserve">
     <value>تم ارسال الرسالة بنجاح!</value>
   </data>
+  <data name="Mission" xml:space="preserve">
+    <value>مهمتنا</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>الاسم</value>
   </data>
+  <data name="Non-contact" xml:space="preserve">
+    <value>بدون تلامس</value>
+  </data>
+  <data name="Offices" xml:space="preserve">
+    <value>المكاتب</value>
+  </data>
   <data name="Our Products" xml:space="preserve">
     <value>منتجاتنا</value>
+  </data>
+  <data name="Our team will be glad to support you with this decision" xml:space="preserve">
+    <value>سنكون سعداء بمساعدتك على اتخاذ قرار</value>
+  </data>
+  <data name="Parcel Lockers" xml:space="preserve">
+    <value>خزائن الطرود</value>
+  </data>
+  <data name="Parcel Pickup and Delivery" xml:space="preserve">
+    <value>أماكن استلام الطرود</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>التليفون</value>
@@ -186,8 +267,17 @@
   <data name="Please complete the form!" xml:space="preserve">
     <value>يرجى ملء النموذج!</value>
   </data>
+  <data name="Recreation Centers" xml:space="preserve">
+    <value>مراكز الترفية</value>
+  </data>
   <data name="Rent" xml:space="preserve">
     <value>إيجار</value>
+  </data>
+  <data name="Rent or Buy?" xml:space="preserve">
+    <value>إيجار أم شراء؟</value>
+  </data>
+  <data name="Safety" xml:space="preserve">
+    <value>الحماية</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>الخدمه</value>
@@ -195,14 +285,47 @@
   <data name="Services" xml:space="preserve">
     <value>الخدمات</value>
   </data>
+  <data name="Shopping Malls" xml:space="preserve">
+    <value>المول</value>
+  </data>
+  <data name="Smart Lockers" xml:space="preserve">
+    <value>الخزائن الذكية</value>
+  </data>
   <data name="Something wrong please try again!" xml:space="preserve">
     <value>خطأ ما الرجاء المحاولة مرة أخرى!</value>
+  </data>
+  <data name="Spare parts" xml:space="preserve">
+    <value>قطع غيار</value>
+  </data>
+  <data name="Staff training" xml:space="preserve">
+    <value>تدريب الموظفين</value>
+  </data>
+  <data name="Streamlined operations and better inventory control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia" xml:space="preserve">
+    <value>ما يجعل دايموند لوكرز الأولي في إدارة الخزائن الذكية في المملكة العربية السعودية هو انسيابية العمليات ومراقبة المخزون بشكل أفضل.</value>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>ارسال</value>
   </data>
+  <data name="Supermarkets" xml:space="preserve">
+    <value>السوبر ماركت</value>
+  </data>
+  <data name="To be Saudi Arabia's number-one choice for innovation in intelligent storage locker solutions." xml:space="preserve">
+    <value>نكون الاختيار الأول فى المملكة العربية السعودية لحلول الخزائن الذكية.</value>
+  </data>
+  <data name="To offer accessible, safe, and efficient state-of-the-art technology without compromising customer service." xml:space="preserve">
+    <value>تقدم خزائن تتميز بسهولة الاستخدام والأمان والتقنية التكنولوجية الحديثة بما يغني عن اللجوء إلي مساعدة خارجية.</value>
+  </data>
   <data name="Type" xml:space="preserve">
     <value>النوع</value>
+  </data>
+  <data name="Universities" xml:space="preserve">
+    <value>الجامعات</value>
+  </data>
+  <data name="Unneeded human presence" xml:space="preserve">
+    <value>لا حاجة لمساعدة خارجية</value>
+  </data>
+  <data name="Vision" xml:space="preserve">
+    <value>رؤيتنا</value>
   </data>
   <data name="Your Email" xml:space="preserve">
     <value>إيميلك</value>
