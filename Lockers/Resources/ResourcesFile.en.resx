@@ -126,4 +126,7 @@
   <data name="CultureVal" xml:space="preserve">
     <value>ar</value>
   </data>
+  <data name="Our Office Location" xml:space="preserve">
+    <value>Headquarter</value>
+  </data>
 </root>

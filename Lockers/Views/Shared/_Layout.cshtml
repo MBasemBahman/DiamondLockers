@@ -38,6 +38,12 @@
             </Text>
         }
 
+        .card-item a img {
+            border: 2px solid #997757;
+            border-radius: 20px;
+            padding: 1px;
+        }
+
     </style>
 </head>
 <body>
@@ -122,16 +128,16 @@
                                         <a href="mailto:support@diamondlockers.com">support@diamondlockers.com</a>
                                     </div>
                                 </div>
-                                @*<div class="soical-contact">
+                                <div class="soical-contact">
                                         <img src="~/assets/images/location.png" alt="" class="img-fluid" />
                                         <div class="des">
-                                            <h2>Our Office Location</h2>
+                                            <h2>@Localizer.Get("Our Office Location")</h2>
                                             <p>
-                                                The Interior Design Studio Company <br />
-                                                The Courtyard, ​Al Quoz 1,​ Colorado, ​ USA
+                                                @Localizer.Get("Riyadh"), <br />
+                                                @Localizer.Get("Saudi Arabia")
                                             </p>
                                         </div>
-                                    </div>*@
+                                    </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
