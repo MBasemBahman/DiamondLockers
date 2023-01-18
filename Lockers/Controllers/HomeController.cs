@@ -40,11 +40,6 @@ namespace Lockers.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
         [HttpPost]
         public IActionResult Contact(ContactForm model)
         {
@@ -52,7 +47,7 @@ namespace Lockers.Controllers
             return Ok();
         }
 
-        [Route(nameof(Culture))]
+        [Route("{culture}")]
         public IActionResult Culture(string culture)
         {
             if (string.IsNullOrWhiteSpace(culture))
