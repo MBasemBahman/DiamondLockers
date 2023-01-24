@@ -154,7 +154,7 @@
     <value>الشقق السكنية</value>
   </data>
   <data name="AVAILABILITY" xml:space="preserve">
-    <value>الإتاحة</value>
+    <value>الخدمة</value>
   </data>
   <data name="Beige" xml:space="preserve">
     <value>بيج</value>
@@ -180,8 +180,8 @@
   <data name="Contact Us" xml:space="preserve">
     <value>إتصل بنا</value>
   </data>
-  <data name="Contact us today. Let us help you better manage your security, storage, and data." xml:space="preserve">
-    <value>اتصل بنا اليوم. لنساعدك فى تحسين إدارة أماناتك ومساحتك وبياناتك</value>
+  <data name="Contact us today. Let us help you better manage your security." xml:space="preserve">
+    <value>اتصل بنا اليوم. لنساعدك فى تحسين إدارة أماناتك.</value>
   </data>
   <data name="Copyright. All Rights Reserved" xml:space="preserve">
     <value>حقوق النشر. كل الحقوق محفوظة</value>
@@ -202,7 +202,7 @@
     <value>رمادي داكن</value>
   </data>
   <data name="Delivery to your location" xml:space="preserve">
-    <value>توصيل لمكانك</value>
+    <value>توصيل إلى موقعك</value>
   </data>
   <data name="Diamond Lockers" xml:space="preserve">
     <value>دايموند لوكرز</value>
@@ -250,16 +250,16 @@
     <value>الرئيسيه</value>
   </data>
   <data name="If anything (non-consumable) goes wrong, we will cover your loss" xml:space="preserve">
-    <value>اذا لم تنل مرادك, فنحن متكلفون بتعويضك</value>
+    <value>في حال حدوث خلل تصنيع, فنحن متكفلون بتعويضك</value>
   </data>
   <data name="Individuals" xml:space="preserve">
     <value>أفراد</value>
   </data>
   <data name="Installation" xml:space="preserve">
-    <value>تركيب</value>
+    <value>التركيب والتشغيل</value>
   </data>
   <data name="Integrated camera surveillance as needed" xml:space="preserve">
-    <value>كاميرات مراقبة متكاملة حسب الحاجة</value>
+    <value>كاميرات مراقبة متكاملة حسب الطلب</value>
   </data>
   <data name="Intelligent lockers are hygienic and clean" xml:space="preserve">
     <value>الخزائن الذكية صحية ونظيفة</value>
@@ -271,7 +271,7 @@
     <value>رمادي فاتح</value>
   </data>
   <data name="Maintenance" xml:space="preserve">
-    <value>صيانة</value>
+    <value>الصيانة</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>الرسالة</value>
@@ -297,11 +297,14 @@
   <data name="Our Office Location" xml:space="preserve">
     <value>المقر الرئيسي</value>
   </data>
-  <data name="Our Products" xml:space="preserve">
-    <value>منتجاتنا</value>
-  </data>
   <data name="Our team will be glad to support you with this decision" xml:space="preserve">
-    <value>سنكون سعداء بمساعدتك على اتخاذ قرار</value>
+    <value>سنكون سعداء بمساعدتك على اتخاذ القرار</value>
+  </data>
+  <data name="Parcel locker control unit" xml:space="preserve">
+    <value>وحدة تحكم في خزائن الطرود</value>
+  </data>
+  <data name="Parcel locker sets" xml:space="preserve">
+    <value>مجموعة لخزائن الطرود</value>
   </data>
   <data name="Parcel Lockers" xml:space="preserve">
     <value>خزائن الطرود</value>
@@ -309,17 +312,26 @@
   <data name="Parcel Pickup and Delivery" xml:space="preserve">
     <value>أماكن استلام الطرود</value>
   </data>
+  <data name="Parcel tower" xml:space="preserve">
+    <value>برج الطرود</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>التليفون</value>
   </data>
   <data name="Please complete the form!" xml:space="preserve">
     <value>يرجى ملء النموذج!</value>
   </data>
+  <data name="Products" xml:space="preserve">
+    <value>المنتجات</value>
+  </data>
   <data name="Recreation Centers" xml:space="preserve">
     <value>مراكز الترفية</value>
   </data>
   <data name="Red" xml:space="preserve">
     <value>أحمر</value>
+  </data>
+  <data name="Refrigerated locker" xml:space="preserve">
+    <value>الخزائن المبردة</value>
   </data>
   <data name="Rent" xml:space="preserve">
     <value>إيجار</value>
@@ -348,17 +360,20 @@
   <data name="Smart Lockers" xml:space="preserve">
     <value>الخزائن الذكية</value>
   </data>
+  <data name="Smart lockers, Smart storage, e lockers, storage alternatives, office storage solutions, what is a smart locker, face recognition locker, touchless lockers, digital locker, smart locker companies ,locker technology" xml:space="preserve">
+    <value>الخزائن الذكية, التخزين الذكي, خزائن الكترونية, بدائل للتخزين, حلول تخزين للمكتب, ما هي الخزنة الذكية؟, خزائن ببصمة الوجه, خزائن بدون لمس, الخزتة الرقمية, شركات الخزائن الذكية, تكنولوجيا الخزائن, نظام التخزين الذكي</value>
+  </data>
   <data name="Something wrong please try again!" xml:space="preserve">
     <value>خطأ ما الرجاء المحاولة مرة أخرى!</value>
   </data>
   <data name="Spare parts" xml:space="preserve">
-    <value>قطع غيار</value>
+    <value>توفير قطع الغيار</value>
   </data>
   <data name="Staff training" xml:space="preserve">
-    <value>تدريب الموظفين</value>
+    <value>التدريب على طريقة الإستخدام</value>
   </data>
-  <data name="Streamlined operations and better inventory control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia" xml:space="preserve">
-    <value>ما يجعل دايموند لوكرز الأولي في إدارة الخزائن الذكية في المملكة العربية السعودية هو انسيابية العمليات ومراقبة المخزون بشكل أفضل.</value>
+  <data name="Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia" xml:space="preserve">
+    <value>تعتبر الخزنة الذكية مساحة تخزين آمنة باستخدام تقنية مبتكرة لجعلك تدير خزتك بانسيابية وبشكل أوتوماتيكياً.  هل مازلت تستخدم الخزائن التقليدية المستهلكة للوقت؟ قد يكون حان الوقت لتحسين خزائنك لخزائن دايموند لوكرز.</value>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>ارسال</value>
@@ -370,7 +385,7 @@
     <value>نكون الاختيار الأول فى المملكة العربية السعودية لحلول الخزائن الذكية.</value>
   </data>
   <data name="To offer accessible, safe, and efficient state-of-the-art technology without compromising customer service." xml:space="preserve">
-    <value>تقدم خزائن تتميز بسهولة الاستخدام والأمان والتقنية التكنولوجية الحديثة بما يغني عن اللجوء إلي مساعدة خارجية.</value>
+    <value>نقدم خزائن تتميز بسهولة الاستخدام والأمان والتقنية التكنولوجية الحديثة.</value>
   </data>
   <data name="Turquoise" xml:space="preserve">
     <value>تركواز</value>
@@ -382,7 +397,7 @@
     <value>الجامعات</value>
   </data>
   <data name="Unneeded human presence" xml:space="preserve">
-    <value>لا حاجة لمساعدة خارجية</value>
+    <value>لا حاجة لوجود موظف إضافي</value>
   </data>
   <data name="Vision" xml:space="preserve">
     <value>رؤيتنا</value>

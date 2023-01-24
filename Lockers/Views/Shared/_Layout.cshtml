@@ -8,8 +8,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Smart lockers,Smart storage,e lockers,storage alternatives,office storage solutions,face recognition locker,touchless lockers,digital locker,smart locker companies,locker technology,intelligent storage system,contactless storage,smart self storage,what is a smart locker,how to increase storage security" />
-    <meta name="description" content="An intelligent locker is a secure storage space that uses innovative technology to automate and streamline your locker management. Still using time-consuming traditional lockers? Maybe it’s time to upgrade to Diamond Lockers." />
+   
+    <meta name="keywords" content="@Localizer.Get("Smart lockers, Smart storage, e lockers, storage alternatives, office storage solutions, what is a smart locker, face recognition locker, touchless lockers, digital locker, smart locker companies ,locker technology")" />
+    <meta name="description" content="@Localizer.Get("Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia")" />
+    
     <title>@ViewData["Title"] - @Localizer.Get("Diamond Lockers")</title>
     <link rel="icon" type="image/x-icon" href="~/assets/images/fav.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,7 +83,7 @@
                                 <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="services">@Localizer.Get("Services")</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">@Localizer.Get("Our Products")</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">@Localizer.Get("Products")</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link @(active == "About"? "active": "" )" asp-action="Index" asp-controller="Home" asp-fragment="about">@Localizer.Get("About Us")</a>

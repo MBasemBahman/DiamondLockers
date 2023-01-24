@@ -279,12 +279,6 @@
 
                                             </div>
                                             <div id="products" class="col-lg-4 col-md-4 col-6">
-                                                <div class="type">
-                                                    <div class="type-icon">
-                                                        <i class="fa-solid fa-boxes-stacked"></i>
-                                                    </div>
-                                                    <span> @Localizer.Get("Parcel Pickup and Delivery")</span>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -303,7 +297,7 @@
     </div>
 </div>
 <div  class="gallery text-center">
-    <h2>@Localizer.Get("Our Products")</h2>
+    <h2>@Localizer.Get("Products")</h2>
     <div class="container mt-30">
         <div class="row">
             <h6 class="mb-30">@Localizer.Get("Filter by category")</h6>
@@ -589,7 +583,7 @@
                     <div class="circle-des">
                         <h2>@Localizer.Get("About Us")</h2>
                         <p>
-                            @Localizer.Get("Streamlined operations and better inventory control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia")
+                            @Localizer.Get("Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia")
                         </p>
                         <div class="cus__btn"><a asp-action="about" asp-controller="Home"> @Localizer.Get("learn More")</a></div>
                     </div>
@@ -616,11 +610,6 @@
                         <h2>@Localizer.Get("Vision")</h2>
                         <p>
                             @Localizer.Get("To be Saudi Arabia's number-one choice for innovation in intelligent storage locker solutions.")
-                            @if (Localizer.Get("CultureState") == "ar")
-                            {
-                                <br />
-                                <br />
-                            }
                         </p>
                     </div>
                 </div>
