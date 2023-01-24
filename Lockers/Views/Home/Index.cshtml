@@ -302,44 +302,17 @@
         </div>
     </div>
 </div>
-<div class="gallery text-center">
-    <h2 class="text-decoration-underline">@Localizer.Get("Parcel Lockers")</h2>
-    <div class="photo__gallery ">
-        <div class="card-item mix  ">
-            <a href="~/assets/images/products/Parcel2.jpg" class="photo__item d-block w-100">
-                <img src="~/assets/images/products/Parcel2.jpg" alt="@Localizer.Get("Parcel locker sets")" class="img-fluid " />
-                <div class="des">
-                    <h4 class="text-black">@Localizer.Get("Parcel locker sets")</h4>
-                </div>
-            </a>
-        </div>
-        <div class="card-item mix ">
-            <a href="~/assets/images/products/Parcel3.jpg" class="photo__item d-block w-100">
-                <img src="~/assets/images/products/Parcel3.jpg" alt="@Localizer.Get("Parcel locker control unit")" class="img-fluid" />
-                <div class="des">
-                    <h4 class="text-black">@Localizer.Get("Parcel locker control unit")</h4>
-                </div>
-            </a>
-        </div>
-        <div class="card-item mix ">
-            <a href="~/assets/images/products/Parcel6.jpg" class="photo__item d-block w-100">
-                <img src="~/assets/images/products/Parcel6.jpg" alt="@Localizer.Get("Parcel tower")" class="img-fluid" />
-                <div class="des">
-                    <h4 class="text-black">@Localizer.Get("Parcel tower")</h4>
-                </div>
-            </a>
-        </div>
-        <div class="card-item mix ">
-            <a href="~/assets/images/products/Refrigerator3.jpg" class="photo__item d-block w-100">
-                <img src="~/assets/images/products/Refrigerator3.jpg" alt="@Localizer.Get("Refrigerated locker")" class="img-fluid" />
-                <div class="des">
-                    <h4 class="text-black">@Localizer.Get("Refrigerated locker")</h4>
-                </div>
-            </a>
-        </div>
-    </div>
-    <h2 class="text-decoration-underline">@Localizer.Get("Smart Lockers")</h2>
+<div  class="gallery text-center">
+    <h2>@Localizer.Get("Our Products")</h2>
     <div class="container mt-30">
+        <div class="row">
+            <h6 class="mb-30">@Localizer.Get("Filter by category")</h6>
+            <div class="controls">
+                <button type="button" class="control" data-filter="all">@Localizer.Get("All")</button>
+                <button type="button" class="control" data-filter=".smart">@Localizer.Get("Smart Lockers")</button>
+                <button type="button" class="control" data-filter=".parcel">@Localizer.Get("Parcel Lockers")</button>
+            </div>
+        </div>
         <div class="row  mt-40">
             <h6 class="mb-30">@Localizer.Get("Filter by size")</h6>
             <div class="controls">
@@ -366,11 +339,43 @@
             </div>
         </div>
         <div class="filterContainer photo__gallery ">
+            <div class="card-item mix parcel effect7">
+                <a href="~/assets/images/products/Parcel2.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel2.jpg" alt="@Localizer.Get("Parcel locker sets")" class="img-fluid " />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel locker sets")</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item mix parcel">
+                <a href="~/assets/images/products/Parcel3.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel3.jpg" alt="@Localizer.Get("Parcel locker control unit")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel locker control unit")</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item mix parcel">
+                <a href="~/assets/images/products/Parcel6.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Parcel6.jpg" alt="@Localizer.Get("Parcel tower")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Parcel tower")</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item mix parcel">
+                <a href="~/assets/images/products/Refrigerator3.jpg" class="photo__item d-block w-100">
+                    <img src="~/assets/images/products/Refrigerator3.jpg" alt="@Localizer.Get("Refrigerated locker")" class="img-fluid" />
+                    <div class="des">
+                        <h2>@Localizer.Get("Refrigerated locker")</h2>
+                    </div>
+                </a>
+            </div>
             <div class="card-item mix smart blue size-6">
                 <a href="~/assets/images/products/Size 6/Bar Code_Blue.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 6/Bar Code_Blue.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -378,7 +383,7 @@
                 <a href="~/assets/images/products/Size 6/Bar code_Light Green.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 6/Bar code_Light Green.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -386,7 +391,7 @@
                 <a href="~/assets/images/products/Size 6/Facial_White.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 6/Facial_White.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4 class="text-black">@Localizer.Get("Facial Recognition")</h4>
+                        <h2>@Localizer.Get("Facial Recognition")</h2>
                     </div>
                 </a>
             </div>
@@ -394,7 +399,7 @@
                 <a href="~/assets/images/products/Size 6/Fingerprint_Red.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 6/Fingerprint_Red.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -402,7 +407,7 @@
                 <a href="~/assets/images/products/Size 6/RFID_Yellow.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 6/RFID_Yellow.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -411,7 +416,7 @@
                 <a href="~/assets/images/products/Size 12/Bar Code_Blue.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Bar Code_Blue.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -419,7 +424,7 @@
                 <a href="~/assets/images/products/Size 12/Bar code_Light Green.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Bar code_Light Green.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -427,7 +432,7 @@
                 <a href="~/assets/images/products/Size 12/Facial_White.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Facial_White.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4 class="text-black">@Localizer.Get("Facial Recognition")</h4>
+                        <h2>@Localizer.Get("Facial Recognition")</h2>
                     </div>
                 </a>
             </div>
@@ -435,7 +440,7 @@
                 <a href="~/assets/images/products/Size 12/Fingerprint_Orange.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Fingerprint_Orange.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -443,7 +448,7 @@
                 <a href="~/assets/images/products/Size 12/Fingerprint_Red.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Fingerprint_Red.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -451,7 +456,7 @@
                 <a href="~/assets/images/products/Size 12/Passpord_Brown.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Passpord_Brown.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -459,7 +464,7 @@
                 <a href="~/assets/images/products/Size 12/Passpord_Cyan.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Passpord_Cyan.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -467,7 +472,7 @@
                 <a href="~/assets/images/products/Size 12/RFID_Green.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/RFID_Green.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -475,7 +480,7 @@
                 <a href="~/assets/images/products/Size 12/RFID_Sky Blue.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/RFID_Sky Blue.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -483,7 +488,7 @@
                 <a href="~/assets/images/products/Size 12/RFID_Yellow.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/RFID_Yellow.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -491,7 +496,7 @@
                 <a href="~/assets/images/products/Size 12/Size 12.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Size 12.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -499,7 +504,7 @@
                 <a href="~/assets/images/products/Size 12/Wechat code_Brown.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/Wechat code_Brown.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -507,7 +512,7 @@
                 <a href="~/assets/images/products/Size 12/12.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 12/12.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -516,7 +521,7 @@
                 <a href="~/assets/images/products/Size 24/24 doors fingerprint.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 24/24 doors fingerprint.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -524,7 +529,7 @@
                 <a href="~/assets/images/products/Size 24/24 Doors password.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 24/24 Doors password.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -532,7 +537,7 @@
                 <a href="~/assets/images/products/Size 24/size 24.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 24/size 24.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -541,7 +546,7 @@
                 <a href="~/assets/images/products/Size 36/36 size.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 36/36 size.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -549,7 +554,7 @@
                 <a href="~/assets/images/products/Size 36/36.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 36/36.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -558,7 +563,7 @@
                 <a href="~/assets/images/products/Size 48/IMG_8920.png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 48/IMG_8920.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
@@ -567,7 +572,7 @@
                 <a href="~/assets/images/products/Size 48/48 doors coin (1).png" class="photo__item d-block w-100">
                     <img src="~/assets/images/products/Size 48/48 doors coin (1).png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid " />
                     <div class="des">
-                        <h4>@Localizer.Get("")</h4>
+                        <h2>@Localizer.Get("")</h2>
                     </div>
                 </a>
             </div>
