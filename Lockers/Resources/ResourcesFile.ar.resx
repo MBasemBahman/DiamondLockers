@@ -180,6 +180,9 @@
   <data name="Contact Us" xml:space="preserve">
     <value>إتصل بنا</value>
   </data>
+  <data name="Contact us today. Let us help you better manage your security, storage, and data." xml:space="preserve">
+    <value>اتصل بنا اليوم. لنساعدك فى تحسين إدارة أماناتك.</value>
+  </data>
   <data name="Contact us today. Let us help you better manage your security." xml:space="preserve">
     <value>اتصل بنا اليوم. لنساعدك فى تحسين إدارة أماناتك.</value>
   </data>

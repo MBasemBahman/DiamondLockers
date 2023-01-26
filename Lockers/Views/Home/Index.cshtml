@@ -296,7 +296,7 @@
         </div>
     </div>
 </div>
-<div  class="gallery text-center">
+<div class="gallery text-center">
     <h2>@Localizer.Get("Products")</h2>
     <div class="container mt-30">
         <div class="row">
@@ -582,9 +582,18 @@
                     <img src="~/assets/images/about-circle-photo.jpg" alt="" class="img-fluid" />
                     <div class="circle-des">
                         <h2>@Localizer.Get("About Us")</h2>
-                        <p>
-                            @Localizer.Get("Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia")
-                        </p>
+                        @if (Localizer.Get("CultureState") == "ar")
+                        {
+                            <p>
+                                إنسيابية العمليات والتحكم في الاستخدام هو ما يجعل دايموند لوكرز الأولي في إدارة الخزائن الذكية في المملكة العربية السعودية.
+                            </p>
+                        }
+                        else
+                        {
+                            <p>
+                                Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia.
+                            </p>
+                        }
                         <div class="cus__btn"><a asp-action="about" asp-controller="Home"> @Localizer.Get("learn More")</a></div>
                     </div>
                 </div>
