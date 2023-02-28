@@ -18,10 +18,10 @@ namespace Lockers.Controllers
 
         public IActionResult Index()
         {
-            if (_expire < DateTime.Now.Date)
-            {
-                return NotFound();
-            }
+            //if (_expire < DateTime.Now.Date)
+            //{
+            //    return NotFound();
+            //}
 
             ViewBag.Active = "Home";
 
