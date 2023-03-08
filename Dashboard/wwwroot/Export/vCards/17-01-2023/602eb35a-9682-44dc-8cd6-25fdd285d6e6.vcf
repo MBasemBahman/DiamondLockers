@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:عبدالرحمن اسامة
+N:اسامة;عبدالرحمن;;;jr.
+TITLE:Facility Manager
+ORG:Multi Aspects
+BDAY;VALUE=DATE:1972-01-03
+X-ANNIVERSARY:2001-06-15
+TEL;TYPE=CELL:876-54321
+TEL;TYPE=WORK:123-45678
+EMAIL;TYPE=INTERNET,PREF:john.doe@internet.com
+X-SPOUSE:عبدالرحمن اسامة
+END:VCARD

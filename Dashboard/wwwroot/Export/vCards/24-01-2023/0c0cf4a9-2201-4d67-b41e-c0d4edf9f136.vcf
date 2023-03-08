@@ -1,0 +1,20 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Abdelrahman Osama
+N:Osama;Abdelrahman;;this is prefix;
+NICKNAME:Abdo
+ORG:this is department;this is office;Software Engineer
+ADR;TYPE=HOME,DOM,INTL,POSTAL,PARCEL:;;Home State;home country;Home City;Ho
+ me Street;this is company
+LABEL;TYPE=HOME,DOM,INTL,POSTAL,PARCEL:Home State\nHome Street home country
+ADR;TYPE=WORK,DOM,INTL,POSTAL,PARCEL:;;Work State;Work Country;Work City;Wo
+ rk Street;23564
+LABEL;TYPE=WORK,DOM,INTL,POSTAL,PARCEL:Work State\nWork Street Work Country
+TEL;TYPE=FAX:101111111111
+TEL;TYPE=CELL:20222222222
+TEL;TYPE=WORK:303333333333
+EMAIL;TYPE=INTERNET,PREF:test@test.com
+EMAIL;TYPE=INTERNET:aa@aa.aa
+URL:Work Postal Code
+NOTE:this is comment
+END:VCARD

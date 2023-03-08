@@ -1,0 +1,23 @@
+BEGIN:VCARD
+VERSION:3.0
+REV:2023-02-28T22:00:00Z
+FN:Mark Zuckerburg
+N:Zuckerburg;Mark;;/;@
+NICKNAME:Markos
+TITLE:Software Engineering
+ORG:AQHA Servers;Business Development;Washington
+BDAY;VALUE=DATE:1997-12-31
+X-ANNIVERSARY:2023-02-01
+ADR;TYPE=HOME,DOM,INTL,POSTAL,PARCEL:;;Alias Street;Washington;Las Vegas;32
+ 511;USA
+LABEL;TYPE=HOME,DOM,INTL,POSTAL,PARCEL:Alias Street\n32511 Washington
+ADR;TYPE=WORK,DOM,INTL,POSTAL,PARCEL:;;Osaka Street;Washington;Las Vegas;32
+ 513;Japan
+LABEL;TYPE=WORK,DOM,INTL,POSTAL,PARCEL:Osaka Street\n32513 Washington
+TEL;TYPE=FAX:+98733121564
+TEL;TYPE=CELL:+98754446523
+TEL;TYPE=WORK:+95461230.3
+EMAIL;TYPE=INTERNET,PREF:mark_zucherburg@gmail.com
+URL:www.markzuckerburg.org
+X-SPOUSE:Mark Ashraf
+END:VCARD

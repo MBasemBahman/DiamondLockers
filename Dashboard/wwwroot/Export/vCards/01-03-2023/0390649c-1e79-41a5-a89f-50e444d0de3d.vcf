@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Cristiano Ronaldo
+N:Ronaldo;Cristiano;;CR7;
+NICKNAME:Ronaldo
+TITLE:Football Player
+ORG:Barcelona;Defender;Real Madrid
+BDAY;VALUE=DATE:1995-06-06
+TEL;TYPE=FAX:+956452312
+TEL;TYPE=CELL:+76543242
+TEL;TYPE=WORK:+9345654
+EMAIL;TYPE=INTERNET,PREF:ronaldo_don@gmail.com
+URL:www.cristianoronaldo.com
+END:VCARD

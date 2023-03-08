@@ -1,0 +1,25 @@
+BEGIN:VCARD
+VERSION:3.0
+REV:2023-01-22T18:35:02Z
+FN:Abdelrahman Osama
+N:Osama;Abdelrahman;;prefix;suffix
+NICKNAME:nickname
+TITLE:jobtitle
+ORG:company;Department;Office
+ADR;TYPE=HOME,DOM,INTL,POSTAL,PARCEL:;;HomeStreet;HomeCity;HomeState;HomePo
+ stalCode;HomeCountry
+LABEL;TYPE=HOME,DOM,INTL,POSTAL,PARCEL:HomeStreet\nHomePostalCode HomeCity
+ADR;TYPE=WORK,DOM,INTL,POSTAL,PARCEL:;;WorkStreet;WorkCity;WorkState;WorkPo
+ stalCode;WorkCountry
+LABEL;TYPE=WORK,DOM,INTL,POSTAL,PARCEL:WorkStreet\nWorkPostalCode WorkCity
+TEL;TYPE=FAX:PhoneNumberFax
+TEL;TYPE=CELL:PhoneNumberMobile
+TEL;TYPE=WORK:PhoneNumberWork
+EMAIL;TYPE=INTERNET,PREF:EmailAddresses
+EMAIL;TYPE=INTERNET:test@test.com
+URL:webPagePersonal
+IMPP;TYPE=PREF:InstantMessengerHandles
+IMPP:dasdsa
+X-SPOUSE:spouse
+NOTE:Comment
+END:VCARD

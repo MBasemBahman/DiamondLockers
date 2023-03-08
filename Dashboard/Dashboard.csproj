@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <TreatAsUsed>true</TreatAsUsed>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
+    <ProjectReference Include="..\CoreServices\CoreServices.csproj" />
+    <ProjectReference Include="..\DevelopmentDAL\DevelopmentDAL.csproj" />
+    <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\TenantConfiguration\TenantConfiguration.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Export\vCards\" />
+    <Folder Include="wwwroot\Upload\ExportExcel\AccountCards" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\AccountCardBadgesRepeater.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\Filter.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\ImportAccountCards.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\AccountCard\PhoneNumbersRepeater.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\Account\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\Account\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\Account\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\Account\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\Account\Profile.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\AccountEntity\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CardTemplateEntity\Views\CardTemplate\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CardTemplateEntity\Views\CardTemplate\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CardTemplateEntity\Views\CardTemplate\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CardTemplateEntity\Views\CardTemplate\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CardTemplateEntity\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\BadgeEntity\Views\Badge\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\BadgeEntity\Views\Badge\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\BadgeEntity\Views\Badge\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\BadgeEntity\Views\Badge\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\BadgeEntity\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\Company\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\Company\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\Company\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\Company\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\Company\Profile.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\Dashboard\Views\Home\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\CreateOrEdit.cshtml" />
+    <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\Delete.cshtml" />
+    <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\Details.cshtml" />
+    <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\Index.cshtml" />
+  </ItemGroup>
+
+</Project>
