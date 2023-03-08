@@ -83,6 +83,30 @@
                                                 <span asp-validation-for="Order" class="text-danger"></span>
                                             </div>
                                         </div>
+                                        
+                                        <div class="col-md-12 col-12">
+                                            <div class="mb-1">
+                                                <label class="form-label">@Localizer.Get("Categories")</label>
+                                                <select class="form-control select2" asp-for="Fk_Categories" asp-items="@(new MultiSelectList(ViewData["Categories"] as Dictionary<string, string>, "Key", "Value"))"></select>
+                                                <span asp-validation-for="Fk_Categories" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12 col-12">
+                                            <div class="mb-1">
+                                                <label class="form-label">@Localizer.Get("Sizes")</label>
+                                                <select class="form-control select2" asp-for="Fk_Sizes" asp-items="@(new MultiSelectList(ViewData["Sizes"] as Dictionary<string, string>, "Key", "Value"))"></select>
+                                                <span asp-validation-for="Fk_Sizes" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12 col-12">
+                                            <div class="mb-1">
+                                                <label class="form-label">@Localizer.Get("Colors")</label>
+                                                <select class="form-control select2" asp-for="Fk_Colors" asp-items="@(new MultiSelectList(ViewData["Colors"] as Dictionary<string, string>, "Key", "Value"))"></select>
+                                                <span asp-validation-for="Fk_Colors" class="text-danger"></span>
+                                            </div>
+                                        </div>
 
                                         <hr/>
                                         <div class="col-12">

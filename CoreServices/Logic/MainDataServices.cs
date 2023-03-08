@@ -115,6 +115,11 @@ namespace CoreServices.Logic
         {
             return await _repository.Size.FindById(id, trackChanges);
         }
+        
+        public Dictionary<string, string> GetSizesLookUp(SizeParameters parameters, bool otherLang)
+        {
+            return GetSizes(parameters, otherLang).ToDictionary(a => a.Id.ToString(), a => a.Name);
+        }
 
         public SizeModel GetSizeById(int id, bool otherLang)
         {
@@ -173,6 +178,11 @@ namespace CoreServices.Logic
         public async Task<Color> FindColorById(int id, bool trackChanges)
         {
             return await _repository.Color.FindById(id, trackChanges);
+        }
+        
+        public Dictionary<string, string> GetColorsLookUp(ColorParameters parameters, bool otherLang)
+        {
+            return GetColors(parameters, otherLang).ToDictionary(a => a.Id.ToString(), a => a.Name);
         }
 
         public ColorModel GetColorById(int id, bool otherLang)

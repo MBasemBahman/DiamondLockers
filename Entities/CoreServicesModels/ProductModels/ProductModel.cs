@@ -37,6 +37,15 @@
         public string ImageUrl { get; set; }
         
         public ProductLangModel ProductLang { get; set; }
+
+        [DisplayName(nameof(Fk_Categories))]
+        public List<int> Fk_Categories { get; set; }
+        
+        [DisplayName(nameof(Fk_Colors))]
+        public List<int> Fk_Colors { get; set; }
+        
+        [DisplayName(nameof(Fk_Sizes))]
+        public List<int> Fk_Sizes { get; set; }
     }
 
     public class ProductLangModel

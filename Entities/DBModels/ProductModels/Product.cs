@@ -16,6 +16,15 @@ namespace Entities.DBModels.ProductModels
         [DisplayName(nameof(ImageUrl))]
         public string ImageUrl { get; set; }
 
+        [DisplayName(nameof(ProductCategories))]
+        public List<ProductCategory> ProductCategories { get; set; }
+        
+        [DisplayName(nameof(ProductSizes))]
+        public List<ProductSize> ProductSizes { get; set; }
+        
+        [DisplayName(nameof(ProductColors))]
+        public List<ProductColor> ProductColors { get; set; }
+        
         public ProductLang ProductLang { get; set; }
     }
 

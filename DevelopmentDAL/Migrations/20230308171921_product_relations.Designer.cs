@@ -4,6 +4,7 @@ using DevelopmentDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevelopmentDAL.Migrations
 {
     [DbContext(typeof(DevelopmentContext))]
-    partial class DevelopmentContextModelSnapshot : ModelSnapshot
+    [Migration("20230308171921_product_relations")]
+    partial class productrelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1046,6 +1049,9 @@ namespace DevelopmentDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ColorCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -1069,11 +1075,18 @@ namespace DevelopmentDAL.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Fk_Category");
 
                     b.HasIndex("Fk_Product");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("ProductCategory");
                 });
@@ -1085,6 +1098,9 @@ namespace DevelopmentDAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ColorCode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -1109,11 +1125,18 @@ namespace DevelopmentDAL.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Fk_Color");
 
                     b.HasIndex("Fk_Product");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("ProductColor");
                 });
@@ -1154,6 +1177,9 @@ namespace DevelopmentDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ColorCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -1177,11 +1203,18 @@ namespace DevelopmentDAL.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Fk_Product");
 
                     b.HasIndex("Fk_Size");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("ProductSize");
                 });
@@ -1337,7 +1370,7 @@ namespace DevelopmentDAL.Migrations
                             EmailAddress = "user@mail.com",
                             LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Developer",
-                            Password = "$2a$11$Wj9b6vzk.1EE9C0sSMuW/OmwtKdhvrbcjadfgKWvw1h4QZ8uwOGh.",
+                            Password = "$2a$11$8TDryqk.6IyOmlIfo3rPJOKMajJ8emQXSYA6S/CmXo2B800xRrnlq",
                             UserName = "Developer"
                         });
                 });

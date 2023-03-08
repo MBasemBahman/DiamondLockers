@@ -42,6 +42,9 @@ namespace Repository
         #region Product Models
 
         private ProductRepository _productRepository;
+        private ProductCategoryRepository _productCategoryRepository;
+        private ProductSizeRepository _productSizeRepository;
+        private ProductColorRepository _productColorRepository;
 
         #endregion
         
@@ -214,6 +217,33 @@ namespace Repository
             {
                 _productRepository ??= new ProductRepository(_dBContext);
                 return _productRepository;
+            }
+        }
+        
+        public ProductCategoryRepository ProductCategory
+        {
+            get
+            {
+                _productCategoryRepository ??= new ProductCategoryRepository(_dBContext);
+                return _productCategoryRepository;
+            }
+        }
+        
+        public ProductSizeRepository ProductSize
+        {
+            get
+            {
+                _productSizeRepository ??= new ProductSizeRepository(_dBContext);
+                return _productSizeRepository;
+            }
+        }
+        
+        public ProductColorRepository ProductColor
+        {
+            get
+            {
+                _productColorRepository ??= new ProductColorRepository(_dBContext);
+                return _productColorRepository;
             }
         }
 

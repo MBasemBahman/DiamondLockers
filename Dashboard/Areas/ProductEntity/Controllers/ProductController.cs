@@ -89,6 +89,24 @@ namespace Dashboard.Areas.ProductEntity.Controllers
                 model = _mapper.Map<ProductCreateOrEditModel>(countryDB);
                 
                 model.ImageUrl = countryDB.StorageUrl + countryDB.ImageUrl;
+                
+                model.Fk_Categories = 
+                    _unitOfWork.Product.GetProductCategories(new ProductCategoryParameters
+                    {
+                        Fk_Product = id
+                    }, otherLang: false).Select(a => a.Fk_Category).ToList();
+                
+                model.Fk_Sizes = 
+                    _unitOfWork.Product.GetProductSizes(new ProductSizeParameters
+                    {
+                        Fk_Product = id
+                    }, otherLang: false).Select(a => a.Fk_Size).ToList();
+                
+                model.Fk_Colors = 
+                    _unitOfWork.Product.GetProductColors(new ProductColorParameters
+                    {
+                        Fk_Product = id
+                    }, otherLang: false).Select(a => a.Fk_Color).ToList();
             }
 
             SetViewData(id);
@@ -140,6 +158,15 @@ namespace Dashboard.Areas.ProductEntity.Controllers
 
                 await _unitOfWork.Save();
 
+                if (id > 0)
+                {
+                    await _unitOfWork.Product.UpdateProductCategories(dataDB.Id, model.Fk_Categories);
+                    await _unitOfWork.Product.UpdateProductColors(dataDB.Id, model.Fk_Colors);
+                    await _unitOfWork.Product.UpdateProductSizes(dataDB.Id, model.Fk_Sizes);
+                }
+
+                await _unitOfWork.Save();
+
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -171,7 +198,12 @@ namespace Dashboard.Areas.ProductEntity.Controllers
         //helper method
         private void SetViewData(int id)
         {
+            bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+            
             ViewData["id"] = id;
+            ViewData["Categories"] = _unitOfWork.MainData.GetCategoriesLookUp(new CategoryParameters(), otherLang);
+            ViewData["Sizes"] = _unitOfWork.MainData.GetSizesLookUp(new SizeParameters(), otherLang);
+            ViewData["Colors"] = _unitOfWork.MainData.GetColorsLookUp(new ColorParameters(), otherLang);
         }
 
     }
