@@ -1,3 +1,4 @@
+using Entities.AuthenticationModels;
 using Entities.DBModels.AccountModels;
 using Entities.DBModels.AuditModels;
 using Entities.DBModels.ContactFormModels;
@@ -18,8 +19,10 @@ namespace BaseDB
 {
     public class BaseContext : DbContext
     {
-        public BaseContext(DbContextOptions options) : base(options)
+        private readonly UserAuthenticatedDto _user;
+        public BaseContext(DbContextOptions options, UserAuthenticatedDto user) : base(options)
         {
+            _user = user;
         }
 
         #region LogModels
@@ -145,11 +148,14 @@ namespace BaseDB
                     {
                         case EntityState.Modified:
                             audittrackable.LastModifiedAt = utcNow;
+                            audittrackable.LastModifiedBy = _user?.Name;
                             entry.Property(nameof(AuditEntity.CreatedAt)).IsModified = false;
                             break;
 
                         case EntityState.Added:
                             audittrackable.CreatedAt = utcNow;
+                            audittrackable.CreatedBy = _user?.Name;
+                            audittrackable.LastModifiedBy = _user?.Name;
                             audittrackable.LastModifiedAt = utcNow;
                             break;
                     }

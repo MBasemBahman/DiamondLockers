@@ -1,4 +1,5 @@
 ﻿using BaseDB;
+using Entities.AuthenticationModels;
 using Microsoft.EntityFrameworkCore;
 using ModelBuilderConfig.Configurations.DashboardAdministrationModels;
 using TenantConfiguration;
@@ -8,7 +9,7 @@ namespace DevelopmentDAL
 {
     public class DevelopmentContext : BaseContext
     {
-        public DevelopmentContext(DbContextOptions options) : base(options)
+        public DevelopmentContext(DbContextOptions options, UserAuthenticatedDto user) : base(options, user)
         {
         }
 

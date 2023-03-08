@@ -41,6 +41,17 @@ namespace Dashboard.Extensions
             if (config.Tenant == TenantEnvironments.Development)
             {
                 _ = services.AddDbContext<BaseContext, DevelopmentContext>(options => options.UseSqlServer(configuration.GetConnectionString("sqlConnection")));
+            
+                _ = services.AddScoped(_ =>
+                {
+                    var httpContext = new HttpContextAccessor().HttpContext;
+
+                    return new UserAuthenticatedDto
+                    {
+                        Name = httpContext?.Request.Cookies[ViewDataConstants.AccountName] ?? "",
+                        EmailAddress = httpContext?.Request.Cookies[ViewDataConstants.AccountEmail] ?? "",
+                    };
+                });
             }
 
         }
