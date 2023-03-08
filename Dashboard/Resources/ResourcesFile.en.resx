@@ -906,4 +906,7 @@
   <data name="Products" xml:space="preserve">
     <value>Products</value>
   </data>
+  <data name="ContactForms" xml:space="preserve">
+    <value>Contact Forms</value>
+  </data>
 </root>

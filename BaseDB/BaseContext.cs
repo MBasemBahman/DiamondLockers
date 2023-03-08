@@ -1,5 +1,6 @@
 using Entities.DBModels.AccountModels;
 using Entities.DBModels.AuditModels;
+using Entities.DBModels.ContactFormModels;
 using Entities.DBModels.DashboardAdministrationModels;
 using Entities.DBModels.LogModels;
 using Entities.DBModels.MainDataModels;
@@ -59,6 +60,12 @@ namespace BaseDB
         #region Product Models
 
         public DbSet<Product> Products { get; set; }
+
+        #endregion
+        
+        #region ContactForm Models
+
+        public DbSet<ContactForm> ContactForms { get; set; }
 
         #endregion
 

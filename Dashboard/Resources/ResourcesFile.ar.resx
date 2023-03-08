@@ -933,4 +933,7 @@
   <data name="Products" xml:space="preserve">
     <value>المنتجات</value>
   </data>
+  <data name="ContactForms" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
 </root>

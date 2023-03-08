@@ -1,4 +1,5 @@
 ﻿using Repository.DBModels.AuditModels;
+using Repository.DBModels.ContactFormModels;
 using Repository.DBModels.DashboardAdministrationModels;
 using Repository.DBModels.LogModels;
 using Repository.DBModels.MainDataModels;
@@ -45,6 +46,12 @@ namespace Repository
         private ProductCategoryRepository _productCategoryRepository;
         private ProductSizeRepository _productSizeRepository;
         private ProductColorRepository _productColorRepository;
+
+        #endregion
+
+        #region ContactForm Models
+
+        private ContactFormRepository _contactFormRepository;
 
         #endregion
         
@@ -248,7 +255,19 @@ namespace Repository
         }
 
         #endregion
-        
+
+        #region ContactForm Models
+
+        public ContactFormRepository ContactForm
+        {
+            get
+            {
+                _contactFormRepository ??= new ContactFormRepository(_dBContext);
+                return _contactFormRepository;
+            }
+        }
+
+        #endregion
         #endregion
     }
 }

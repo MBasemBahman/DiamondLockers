@@ -15,10 +15,13 @@ using Entities.CoreServicesModels.AuditModels;
 using Entities.DBModels.DashboardAdministrationModels;
 #endregion
 
+using Dashboard.Areas.ContactFormEntity.Models;
 using Dashboard.Areas.MainDataEntity.Models;
 using Dashboard.Areas.ProductEntity.Models;
+using Entities.CoreServicesModels.ContactFormModels;
 using Entities.CoreServicesModels.MainDataModels;
 using Entities.CoreServicesModels.ProductModels;
+using Entities.DBModels.ContactFormModels;
 using Entities.DBModels.MainDataModels;
 using Entities.DBModels.ProductModels;
 using Entities.RequestFeatures;
@@ -204,6 +207,18 @@ namespace Dashboard.MappingProfileCls
             
             _ = CreateMap<ProductLangModel, ProductLang>();
             #endregion
+
+            #endregion
+
+            #region ContactForm Model
+
+            _ = CreateMap<ContactForm, ContactFormCreateOrEditModel>();
+
+            _ = CreateMap<ContactFormCreateOrEditModel, ContactForm>();
+            
+            _ = CreateMap<ContactFormModel, ContactFormDto>();
+            
+            _ = CreateMap<ContactFormFilter, ContactFormParameters>();
 
             #endregion
             

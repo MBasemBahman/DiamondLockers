@@ -12,8 +12,6 @@
         public enum DashboardAdministrationRoleEnum
         {
             Developer = 1,
-            Owner = 3,
-            Employee = 6
         }
 
         public enum DashboardViewEnum
@@ -32,36 +30,8 @@
             Category = 12,
             Size = 13,
             Color = 14,
-            Product = 15
-        }
-
-        public enum AccountProfileItems
-        {
-            Details = 1,
-            AccountCard = 2
-        }
-        public enum CompanyProfileItems
-        {
-            Details = 1,
-            Account = 2
-        }
-
-        public enum AccountReturnPage
-        {
-            Index = 1,
-            Profile = 2
-        }
-
-        public enum Gender
-        {
-            Male = 1,
-            Female = 2
-        }
-        
-        public enum CardTypeEnum
-        {
-            Work = 1,
-            Personal = 2
+            Product = 15,
+            ContactForm = 16,
         }
     }
 }

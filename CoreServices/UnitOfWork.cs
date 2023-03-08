@@ -13,6 +13,7 @@ namespace CoreServices
         private AuditServices _auditServices;
         private MainDataServices _mainDataServices;
         private ProductServices _productServices;
+        private ContactFormServices _contactFormServices;
 
         public UnitOfWork(RepositoryManager repository, IConfiguration config)
         {
@@ -75,6 +76,15 @@ namespace CoreServices
             {
                 _productServices ??= new ProductServices(_repository);
                 return _productServices;
+            }
+        }
+        
+        public ContactFormServices ContactForm
+        {
+            get
+            {
+                _contactFormServices ??= new ContactFormServices(_repository);
+                return _contactFormServices;
             }
         }
         

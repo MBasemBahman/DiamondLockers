@@ -84,12 +84,28 @@
                     @(active == DashboardViewEnum.DashboardAdministrator.ToString() ? "active" : "")
                     @(active == DashboardViewEnum.DashboardAccessLevel.ToString() ? "active" : "")
                     @(active == DashboardViewEnum.DashboardView.ToString() ? "active" : "")
-                    @(active == DashboardViewEnum.DashboardAdministrationRole.ToString() ? "active" : "")" data-menu="dropdown">
+                    @(active == DashboardViewEnum.DashboardAdministrationRole.ToString() ? "active" : "")
+                    @(active == DashboardViewEnum.ContactForm.ToString() ? "active" : "")" data-menu="dropdown">
                     <a class="dropdown-toggle nav-link d-flex align-items-center" href="#" data-bs-toggle="dropdown">
                         <i data-feather="package"></i><span data-i18n="@Localizer.Get("DashboardAdministration")">@Localizer.Get("DashboardAdministration")</span>
                     </a>
                     <ul class="dropdown-menu" data-bs-popper="none">
 
+                        @if (viewList.Contains((int)DashboardViewEnum.ContactForm))
+                        {
+
+                            <li data-menu=""
+                                class="@(active == DashboardViewEnum.ContactForm.ToString() ? "active" : "")">
+                                <a class="dropdown-item d-flex align-items-center"
+                                   asp-action="Index" asp-area="ContactFormEntity"
+                                   asp-controller="ContactForm"
+                                   data-bs-toggle="" data-i18n="ContactForms">
+                                    <i data-feather="users"></i>
+                                    <span data-i18n="ContactForms">@Localizer.Get("ContactForms")</span>
+                                </a>
+                            </li>
+                        }
+                        
                         @if (viewList.Contains((int)DashboardViewEnum.DashboardAdministrator))
                         {
 
