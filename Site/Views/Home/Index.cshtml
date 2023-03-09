@@ -479,21 +479,32 @@
                           fk_Size: $("input[name=Fk_Size]").val(),
                           fk_Color: $("input[name=Fk_Color]").val(),
                       },
+                      beforeSend: function () {
+                          $('#cover-spin').show();
+                      },
+                      complete: function () {
+                          $('#cover-spin').hide();
+                      },
                       success: function (data) {
                           let products = '';
                           
-                           data.forEach(product => {
-                               products += `<div class="card-item mix">
-                                     <a href="${product.imageUrl}" class="photo__item d-block w-100">
-                                         <img src="${product.imageUrl}" alt="${product.name}" class="img-fluid" />
-                                         <div class="des">
-                                             <h2>${product.name}</h2>
-                                         </div>
-                                     </a>
-                                 </div>`;
-                           });
+                           if (data.length > 0) {
+                               data.forEach(product => {
+                                   products += `<div class="card-item mix">
+                                         <a href="${product.imageUrl}" class="photo__item d-block w-100">
+                                             <img src="${product.imageUrl}" alt="${product.name}" class="img-fluid" />
+                                             <div class="des">
+                                                 <h2>${product.name}</h2>
+                                             </div>
+                                         </a>
+                                     </div>`;
+                               });
+                               
+                               $(".photo__gallery").html(products);
+                           } else {
+                               $(".photo__gallery").html(`<h1 style="padding-top: 40px;">@Localizer.Get("No Content")</h3>`);
+                           }
                            
-                           $(".photo__gallery").html(products);
                       }
                   });
         }

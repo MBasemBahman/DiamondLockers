@@ -77,8 +77,6 @@
                                             <th>@Html.DisplayNameFor(model => row.Type)</th>
                                             <th>@Html.DisplayNameFor(model => row.DisplayName)</th>
                                             <th>@Html.DisplayNameFor(model => row.Value)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Order)</th>
-                                            <th>@Html.DisplayNameFor(model => row.CreatedAt)</th>
                                             <th>
                                                 @Html.DisplayNameFor(model => row.Id)
                                             </th>
@@ -134,8 +132,6 @@
                           
                           return data;
                         } },
-                        { data: "order" },
-                        { data: "createdAt" },
                         { data: "id" },
                     ]
                 });

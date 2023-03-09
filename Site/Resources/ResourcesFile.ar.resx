@@ -420,4 +420,7 @@
   <data name="Your Phone" xml:space="preserve">
     <value>رقم تليفونك</value>
   </data>
+  <data name="No Content" xml:space="preserve">
+    <value>عفوا لا يوجد</value>
+  </data>
 </root>
