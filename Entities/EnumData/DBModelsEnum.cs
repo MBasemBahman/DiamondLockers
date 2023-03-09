@@ -32,6 +32,16 @@
             Color = 14,
             Product = 15,
             ContactForm = 16,
+            Setting = 17
         }
+        
+        public enum SettingTypeEnum
+        {
+            Input,
+            File,
+            TextArea,
+            Boolean
+        }
+
     }
 }

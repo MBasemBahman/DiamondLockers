@@ -62,6 +62,14 @@
     <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\Company\Profile.cshtml" />
     <_ContentIncludedByDefault Remove="Areas\CompanyEntity\Views\_ViewImports.cshtml" />
     <_ContentIncludedByDefault Remove="Areas\Dashboard\Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Color\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Color\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Color\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Color\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Size\CreateOrEdit.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Size\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Size\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\SettingEntity\Views\Size\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -69,6 +77,11 @@
     <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\Delete.cshtml" />
     <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\Details.cshtml" />
     <AdditionalFiles Include="Areas\MainDataEntity\Views\Size\Index.cshtml" />
+    <AdditionalFiles Include="Areas\SettingEntity\Views\Setting\CreateOrEdit.cshtml" />
+    <AdditionalFiles Include="Areas\SettingEntity\Views\Setting\Delete.cshtml" />
+    <AdditionalFiles Include="Areas\SettingEntity\Views\Setting\Details.cshtml" />
+    <AdditionalFiles Include="Areas\SettingEntity\Views\Setting\Index.cshtml" />
+    <AdditionalFiles Include="Areas\SettingEntity\Views\_ViewImports.cshtml" />
   </ItemGroup>
 
 </Project>

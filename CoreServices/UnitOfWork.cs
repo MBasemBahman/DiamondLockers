@@ -14,6 +14,7 @@ namespace CoreServices
         private MainDataServices _mainDataServices;
         private ProductServices _productServices;
         private ContactFormServices _contactFormServices;
+        private SettingServices _settingServices;
 
         public UnitOfWork(RepositoryManager repository, IConfiguration config)
         {
@@ -85,6 +86,15 @@ namespace CoreServices
             {
                 _contactFormServices ??= new ContactFormServices(_repository);
                 return _contactFormServices;
+            }
+        }
+        
+        public SettingServices Setting
+        {
+            get
+            {
+                _settingServices ??= new SettingServices(_repository);
+                return _settingServices;
             }
         }
         

@@ -909,4 +909,37 @@
   <data name="ContactForms" xml:space="preserve">
     <value>Contact Forms</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="Site Name" xml:space="preserve">
+    <value>Site Name</value>
+  </data>
+  <data name="Site Logo" xml:space="preserve">
+    <value>Site Logo</value>
+  </data>
+  <data name="Site Active" xml:space="preserve">
+    <value>Site Active</value>
+  </data>
+  <data name="Site Description" xml:space="preserve">
+    <value>Site Description</value>
+  </data>
 </root>

@@ -4,6 +4,7 @@ using Repository.DBModels.DashboardAdministrationModels;
 using Repository.DBModels.LogModels;
 using Repository.DBModels.MainDataModels;
 using Repository.DBModels.ProductModels;
+using Repository.DBModels.SettingModels;
 
 namespace Repository
 {
@@ -53,6 +54,10 @@ namespace Repository
 
         private ContactFormRepository _contactFormRepository;
 
+        #endregion
+        
+        #region Setting Models
+        private SettingRepository _settingRepository;
         #endregion
         
         #region Audit Models
@@ -268,6 +273,20 @@ namespace Repository
         }
 
         #endregion
+        
+        #region Setting Models
+
+        public SettingRepository Setting
+        {
+            get
+            {
+                _settingRepository ??= new SettingRepository(_dBContext);
+                return _settingRepository;
+            }
+        }
+
+        #endregion
+        
         #endregion
     }
 }

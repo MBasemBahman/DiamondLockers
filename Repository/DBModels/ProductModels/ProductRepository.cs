@@ -16,7 +16,10 @@ namespace Repository.DBModels.ProductModels
             bool trackChanges)
         {
             return FindByCondition(a => true, trackChanges)
-                   .Filter(parameters.Id);
+                   .Filter(parameters.Id,
+                       parameters.Fk_Category,
+                       parameters.Fk_Color,
+                       parameters.Fk_Size);
 
 
         }
@@ -36,9 +39,15 @@ namespace Repository.DBModels.ProductModels
     {
         public static IQueryable<Product> Filter(
             this IQueryable<Product> categories,
-            int id)
+            int id,
+            int fk_Category,
+            int fk_Color,
+            int fk_Size)
         {
-            return categories.Where(a => (id == 0 || a.Id == id));
+            return categories.Where(a => (id == 0 || a.Id == id) &&
+                                         (fk_Category == 0 || a.ProductCategories.Any(b => b.Fk_Category == fk_Category)) &&
+                                         (fk_Color == 0 || a.ProductColors.Any(b => b.Fk_Color == fk_Color)) &&
+                                         (fk_Size == 0 || a.ProductSizes.Any(b => b.Fk_Size == fk_Size)) );
         }
 
 

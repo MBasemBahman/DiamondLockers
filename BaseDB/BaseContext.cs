@@ -1,11 +1,11 @@
 using Entities.AuthenticationModels;
-using Entities.DBModels.AccountModels;
 using Entities.DBModels.AuditModels;
 using Entities.DBModels.ContactFormModels;
 using Entities.DBModels.DashboardAdministrationModels;
 using Entities.DBModels.LogModels;
 using Entities.DBModels.MainDataModels;
 using Entities.DBModels.ProductModels;
+using Entities.DBModels.SettingModels;
 using Entities.DBModels.SharedModels;
 using Entities.DBModels.UserModels;
 using Microsoft.EntityFrameworkCore;
@@ -69,6 +69,12 @@ namespace BaseDB
         #region ContactForm Models
 
         public DbSet<ContactForm> ContactForms { get; set; }
+
+        #endregion
+        
+        #region Setting Models
+
+        public DbSet<Setting> Settings { get; set; }
 
         #endregion
 

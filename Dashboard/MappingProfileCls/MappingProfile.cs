@@ -18,12 +18,15 @@ using Entities.DBModels.DashboardAdministrationModels;
 using Dashboard.Areas.ContactFormEntity.Models;
 using Dashboard.Areas.MainDataEntity.Models;
 using Dashboard.Areas.ProductEntity.Models;
+using Dashboard.Areas.SettingEntity.Models;
 using Entities.CoreServicesModels.ContactFormModels;
 using Entities.CoreServicesModels.MainDataModels;
 using Entities.CoreServicesModels.ProductModels;
+using Entities.CoreServicesModels.SettingModels;
 using Entities.DBModels.ContactFormModels;
 using Entities.DBModels.MainDataModels;
 using Entities.DBModels.ProductModels;
+using Entities.DBModels.SettingModels;
 using Entities.RequestFeatures;
 
 namespace Dashboard.MappingProfileCls
@@ -219,6 +222,18 @@ namespace Dashboard.MappingProfileCls
             _ = CreateMap<ContactFormModel, ContactFormDto>();
             
             _ = CreateMap<ContactFormFilter, ContactFormParameters>();
+
+            #endregion
+            
+            #region Setting Model
+
+            _ = CreateMap<Setting, SettingCreateOrEditModel>();
+
+            _ = CreateMap<SettingCreateOrEditModel, Setting>();
+            
+            _ = CreateMap<SettingModel, SettingDto>();
+            
+            _ = CreateMap<SettingFilter, SettingParameters>();
 
             #endregion
             

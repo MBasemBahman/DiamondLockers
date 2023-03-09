@@ -270,6 +270,14 @@ namespace DevelopmentDAL.Migrations
                             FkDashboardAccessLevel = 1,
                             FkDashboardAdministrationRole = 1,
                             FkDashboardView = 16
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FkDashboardAccessLevel = 1,
+                            FkDashboardAdministrationRole = 1,
+                            FkDashboardView = 17
                         });
                 });
 
@@ -677,6 +685,13 @@ namespace DevelopmentDAL.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "ContactForm",
                             ViewPath = "ContactForm"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Setting",
+                            ViewPath = "Setting"
                         });
                 });
 
@@ -819,6 +834,13 @@ namespace DevelopmentDAL.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FkSource = 16,
                             Name = "ContactForm"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FkSource = 17,
+                            Name = "Setting"
                         });
                 });
 
@@ -1262,6 +1284,54 @@ namespace DevelopmentDAL.Migrations
                     b.ToTable("ProductSize");
                 });
 
+            modelBuilder.Entity("Entities.DBModels.SettingModels.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getutcdate()");
+
+                    b.Property<string>("CreatedBy")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModifiedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getutcdate()");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+                });
+
             modelBuilder.Entity("Entities.DBModels.UserModels.Device", b =>
                 {
                     b.Property<int>("Id")
@@ -1413,7 +1483,7 @@ namespace DevelopmentDAL.Migrations
                             EmailAddress = "user@mail.com",
                             LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Developer",
-                            Password = "$2a$11$HLzxbkPBGsuiWBKryKquL.zsjMYO26Z8UPT.Bfrhy0aab3mlWPNZm",
+                            Password = "$2a$11$vQ2kINSmGHWaUowSZgFM9.dBZ5CSJPvcl/DmLACeFzLWRw3A6zf/m",
                             UserName = "Developer"
                         });
                 });

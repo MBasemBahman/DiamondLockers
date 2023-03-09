@@ -936,4 +936,37 @@
   <data name="ContactForms" xml:space="preserve">
     <value>تواصل معنا</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>الخدمة</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>الاعداد</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>الاعدادات</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>المفتاح</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>اسم الاعداد</value>
+  </data>
+  <data name="Site Name" xml:space="preserve">
+    <value>اسم الموقع</value>
+  </data>
+  <data name="Site Logo" xml:space="preserve">
+    <value>شعار الموقع</value>
+  </data>
+  <data name="Site Active" xml:space="preserve">
+    <value>الموقع مفعل</value>
+  </data>
+  <data name="Site Description" xml:space="preserve">
+    <value>وصف الموقع</value>
+  </data>
 </root>

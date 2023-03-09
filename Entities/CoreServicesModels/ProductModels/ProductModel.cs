@@ -2,7 +2,9 @@
 {
     public class ProductParameters : RequestParameters
     {
-
+        public int Fk_Category { get; set; }
+        public int Fk_Color { get; set; }
+        public int Fk_Size { get; set; }
     }
 
     public class ProductModel
@@ -22,6 +24,15 @@
 
         [DisplayName(nameof(CreatedAt))]
         public DateTime CreatedAt { get; set; }
+
+        [DisplayName(nameof(ProductCategories))]
+        public List<ProductCategoryModel> ProductCategories { get; set; }
+        
+        [DisplayName(nameof(ProductSizes))]
+        public List<ProductSizeModel> ProductSizes { get; set; }
+        
+        [DisplayName(nameof(ProductColors))]
+        public List<ProductColorModel> ProductColors { get; set; }
     }
 
     public class ProductCreateOrEditModel

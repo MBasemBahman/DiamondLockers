@@ -1,27 +1,35 @@
 ﻿using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Contracts.Constants;
+using CoreServices;
+using Entities.CoreServicesModels.MainDataModels;
+using Entities.CoreServicesModels.ProductModels;
+using Org.BouncyCastle.Ocsp;
 using Site.Models;
 
 namespace Site.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly UnitOfWork _unitOfWork;
         private readonly DateTime _expire;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(UnitOfWork unitOfWork)
         {
-            _logger = logger;
+            _unitOfWork = unitOfWork;
             _expire = new DateTime(2023, 01, 30);
         }
 
         public IActionResult Index()
         {
-            //if (_expire < DateTime.Now.Date)
-            //{
-            //    return NotFound();
-            //}
+            bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+            
+            ViewData["Category"] = _unitOfWork.MainData.GetCategoriesLookUp(new CategoryParameters(), otherLang);
+            ViewData["Size"] = _unitOfWork.MainData.GetSizesLookUp(new SizeParameters(), otherLang);
+            ViewData["Color"] = _unitOfWork.MainData.GetColorsLookUp(new ColorParameters(), otherLang);
+            
+            ViewData["Product"] = _unitOfWork.Product.GetProducts(new ProductParameters(), otherLang);
 
             ViewBag.Active = "Home";
 

@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Entities.CoreServicesModels.ProductModels
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
     ViewData["Title"] = Localizer.Get("Home");
 }
 
@@ -302,276 +304,37 @@
         <div class="row">
             <h6 class="mb-30">@Localizer.Get("Filter by category")</h6>
             <div class="controls">
-                <button type="button" class="control" data-filter="all">@Localizer.Get("All")</button>
-                <button type="button" class="control" data-filter=".smart">@Localizer.Get("Smart Lockers")</button>
-                <button type="button" class="control" data-filter=".parcel">@Localizer.Get("Parcel Lockers")</button>
+                <button type="button" class="control category_btn" data-filter="0">@Localizer.Get("All")</button>
+                @foreach (var category in (IDictionary<string, string>)ViewData["Category"])
+                {
+                    <button type="button" class="control category_btn" data-filter="@category.Key">@category.Value</button>
+                }
+                <input type="hidden" name="Fk_Category" value="0" />
             </div>
         </div>
         <div class="row  mt-40">
             <h6 class="mb-30">@Localizer.Get("Filter by size")</h6>
             <div class="controls">
-                <button type="button" class="control" data-filter="all">@Localizer.Get("All")</button>
-                <button type="button" class="control" data-filter=".size-6">@Localizer.Get("6")</button>
-                <button type="button" class="control" data-filter=".size-12">@Localizer.Get("12")</button>
-                <button type="button" class="control" data-filter=".size-24">@Localizer.Get("24")</button>
-                <button type="button" class="control" data-filter=".size-36">@Localizer.Get("36")</button>
-                <button type="button" class="control" data-filter=".size-48">@Localizer.Get("48")</button>
+                <button type="button" class="control size_btn" data-filter="0">@Localizer.Get("All")</button>
+                @foreach (var size in (IDictionary<string, string>)ViewData["Size"])
+                {
+                    <button type="button" class="control size_btn" data-filter="@size.Key">@size.Value</button>
+                }
+                <input type="hidden" name="Fk_Size" value="0" />
             </div>
         </div>
         <div class="row  mt-40">
             <h6 class="mb-30">@Localizer.Get("Filter by color")</h6>
             <div class="controls">
-                <button type="button" class="control" data-filter="all">@Localizer.Get("All")</button>
-                <button type="button" class="control" data-filter=".beige">@Localizer.Get("Beige")</button>
-                <button type="button" class="control" data-filter=".turquoise">@Localizer.Get("Turquoise")</button>
-                <button type="button" class="control" data-filter=".green">@Localizer.Get("Green")</button>
-                <button type="button" class="control" data-filter=".red">@Localizer.Get("Red")</button>
-                <button type="button" class="control" data-filter=".blue">@Localizer.Get("Blue")</button>
-                <button type="button" class="control" data-filter=".white">@Localizer.Get("White")</button>
-                <button type="button" class="control" data-filter=".orange">@Localizer.Get("Orange")</button>
-                <button type="button" class="control" data-filter=".brown">@Localizer.Get("Brown")</button>
+                <button type="button" class="control color_btn" data-filter="0">@Localizer.Get("All")</button>
+                @foreach (var color in (IDictionary<string, string>)ViewData["Color"])
+                {
+                    <button type="button" class="control color_btn" data-filter="@color.Key">@color.Value</button>
+                }
+                <input type="hidden" name="Fk_Color" value="0" />
             </div>
         </div>
-        <div class="filterContainer photo__gallery ">
-            <div class="card-item mix parcel effect7">
-                <a href="~/assets/images/products/Parcel2.jpg" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Parcel2.jpg" alt="@Localizer.Get("Parcel locker sets")" class="img-fluid " />
-                    <div class="des">
-                        <h2>@Localizer.Get("Parcel locker sets")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix parcel">
-                <a href="~/assets/images/products/Parcel3.jpg" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Parcel3.jpg" alt="@Localizer.Get("Parcel locker control unit")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("Parcel locker control unit")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix parcel">
-                <a href="~/assets/images/products/Parcel6.jpg" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Parcel6.jpg" alt="@Localizer.Get("Parcel tower")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("Parcel tower")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix parcel">
-                <a href="~/assets/images/products/Refrigerator3.jpg" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Refrigerator3.jpg" alt="@Localizer.Get("Refrigerated locker")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("Refrigerated locker")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart blue size-6">
-                <a href="~/assets/images/products/Size 6/Bar Code_Blue.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 6/Bar Code_Blue.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart green size-6">
-                <a href="~/assets/images/products/Size 6/Bar code_Light Green.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 6/Bar code_Light Green.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart white size-6">
-                <a href="~/assets/images/products/Size 6/Facial_White.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 6/Facial_White.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("Facial Recognition")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart red size-6">
-                <a href="~/assets/images/products/Size 6/Fingerprint_Red.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 6/Fingerprint_Red.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart orange size-6">
-                <a href="~/assets/images/products/Size 6/RFID_Yellow.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 6/RFID_Yellow.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card-item mix smart blue size-12">
-                <a href="~/assets/images/products/Size 12/Bar Code_Blue.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Bar Code_Blue.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart green size-12">
-                <a href="~/assets/images/products/Size 12/Bar code_Light Green.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Bar code_Light Green.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart white size-12">
-                <a href="~/assets/images/products/Size 12/Facial_White.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Facial_White.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("Facial Recognition")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart orange size-12">
-                <a href="~/assets/images/products/Size 12/Fingerprint_Orange.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Fingerprint_Orange.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart red size-12">
-                <a href="~/assets/images/products/Size 12/Fingerprint_Red.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Fingerprint_Red.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart brown size-12">
-                <a href="~/assets/images/products/Size 12/Passpord_Brown.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Passpord_Brown.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart turquoise size-12">
-                <a href="~/assets/images/products/Size 12/Passpord_Cyan.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Passpord_Cyan.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart green size-12">
-                <a href="~/assets/images/products/Size 12/RFID_Green.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/RFID_Green.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart blue size-12">
-                <a href="~/assets/images/products/Size 12/RFID_Sky Blue.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/RFID_Sky Blue.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart orange size-12">
-                <a href="~/assets/images/products/Size 12/RFID_Yellow.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/RFID_Yellow.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart beige size-12">
-                <a href="~/assets/images/products/Size 12/Size 12.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Size 12.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart brown size-12">
-                <a href="~/assets/images/products/Size 12/Wechat code_Brown.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/Wechat code_Brown.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart red blue beige size-12">
-                <a href="~/assets/images/products/Size 12/12.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 12/12.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card-item mix smart brown size-24">
-                <a href="~/assets/images/products/Size 24/24 doors fingerprint.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 24/24 doors fingerprint.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart white size-24">
-                <a href="~/assets/images/products/Size 24/24 Doors password.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 24/24 Doors password.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart beige size-24">
-                <a href="~/assets/images/products/Size 24/size 24.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 24/size 24.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card-item mix smart blue size-36">
-                <a href="~/assets/images/products/Size 36/36 size.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 36/36 size.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="card-item mix smart beige size-36">
-                <a href="~/assets/images/products/Size 36/36.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 36/36.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card-item mix smart blue size-48">
-                <a href="~/assets/images/products/Size 48/IMG_8920.png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 48/IMG_8920.png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid" />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card-item mix smart orange size-48">
-                <a href="~/assets/images/products/Size 48/48 doors coin (1).png" class="photo__item d-block w-100">
-                    <img src="~/assets/images/products/Size 48/48 doors coin (1).png" alt="@Localizer.Get("Smart Lockers")" class="img-fluid " />
-                    <div class="des">
-                        <h2>@Localizer.Get("")</h2>
-                    </div>
-                </a>
-            </div>
-
-        </div>
+        <div class="filterContainer photo__gallery "></div>
     </div>
 </div>
 <div id="about" class="about-us">
@@ -667,3 +430,72 @@
         </div>
     </div>
 </div>
+
+@section Scripts
+{
+    <script>
+        LoadProducts();
+    
+        $(document).on("click", ".category_btn", function() {
+           let category = $(this).data("filter");
+           $("input[name=Fk_Category]").val(category);
+          
+           $(".category_btn").removeClass("active-filter");
+           
+           resetProducts($(this));
+        });
+        
+        $(document).on("click", ".size_btn", function() {
+           let size = $(this).data("filter");
+           $("input[name=Fk_Size]").val(size);
+          
+           $(".size_btn").removeClass("active-filter");
+           
+           resetProducts($(this));
+        });
+        
+        $(document).on("click", ".color_btn", function() {
+           let color = $(this).data("filter");
+           $("input[name=Fk_Color]").val(color);
+          
+           $(".color_btn").removeClass("active-filter");
+           
+           resetProducts($(this));
+        });
+    
+        function resetProducts(element) {
+            if (element.data("filter") != "0") {
+                element.addClass("active-filter");
+            }
+           LoadProducts();           
+        }
+                   
+        function LoadProducts() {
+          $.ajax({
+                      type: 'get',
+                      url: '@Url.ActionLink("GetProducts", "Product")',
+                      data: {
+                          fk_Category: $("input[name=Fk_Category]").val(),
+                          fk_Size: $("input[name=Fk_Size]").val(),
+                          fk_Color: $("input[name=Fk_Color]").val(),
+                      },
+                      success: function (data) {
+                          let products = '';
+                          
+                           data.forEach(product => {
+                               products += `<div class="card-item mix">
+                                     <a href="${product.imageUrl}" class="photo__item d-block w-100">
+                                         <img src="${product.imageUrl}" alt="${product.name}" class="img-fluid" />
+                                         <div class="des">
+                                             <h2>${product.name}</h2>
+                                         </div>
+                                     </a>
+                                 </div>`;
+                           });
+                           
+                           $(".photo__gallery").html(products);
+                      }
+                  });
+        }
+    </script>
+}

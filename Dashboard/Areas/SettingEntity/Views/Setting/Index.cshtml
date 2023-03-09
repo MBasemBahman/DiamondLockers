@@ -1,6 +1,8 @@
-﻿@model ContactFormFilter
+﻿@using Entities.EnumData
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model SettingFilter
 @{
-    ViewData["Title"] = Localizer.Get("ContactForms");
+    ViewData["Title"] = Localizer.Get("Settings");
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.useDatatable = true;
     ViewBag.useModels = true;
@@ -9,7 +11,7 @@
     ViewBag.useCharts = true;
     var accessLevel = (DashboardAccessLevelModel)ViewData[ViewDataConstants.AccessLevel];
 
-    var row = new ContactFormDto();
+    var row = new SettingDto();
 }
 
 <!-- BEGIN: Content-->
@@ -63,20 +65,19 @@
                                                     <a id="export" href="export">
                                                     </a>
                                                 }
-                                                
-                                                @if (accessLevel.DeleteAccess)
+
+                                                @if (accessLevel.EditAccess)
                                                 {
-                                                    <a id="delete" asp-action="Delete">
+                                                    <a id="edit" asp-action="CreateOrEdit">
                                                     </a>
                                                 }
 
                                             </th>
+                                            <th>@Html.DisplayNameFor(model => row.Key)</th>
                                             <th>@Html.DisplayNameFor(model => row.Type)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Name)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Phone)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Email)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Service)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Message)</th>
+                                            <th>@Html.DisplayNameFor(model => row.DisplayName)</th>
+                                            <th>@Html.DisplayNameFor(model => row.Value)</th>
+                                            <th>@Html.DisplayNameFor(model => row.Order)</th>
                                             <th>@Html.DisplayNameFor(model => row.CreatedAt)</th>
                                             <th>
                                                 @Html.DisplayNameFor(model => row.Id)
@@ -115,12 +116,25 @@
                     // Columns Setups
                     columns: [
                         { data: "id" },
+                        { data: "key" },
                         { data: "type" },
-                        { data: "name" },
-                        { data: "phone" },
-                        { data: "email" },
-                        { data: "service" },
-                        { data: "message" },
+                        { data: "displayName" },
+                        { data: "value", render: function(data, row, type) {
+                          if (type.type == "@DBModelsEnum.SettingTypeEnum.File") {
+                              return `<img src="/${data}" width="40" height="40" alt="${type.displayName}" />`;
+                          } else if (type.type == "@DBModelsEnum.SettingTypeEnum.TextArea") {
+                              return `${data}`;
+                          } else if (type.type == "@DBModelsEnum.SettingTypeEnum.Boolean") {
+                              if (data == 1) {
+                                  return `<span class="badge bg-success">@Localizer.Get("Yes")</span>`;
+                              } else {
+                                  return `<span class="badge bg-danger">@Localizer.Get("No")</span>`;
+                              }
+                          }
+                          
+                          return data;
+                        } },
+                        { data: "order" },
                         { data: "createdAt" },
                         { data: "id" },
                     ]

@@ -4,8 +4,21 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using System.Reflection;
+using BaseDB;
+using Contracts.Constants;
+using CoreServices;
+using Dashboard.Middlewares;
+using DevelopmentDAL;
+using Entities.AuthenticationModels;
+using Microsoft.EntityFrameworkCore;
+using Repository;
+using Services;
+using Site.Services;
+using TenantConfiguration;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+TenantConfig config = new(TenantData.TenantEnvironments.Development);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews()
@@ -31,7 +44,28 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });
+
+builder.Services.AddDbContext<BaseContext, DevelopmentContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection")));
+
+if (config.Tenant == TenantData.TenantEnvironments.Development)
+{
+    builder.Services.AddScoped(_ =>
+    {
+        var httpContext = new HttpContextAccessor().HttpContext;
+
+        return new UserAuthenticatedDto
+        {
+            Name = httpContext?.Request.Cookies[ViewDataConstants.AccountName] ?? "",
+            EmailAddress = httpContext?.Request.Cookies[ViewDataConstants.AccountEmail] ?? "",
+        };
+    });
+    
+    builder.Services.AddScoped<RepositoryManager, RepositoryManager>();
+    builder.Services.AddScoped<UnitOfWork, UnitOfWork>();
+}
+
 builder.Services.AddSingleton<LocalizationManager>();
+builder.Services.AddSingleton<SettingsService>();
 
 WebApplication app = builder.Build();
 
@@ -48,6 +82,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCookiePolicy();
 app.UseRequestLocalization(app.Services.GetService<IOptions<RequestLocalizationOptions>>().Value);
+app.UseMiddleware<CultureMiddleware>();
 
 app.MapControllerRoute(
     name: "default",

@@ -28,7 +28,19 @@ namespace CoreServices.Logic
                     CreatedAt = a.CreatedAt,
                     Name = otherLang ? a.ProductLang.Name : a.Name,
                     ImageUrl = a.StorageUrl + a.ImageUrl,
-                    Order = a.Order
+                    Order = a.Order,
+                    ProductCategories = a.ProductCategories.Select(b => new ProductCategoryModel
+                    {
+                        Fk_Category = b.Fk_Category
+                    }).ToList(),
+                    ProductSizes = a.ProductSizes.Select(b => new ProductSizeModel
+                    {
+                        Fk_Size = b.Fk_Size
+                    }).ToList(),
+                    ProductColors = a.ProductColors.Select(b => new ProductColorModel
+                    {
+                        Fk_Color = b.Fk_Color
+                    }).ToList()
                 })
                 .Search(parameters.SearchColumns, parameters.SearchTerm)
                 .Sort(parameters.OrderBy);
@@ -98,7 +110,7 @@ namespace CoreServices.Logic
 
             AddProductSizes(fk_Product, dataToCreate);
 
-            await RemoveProductSizes(dataToRemove);
+            RemoveProductSizes(fk_Product, dataToRemove);
         }
         
         private void AddProductSizes(int fk_Product, List<int> sizes)
@@ -116,13 +128,13 @@ namespace CoreServices.Logic
             }
         }
 
-        private async Task RemoveProductSizes(List<int> ids)
+        private void RemoveProductSizes(int fk_Product, List<int> fk_Sizes)
         {
-            if (ids != null && ids.Any())
+            if (fk_Sizes != null && fk_Sizes.Any())
             {
-                foreach (int id in ids)
+                foreach (int fk_Size in fk_Sizes)
                 {
-                    await DeleteProductSize(id);
+                    DeleteProductSize(fk_Product, fk_Size);
                 }
             }
         }
@@ -146,7 +158,7 @@ namespace CoreServices.Logic
 
             AddProductCategories(fk_Product, dataToCreate);
 
-            await RemoveProductCategories(dataToRemove);
+            RemoveProductCategories(fk_Product, dataToRemove);
         }
         
         private void AddProductCategories(int fk_Product, List<int> categories)
@@ -164,13 +176,13 @@ namespace CoreServices.Logic
             }
         }
 
-        private async Task RemoveProductCategories(List<int> ids)
+        private void RemoveProductCategories(int fk_Product, List<int> fk_categories)
         {
-            if (ids != null && ids.Any())
+            if (fk_categories != null && fk_categories.Any())
             {
-                foreach (int id in ids)
+                foreach (int fk_Category in fk_categories)
                 {
-                    await DeleteProductCategory(id);
+                    DeleteProductCategory(fk_Product, fk_Category);
                 }
             }
         }
@@ -194,7 +206,7 @@ namespace CoreServices.Logic
 
             AddProductColors(fk_Product, dataToCreate);
 
-            await RemoveProductColors(dataToRemove);
+            RemoveProductColors(fk_Product, dataToRemove);
         }
         
         private void AddProductColors(int fk_Product, List<int> sizes)
@@ -212,13 +224,13 @@ namespace CoreServices.Logic
             }
         }
 
-        private async Task RemoveProductColors(List<int> ids)
+        private void RemoveProductColors(int fk_Product, List<int> fk_Colors)
         {
-            if (ids != null && ids.Any())
+            if (fk_Colors != null && fk_Colors.Any())
             {
-                foreach (int id in ids)
+                foreach (int fk_Color in fk_Colors)
                 {
-                    await DeleteProductColor(id);
+                    DeleteProductColor(fk_Product, fk_Color);
                 }
             }
         }
@@ -277,9 +289,13 @@ namespace CoreServices.Logic
             return GetProductCategories(new ProductCategoryParameters { Id = id }, otherLang).SingleOrDefault();
         }
 
-        public async Task DeleteProductCategory(int id)
+        private void DeleteProductCategory(int fk_Product, int fk_Category)
         {
-            ProductCategory entity = await FindProductCategoryById(id, trackChanges: false);
+            ProductCategory entity = _repository.ProductCategory.FindAll(new ProductCategoryParameters
+            {
+                Fk_Product = fk_Product,
+                Fk_Category = fk_Category
+            }, trackChanges: false).SingleOrDefault();
             _repository.ProductCategory.Delete(entity);
         }
 
@@ -338,9 +354,13 @@ namespace CoreServices.Logic
             return GetProductSizes(new ProductSizeParameters { Id = id }, otherLang).SingleOrDefault();
         }
 
-        public async Task DeleteProductSize(int id)
+        private void DeleteProductSize(int fk_Product, int fk_Size)
         {
-            ProductSize entity = await FindProductSizeById(id, trackChanges: false);
+            ProductSize entity = _repository.ProductSize.FindAll(new ProductSizeParameters
+            {
+                Fk_Product = fk_Product,
+                Fk_Size = fk_Size
+            }, trackChanges: false).SingleOrDefault();
             _repository.ProductSize.Delete(entity);
         }
 
@@ -399,9 +419,13 @@ namespace CoreServices.Logic
             return GetProductColors(new ProductColorParameters { Id = id }, otherLang).SingleOrDefault();
         }
 
-        public async Task DeleteProductColor(int id)
+        private void DeleteProductColor(int fk_Product, int fk_Color)
         {
-            ProductColor entity = await FindProductColorById(id, trackChanges: false);
+            ProductColor entity = _repository.ProductColor.FindAll(new ProductColorParameters
+            {
+                Fk_Product = fk_Product,
+                Fk_Color = fk_Color
+            }, trackChanges: false).SingleOrDefault();
             _repository.ProductColor.Delete(entity);
         }
 
