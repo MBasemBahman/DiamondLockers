@@ -934,7 +934,7 @@
     <value>المنتجات</value>
   </data>
   <data name="ContactForms" xml:space="preserve">
-    <value>تواصل معنا</value>
+    <value>نماذج التواصل</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>الخدمة</value>
@@ -968,5 +968,17 @@
   </data>
   <data name="Site Description" xml:space="preserve">
     <value>وصف الموقع</value>
+  </data>
+  <data name="ProductCategoriesCount" xml:space="preserve">
+    <value>الأقسام</value>
+  </data>
+  <data name="ProductColorsCount" xml:space="preserve">
+    <value>الألوان</value>
+  </data>
+  <data name="ProductCount" xml:space="preserve">
+    <value>عدد المنتجات</value>
+  </data>
+  <data name="ProductSizesCount" xml:space="preserve">
+    <value>الاحجام</value>
   </data>
 </root>

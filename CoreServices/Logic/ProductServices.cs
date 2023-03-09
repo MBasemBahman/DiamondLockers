@@ -1,6 +1,5 @@
 ﻿using Entities.CoreServicesModels.MainDataModels;
 using Entities.CoreServicesModels.ProductModels;
-using Entities.DBModels.MainDataModels;
 using Entities.DBModels.ProductModels;
 using Microsoft.AspNetCore.Http;
 
@@ -29,18 +28,16 @@ namespace CoreServices.Logic
                     Name = otherLang ? a.ProductLang.Name : a.Name,
                     ImageUrl = a.StorageUrl + a.ImageUrl,
                     Order = a.Order,
-                    ProductCategories = a.ProductCategories.Select(b => new ProductCategoryModel
-                    {
-                        Fk_Category = b.Fk_Category
-                    }).ToList(),
-                    ProductSizes = a.ProductSizes.Select(b => new ProductSizeModel
-                    {
-                        Fk_Size = b.Fk_Size
-                    }).ToList(),
-                    ProductColors = a.ProductColors.Select(b => new ProductColorModel
-                    {
-                        Fk_Color = b.Fk_Color
-                    }).ToList()
+                    ProductCategoriesString = parameters.IncludeCategories ?
+                    string.Join(" , ", a.ProductCategories
+                    .Select(b => otherLang ? b.Category.CategoryLang.Name : b.Category.Name)
+                    .ToList()) : null,
+                    ProductSizesString = parameters.IncludeSizes ? string.Join(" , ", a.ProductSizes
+                    .Select(b => otherLang ? b.Size.SizeLang.Name : b.Size.Name)
+                    .ToList()) : null,
+                    ProductColorsString = parameters.IncludeColors ? string.Join(" , ", a.ProductColors
+                    .Select(b => otherLang ? b.Color.ColorLang.Name : b.Color.Name)
+                    .ToList()) : null
                 })
                 .Search(parameters.SearchColumns, parameters.SearchTerm)
                 .Sort(parameters.OrderBy);
@@ -53,13 +50,13 @@ namespace CoreServices.Logic
             return await PagedList<ProductModel>.ToPagedList(GetProducts(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateProduct(Product entity)
+        public void CreateProduct(Product entity)
         {
             entity.ProductLang ??= new ProductLang
             {
                 Name = ""
             };
-            
+
             _repository.Product.Create(entity);
         }
 
@@ -73,7 +70,7 @@ namespace CoreServices.Logic
             FileUploader uploader = new(rootPath);
             return await uploader.UploudFile(file, "Upload/Product");
         }
-        
+
         public ProductModel GetProductById(int id, bool otherLang)
         {
             return GetProducts(new ProductParameters { Id = id }, otherLang).SingleOrDefault();
@@ -95,7 +92,7 @@ namespace CoreServices.Logic
 
         #region ProductSizes Models
 
-        public async Task UpdateProductSizes(int fk_Product, List<int> sizes)
+        public void UpdateProductSizes(int fk_Product, List<int> sizes)
         {
             sizes ??= new List<int>();
 
@@ -112,7 +109,7 @@ namespace CoreServices.Logic
 
             RemoveProductSizes(fk_Product, dataToRemove);
         }
-        
+
         private void AddProductSizes(int fk_Product, List<int> sizes)
         {
             if (sizes != null && sizes.Any())
@@ -140,10 +137,10 @@ namespace CoreServices.Logic
         }
 
         #endregion
-        
+
         #region ProductCategories Models
 
-        public async Task UpdateProductCategories(int fk_Product, List<int> categories)
+        public void UpdateProductCategories(int fk_Product, List<int> categories)
         {
             categories ??= new List<int>();
 
@@ -160,7 +157,7 @@ namespace CoreServices.Logic
 
             RemoveProductCategories(fk_Product, dataToRemove);
         }
-        
+
         private void AddProductCategories(int fk_Product, List<int> categories)
         {
             if (categories != null && categories.Any())
@@ -191,7 +188,7 @@ namespace CoreServices.Logic
 
         #region ProductColors Models
 
-        public async Task UpdateProductColors(int fk_Product, List<int> sizes)
+        public void UpdateProductColors(int fk_Product, List<int> sizes)
         {
             sizes ??= new List<int>();
 
@@ -208,7 +205,7 @@ namespace CoreServices.Logic
 
             RemoveProductColors(fk_Product, dataToRemove);
         }
-        
+
         private void AddProductColors(int fk_Product, List<int> sizes)
         {
             if (sizes != null && sizes.Any())
@@ -236,9 +233,9 @@ namespace CoreServices.Logic
         }
 
         #endregion
-        
+
         #endregion
-        
+
         #endregion
 
         #region ProductCategory Services
@@ -274,7 +271,7 @@ namespace CoreServices.Logic
             return await PagedList<ProductCategoryModel>.ToPagedList(GetProductCategories(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateProductCategory(ProductCategory entity)
+        public void CreateProductCategory(ProductCategory entity)
         {
             _repository.ProductCategory.Create(entity);
         }
@@ -303,9 +300,9 @@ namespace CoreServices.Logic
         {
             return _repository.ProductCategory.Count();
         }
-        
+
         #endregion
-        
+
         #region ProductSize Services
 
         public IQueryable<ProductSizeModel> GetProductSizes(ProductSizeParameters parameters,
@@ -339,7 +336,7 @@ namespace CoreServices.Logic
             return await PagedList<ProductSizeModel>.ToPagedList(GetProductSizes(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateProductSize(ProductSize entity)
+        public void CreateProductSize(ProductSize entity)
         {
             _repository.ProductSize.Create(entity);
         }
@@ -368,9 +365,9 @@ namespace CoreServices.Logic
         {
             return _repository.ProductSize.Count();
         }
-        
+
         #endregion
-        
+
         #region ProductColor Services
 
         public IQueryable<ProductColorModel> GetProductColors(ProductColorParameters parameters,
@@ -404,7 +401,7 @@ namespace CoreServices.Logic
             return await PagedList<ProductColorModel>.ToPagedList(GetProductColors(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateProductColor(ProductColor entity)
+        public void CreateProductColor(ProductColor entity)
         {
             _repository.ProductColor.Create(entity);
         }
@@ -433,7 +430,7 @@ namespace CoreServices.Logic
         {
             return _repository.ProductColor.Count();
         }
-        
+
         #endregion
     }
 }

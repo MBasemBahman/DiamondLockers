@@ -4,6 +4,7 @@ using DevelopmentDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevelopmentDAL.Migrations
 {
     [DbContext(typeof(DevelopmentContext))]
-    partial class DevelopmentContextModelSnapshot : ModelSnapshot
+    [Migration("20230309205548_dkmdkmds")]
+    partial class dkmdkmds
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1095,6 +1098,9 @@ namespace DevelopmentDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ColorCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -1117,7 +1123,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Order")
                         .HasColumnType("int");
@@ -1126,6 +1132,9 @@ namespace DevelopmentDAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("Products");
                 });
@@ -1477,7 +1486,7 @@ namespace DevelopmentDAL.Migrations
                             EmailAddress = "user@mail.com",
                             LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Developer",
-                            Password = "$2a$11$WexNwD.Igm5ggb5PntjMH.zBjl6/np7Zn4QT4ZZliaCtnHsXwLspO",
+                            Password = "$2a$11$zuz8kDE1x7Kdg./TJakli.XxDB4m.pWKOwq7k.QaFJuI7S0iFVa6u",
                             UserName = "Developer"
                         });
                 });
@@ -1637,7 +1646,7 @@ namespace DevelopmentDAL.Migrations
             modelBuilder.Entity("Entities.DBModels.ProductModels.ProductCategory", b =>
                 {
                     b.HasOne("Entities.DBModels.MainDataModels.Category", "Category")
-                        .WithMany("ProductCategories")
+                        .WithMany()
                         .HasForeignKey("Fk_Category")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1656,7 +1665,7 @@ namespace DevelopmentDAL.Migrations
             modelBuilder.Entity("Entities.DBModels.ProductModels.ProductColor", b =>
                 {
                     b.HasOne("Entities.DBModels.MainDataModels.Color", "Color")
-                        .WithMany("ProductColors")
+                        .WithMany()
                         .HasForeignKey("Fk_Color")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1692,7 +1701,7 @@ namespace DevelopmentDAL.Migrations
                         .IsRequired();
 
                     b.HasOne("Entities.DBModels.MainDataModels.Size", "Size")
-                        .WithMany("ProductSizes")
+                        .WithMany()
                         .HasForeignKey("Fk_Size")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1761,21 +1770,15 @@ namespace DevelopmentDAL.Migrations
             modelBuilder.Entity("Entities.DBModels.MainDataModels.Category", b =>
                 {
                     b.Navigation("CategoryLang");
-
-                    b.Navigation("ProductCategories");
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.Color", b =>
                 {
                     b.Navigation("ColorLang");
-
-                    b.Navigation("ProductColors");
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.Size", b =>
                 {
-                    b.Navigation("ProductSizes");
-
                     b.Navigation("SizeLang");
                 });
 

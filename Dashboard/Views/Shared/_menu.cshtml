@@ -34,7 +34,7 @@
         <div class="navbar-container main-menu-content" data-menu="menu-container">
             <!-- include ../../../includes/mixins-->
             <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
-                
+
                 @if (viewList.Contains((int)DashboardViewEnum.Home))
                 {
                     <li id="HomeList" class="@(active == DashboardViewEnum.Home.ToString() ? "active" : "") nav-item">
@@ -44,7 +44,8 @@
                                 @Localizer.Get("Home")
                             </span>
                         </a>
-                    </li>   
+                    </li>
+
                 }
 
                 @if (viewList.Contains((int)DashboardViewEnum.Category))
@@ -56,7 +57,8 @@
                                 @Localizer.Get("Categories")
                             </span>
                         </a>
-                    </li>   
+                    </li>
+
                 }
 
                 @if (viewList.Contains((int)DashboardViewEnum.Size))
@@ -68,22 +70,23 @@
                                 @Localizer.Get("Sizes")
                             </span>
                         </a>
-                    </li>   
+                    </li>
+
                 }
 
                 @if (viewList.Contains((int)DashboardViewEnum.Color))
-                 {
-                     <li id="ColorList" class="@(active == DashboardViewEnum.Color.ToString() ? "active" : "") nav-item">
-                         <a class="nav-link d-flex align-items-center" asp-action="Index" asp-controller="Color" asp-area="MainDataEntity">
-                             <i data-feather="git-branch"></i>
-                             <span data-i18n="git-branch">
-                                 @Localizer.Get("Colors")
-                             </span>
-                         </a>
-                     </li>
-                 }
-                
-                
+                {
+                    <li id="ColorList" class="@(active == DashboardViewEnum.Color.ToString() ? "active" : "") nav-item">
+                        <a class="nav-link d-flex align-items-center" asp-action="Index" asp-controller="Color" asp-area="MainDataEntity">
+                            <i data-feather="git-branch"></i>
+                            <span data-i18n="git-branch">
+                                @Localizer.Get("Colors")
+                            </span>
+                        </a>
+                    </li>
+                }
+
+
                 @if (viewList.Contains((int)DashboardViewEnum.Product))
                 {
                     <li id="ProductList" class="@(active == DashboardViewEnum.Product.ToString() ? "active" : "") nav-item">
@@ -93,7 +96,8 @@
                                 @Localizer.Get("Products")
                             </span>
                         </a>
-                    </li>   
+                    </li>
+
                 }
 
                 @if (viewList.Contains((int)DashboardViewEnum.ContactForm))
@@ -107,142 +111,138 @@
                         </a>
                     </li>
                 }
-                
+
+                @if (viewList.Contains((int)DashboardViewEnum.ContactForm))
+                {
+                    <li id="ContactFormList" class="@(active == DashboardViewEnum.Setting.ToString() ? "active" : "") nav-item">
+                        <a class="nav-link d-flex align-items-center" asp-action="Index" asp-controller="Setting" asp-area="SettingEntity">
+                            <i data-feather="settings"></i>
+                            <span data-i18n="settings">
+                                @Localizer.Get("Settings")
+                            </span>
+                        </a>
+                    </li>
+                }
+
                 @if (viewList.Contains((int)DashboardViewEnum.DashboardAdministrator) ||
-                     viewList.Contains((int)DashboardViewEnum.DashboardAccessLevel) ||
-                     viewList.Contains((int)DashboardViewEnum.DashboardView) ||
-                     viewList.Contains((int)DashboardViewEnum.DashboardAdministrationRole) )
+                    viewList.Contains((int)DashboardViewEnum.DashboardAccessLevel) ||
+                    viewList.Contains((int)DashboardViewEnum.DashboardView) ||
+                    viewList.Contains((int)DashboardViewEnum.DashboardAdministrationRole))
                 {
                     <li class="dropdown nav-item
                     @(active == DashboardViewEnum.DashboardAdministrator.ToString() ? "active" : "")
                     @(active == DashboardViewEnum.DashboardAccessLevel.ToString() ? "active" : "")
                     @(active == DashboardViewEnum.DashboardView.ToString() ? "active" : "")
-                    @(active == DashboardViewEnum.DashboardAdministrationRole.ToString() ? "active" : "")
-                    @(active == DashboardViewEnum.Setting.ToString() ? "active" : "")" data-menu="dropdown">
-                    <a class="dropdown-toggle nav-link d-flex align-items-center" href="#" data-bs-toggle="dropdown">
-                        <i data-feather="package"></i><span data-i18n="@Localizer.Get("DashboardAdministration")">@Localizer.Get("DashboardAdministration")</span>
-                    </a>
-                    <ul class="dropdown-menu" data-bs-popper="none">
+                    @(active == DashboardViewEnum.DashboardAdministrationRole.ToString() ? "active" : "")" data-menu="dropdown">
+                        <a class="dropdown-toggle nav-link d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+                            <i data-feather="package"></i><span data-i18n="@Localizer.Get("DashboardAdministration")">@Localizer.Get("DashboardAdministration")</span>
+                        </a>
+                        <ul class="dropdown-menu" data-bs-popper="none">
 
-                        @if (viewList.Contains((int)DashboardViewEnum.Setting))
-                        {
+                            @if (viewList.Contains((int)DashboardViewEnum.DashboardAdministrator))
+                            {
 
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.Setting.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="SettingEntity"
-                                   asp-controller="Setting"
-                                   data-bs-toggle="" data-i18n="Settings">
-                                    <i data-feather="settings"></i>
-                                    <span data-i18n="Settings">@Localizer.Get("Settings")</span>
-                                </a>
-                            </li>
-                        }
-                        
-                        @if (viewList.Contains((int)DashboardViewEnum.DashboardAdministrator))
-                        {
+                                <li data-menu=""
+                                    class="@(active == DashboardViewEnum.DashboardAdministrator.ToString() ? "active" : "")">
+                                    <a class="dropdown-item d-flex align-items-center"
+                                       asp-action="Index" asp-area="DashboardAdministration"
+                                       asp-controller="DashboardAdministrator"
+                                       data-bs-toggle="" data-i18n="DashboardAdministrators">
+                                        <i data-feather="users"></i>
+                                        <span data-i18n="DashboardAdministrators">@Localizer.Get("DashboardAdministrators")</span>
+                                    </a>
+                                </li>
+                            }
 
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.DashboardAdministrator.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="DashboardAdministration"
-                                   asp-controller="DashboardAdministrator"
-                                   data-bs-toggle="" data-i18n="DashboardAdministrators">
-                                    <i data-feather="users"></i>
-                                    <span data-i18n="DashboardAdministrators">@Localizer.Get("DashboardAdministrators")</span>
-                                </a>
-                            </li>
-                        }
+                            @if (viewList.Contains((int)DashboardViewEnum.DashboardAccessLevel))
+                            {
+                                <li data-menu=""
+                                    class="@(active == DashboardViewEnum.DashboardAccessLevel.ToString() ? "active" : "")">
+                                    <a class="dropdown-item d-flex align-items-center"
+                                       asp-action="Index" asp-area="DashboardAdministration"
+                                       asp-controller="DashboardAccessLevel"
+                                       data-bs-toggle="" data-i18n="DashboardAccessLevel">
+                                        <i data-feather="key"></i>
+                                        <span data-i18n="DashboardAccessLevel">@Localizer.Get("DashboardAccessLevels")</span>
+                                    </a>
+                                </li>
+                            }
 
-                        @if (viewList.Contains((int)DashboardViewEnum.DashboardAccessLevel))
-                        {
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.DashboardAccessLevel.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="DashboardAdministration"
-                                   asp-controller="DashboardAccessLevel"
-                                   data-bs-toggle="" data-i18n="DashboardAccessLevel">
-                                    <i data-feather="key"></i>
-                                    <span data-i18n="DashboardAccessLevel">@Localizer.Get("DashboardAccessLevels")</span>
-                                </a>
-                            </li>
-                        }
+                            @if (viewList.Contains((int)DashboardViewEnum.DashboardView))
+                            {
 
-                        @if (viewList.Contains((int)DashboardViewEnum.DashboardView))
-                        {
+                                <li data-menu=""
+                                    class="@(active == DashboardViewEnum.DashboardView.ToString() ? "active" : "")">
+                                    <a class="dropdown-item d-flex align-items-center"
+                                       asp-action="Index" asp-area="DashboardAdministration"
+                                       asp-controller="DashboardView"
+                                       data-bs-toggle="" data-i18n="DashboardView">
+                                        <i data-feather="grid"></i>
+                                        <span data-i18n="DashboardView">@Localizer.Get("DashboardViews")</span>
+                                    </a>
+                                </li>
+                            }
 
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.DashboardView.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="DashboardAdministration"
-                                   asp-controller="DashboardView"
-                                   data-bs-toggle="" data-i18n="DashboardView">
-                                    <i data-feather="grid"></i>
-                                    <span data-i18n="DashboardView">@Localizer.Get("DashboardViews")</span>
-                                </a>
-                            </li>
-                        }
+                            @if (viewList.Contains((int)DashboardViewEnum.DashboardAdministrationRole))
+                            {
 
-                        @if (viewList.Contains((int)DashboardViewEnum.DashboardAdministrationRole))
-                        {
+                                <li data-menu=""
+                                    class="@(active == DashboardViewEnum.DashboardAdministrationRole.ToString() ? "active" : "")">
+                                    <a class="dropdown-item d-flex align-items-center"
+                                       asp-action="Index" asp-area="DashboardAdministration"
+                                       asp-controller="DashboardAdministrationRole"
+                                       data-bs-toggle="" data-i18n="DashboardAdministrationRole">
+                                        <i data-feather="settings"></i>
+                                        <span data-i18n="DashboardAdministrationRole">@Localizer.Get("DashboardAdministrationRoles")</span>
+                                    </a>
+                                </li>
+                            }
 
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.DashboardAdministrationRole.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="DashboardAdministration"
-                                   asp-controller="DashboardAdministrationRole"
-                                   data-bs-toggle="" data-i18n="DashboardAdministrationRole">
-                                    <i data-feather="settings"></i>
-                                    <span data-i18n="DashboardAdministrationRole">@Localizer.Get("DashboardAdministrationRoles")</span>
-                                </a>
-                            </li>
-                        }
-
-                    </ul>
-                </li>
+                        </ul>
+                    </li>
                 }
-                
+
                 @if (viewList.Contains((int)DashboardViewEnum.DBLogs) ||
-                     viewList.Contains((int)DashboardViewEnum.Audit) )
+                    viewList.Contains((int)DashboardViewEnum.Audit))
                 {
                     <li class="dropdown nav-item
                     @(active == DashboardViewEnum.DBLogs.ToString() ? "active" : "")
                     @(active == DashboardViewEnum.Audit.ToString() ? "active" : "")" data-menu="dropdown">
-                    <a class="dropdown-toggle nav-link d-flex align-items-center" href="#" data-bs-toggle="dropdown">
-                        <i data-feather="package"></i><span data-i18n="@Localizer.Get("system")">@Localizer.Get("system")</span>
-                    </a>
-                    <ul class="dropdown-menu" data-bs-popper="none">
+                        <a class="dropdown-toggle nav-link d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+                            <i data-feather="package"></i><span data-i18n="@Localizer.Get("system")">@Localizer.Get("system")</span>
+                        </a>
+                        <ul class="dropdown-menu" data-bs-popper="none">
 
-                        @if (viewList.Contains((int)DashboardViewEnum.DBLogs))
-                        {
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.DBLogs.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="LogEntity"
-                                   asp-controller="DBLogs"
-                                   data-bs-toggle="" data-i18n="DBLogs">
-                                    <i data-feather="x-circle"></i>
-                                    <span data-i18n="DBLogs">@Localizer.Get("DBLogs")</span>
-                                </a>
-                            </li>
-                        }
-                        @if (viewList.Contains((int)DashboardViewEnum.Audit))
-                        {
-                            <li data-menu=""
-                                class="@(active == DashboardViewEnum.Audit.ToString() ? "active" : "")">
-                                <a class="dropdown-item d-flex align-items-center"
-                                   asp-action="Index" asp-area="AuditEntity"
-                                   asp-controller="Audit"
-                                   data-bs-toggle="" data-i18n="Audit">
-                                    <i data-feather="file-text"></i>
-                                    <span data-i18n="Audit">@Localizer.Get("Audits")</span>
-                                </a>
-                            </li>
-                        }
-                    </ul>
-                </li>
+                            @if (viewList.Contains((int)DashboardViewEnum.DBLogs))
+                            {
+                                <li data-menu=""
+                                    class="@(active == DashboardViewEnum.DBLogs.ToString() ? "active" : "")">
+                                    <a class="dropdown-item d-flex align-items-center"
+                                       asp-action="Index" asp-area="LogEntity"
+                                       asp-controller="DBLogs"
+                                       data-bs-toggle="" data-i18n="DBLogs">
+                                        <i data-feather="x-circle"></i>
+                                        <span data-i18n="DBLogs">@Localizer.Get("DBLogs")</span>
+                                    </a>
+                                </li>
+                            }
+                            @if (viewList.Contains((int)DashboardViewEnum.Audit))
+                            {
+                                <li data-menu=""
+                                    class="@(active == DashboardViewEnum.Audit.ToString() ? "active" : "")">
+                                    <a class="dropdown-item d-flex align-items-center"
+                                       asp-action="Index" asp-area="AuditEntity"
+                                       asp-controller="Audit"
+                                       data-bs-toggle="" data-i18n="Audit">
+                                        <i data-feather="file-text"></i>
+                                        <span data-i18n="Audit">@Localizer.Get("Audits")</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
                 }
-                
+
             </ul>
         </div>
     </div>

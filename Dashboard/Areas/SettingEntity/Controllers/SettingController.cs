@@ -113,7 +113,7 @@ namespace Dashboard.Areas.SettingEntity.Controllers
 
                     dataDB.CreatedBy = auth.UserName;
 
-                    await _unitOfWork.Setting.CreateSetting(dataDB);
+                    _unitOfWork.Setting.CreateSetting(dataDB);
                 }
                 else
                 {
@@ -121,7 +121,7 @@ namespace Dashboard.Areas.SettingEntity.Controllers
 
                     if (model.Type != SettingTypeEnum.File)
                     {
-                        await _unitOfWork.Setting.UpdateSetting(model, dataDB);
+                        _unitOfWork.Setting.UpdateSetting(model, dataDB);
                     }
                     else
                     {

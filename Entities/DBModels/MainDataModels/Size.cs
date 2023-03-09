@@ -1,4 +1,6 @@
 ﻿
+using Entities.DBModels.ProductModels;
+
 namespace Entities.DBModels.MainDataModels
 {
     public class Size : AuditLookUpEntity
@@ -9,6 +11,9 @@ namespace Entities.DBModels.MainDataModels
         
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
+
+        [DisplayName(nameof(ProductSizes))]
+        public List<ProductSize> ProductSizes { get; set; }
 
         public SizeLang SizeLang { get; set; }
     }

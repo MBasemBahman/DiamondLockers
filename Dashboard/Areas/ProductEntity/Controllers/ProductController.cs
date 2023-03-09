@@ -53,10 +53,14 @@ namespace Dashboard.Areas.ProductEntity.Controllers
 
             ProductParameters parameters = new()
             {
-                SearchColumns = "Id,Name"
+                SearchColumns = "Id,Name,Order"
             };
 
             _ = _mapper.Map(dtParameters, parameters);
+
+            parameters.IncludeColors = true;
+            parameters.IncludeSizes = true;
+            parameters.IncludeCategories = true;
 
             PagedList<ProductModel> data = await _unitOfWork.Product.GetProductsPaged(parameters, otherLang);
 
@@ -87,22 +91,22 @@ namespace Dashboard.Areas.ProductEntity.Controllers
             {
                 Product countryDB = await _unitOfWork.Product.FindProductById(id, trackChanges: false);
                 model = _mapper.Map<ProductCreateOrEditModel>(countryDB);
-                
+
                 model.ImageUrl = countryDB.StorageUrl + countryDB.ImageUrl;
-                
-                model.Fk_Categories = 
+
+                model.Fk_Categories =
                     _unitOfWork.Product.GetProductCategories(new ProductCategoryParameters
                     {
                         Fk_Product = id
                     }, otherLang: false).Select(a => a.Fk_Category).ToList();
-                
-                model.Fk_Sizes = 
+
+                model.Fk_Sizes =
                     _unitOfWork.Product.GetProductSizes(new ProductSizeParameters
                     {
                         Fk_Product = id
                     }, otherLang: false).Select(a => a.Fk_Size).ToList();
-                
-                model.Fk_Colors = 
+
+                model.Fk_Colors =
                     _unitOfWork.Product.GetProductColors(new ProductColorParameters
                     {
                         Fk_Product = id
@@ -128,7 +132,6 @@ namespace Dashboard.Areas.ProductEntity.Controllers
             }
             try
             {
-
                 UserAuthenticatedDto auth = (UserAuthenticatedDto)Request.HttpContext.Items[ApiConstants.User];
                 Product dataDB = new();
                 if (id == 0)
@@ -158,11 +161,13 @@ namespace Dashboard.Areas.ProductEntity.Controllers
 
                 await _unitOfWork.Save();
 
+                id = dataDB.Id;
+
                 if (id > 0)
                 {
-                    await _unitOfWork.Product.UpdateProductCategories(dataDB.Id, model.Fk_Categories);
-                    await _unitOfWork.Product.UpdateProductColors(dataDB.Id, model.Fk_Colors);
-                    await _unitOfWork.Product.UpdateProductSizes(dataDB.Id, model.Fk_Sizes);
+                    _unitOfWork.Product.UpdateProductCategories(dataDB.Id, model.Fk_Categories);
+                    _unitOfWork.Product.UpdateProductColors(dataDB.Id, model.Fk_Colors);
+                    _unitOfWork.Product.UpdateProductSizes(dataDB.Id, model.Fk_Sizes);
                 }
 
                 await _unitOfWork.Save();
@@ -199,7 +204,7 @@ namespace Dashboard.Areas.ProductEntity.Controllers
         private void SetViewData(int id)
         {
             bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
-            
+
             ViewData["id"] = id;
             ViewData["Categories"] = _unitOfWork.MainData.GetCategoriesLookUp(new CategoryParameters(), otherLang);
             ViewData["Sizes"] = _unitOfWork.MainData.GetSizesLookUp(new SizeParameters(), otherLang);

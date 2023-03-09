@@ -1,4 +1,5 @@
-﻿
+﻿using Entities.DBModels.ProductModels;
+
 namespace Entities.DBModels.MainDataModels
 {
     public class Category : AuditLookUpEntity
@@ -9,6 +10,9 @@ namespace Entities.DBModels.MainDataModels
         
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
+
+        [DisplayName(nameof(ProductCategories))]
+        public List<ProductCategory> ProductCategories { get; set; }
 
         public CategoryLang CategoryLang { get; set; }
     }

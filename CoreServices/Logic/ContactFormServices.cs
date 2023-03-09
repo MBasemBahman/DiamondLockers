@@ -1,6 +1,4 @@
-﻿using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.ContactFormModels;
-using Entities.DBModels.MainDataModels;
+﻿using Entities.CoreServicesModels.ContactFormModels;
 using Entities.DBModels.ContactFormModels;
 using Microsoft.AspNetCore.Http;
 
@@ -41,7 +39,7 @@ namespace CoreServices.Logic
             return await PagedList<ContactFormModel>.ToPagedList(GetContactForms(parameters), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateContactForm(ContactForm entity)
+        public void CreateContactForm(ContactForm entity)
         {
             _repository.ContactForm.Create(entity);
         }
@@ -56,7 +54,7 @@ namespace CoreServices.Logic
             FileUploader uploader = new(rootPath);
             return await uploader.UploudFile(file, "Upload/ContactForm");
         }
-        
+
         public ContactFormModel GetContactFormById(int id)
         {
             return GetContactForms(new ContactFormParameters { Id = id }).SingleOrDefault();

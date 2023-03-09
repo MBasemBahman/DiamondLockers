@@ -942,4 +942,16 @@
   <data name="Site Description" xml:space="preserve">
     <value>Site Description</value>
   </data>
+  <data name="ProductCategoriesCount" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="ProductColorsCount" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="ProductCount" xml:space="preserve">
+    <value>Product count</value>
+  </data>
+  <data name="ProductSizesCount" xml:space="preserve">
+    <value>Sizes</value>
+  </data>
 </root>

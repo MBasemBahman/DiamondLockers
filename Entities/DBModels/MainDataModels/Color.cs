@@ -1,4 +1,6 @@
 ﻿
+using Entities.DBModels.ProductModels;
+
 namespace Entities.DBModels.MainDataModels
 {
     public class Color : AuditLookUpEntity
@@ -9,6 +11,9 @@ namespace Entities.DBModels.MainDataModels
         
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
+
+        [DisplayName(nameof(ProductColors))]
+        public List<ProductColor> ProductColors { get; set; }
 
         public ColorLang ColorLang { get; set; }
     }

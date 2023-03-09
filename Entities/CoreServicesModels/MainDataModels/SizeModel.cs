@@ -16,6 +16,9 @@
 
         [DisplayName(nameof(CreatedAt))]
         public DateTime CreatedAt { get; set; }
+
+        [DisplayName(nameof(ProductCount))]
+        public int ProductCount { get; set; }
     }
 
     public class SizeCreateOrEditModel

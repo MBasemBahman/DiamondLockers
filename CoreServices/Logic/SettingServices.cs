@@ -45,7 +45,7 @@ namespace CoreServices.Logic
             return await PagedList<SettingModel>.ToPagedList(GetSettings(parameters), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateSetting(Setting entity)
+        public void CreateSetting(Setting entity)
         {
             _repository.Setting.Create(entity);
         }
@@ -54,8 +54,8 @@ namespace CoreServices.Logic
         {
             return GetSettings(parameters).ToDictionary(a => a.Key, a => a.Value);
         }
-        
-        public async Task UpdateSetting(SettingCreateOrEditModel model, Setting entity)
+
+        public void UpdateSetting(SettingCreateOrEditModel model, Setting entity)
         {
             if (model.Type != DBModelsEnum.SettingTypeEnum.File)
             {

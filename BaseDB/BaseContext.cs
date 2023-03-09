@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 using ModelBuilderConfig.Configurations.DashboardAdministrationModels;
+using ModelBuilderConfig.Configurations.SettingModels;
 using ModelBuilderConfig.Configurations.UserModels;
 using Newtonsoft.Json;
 
@@ -118,6 +119,11 @@ namespace BaseDB
             _ = modelBuilder.ApplyConfiguration(new DashboardAdministratorConfiguration());
 
             #endregion
+
+            #region SettingModels
+            _ = modelBuilder.ApplyConfiguration(new SettingConfiguration());
+            #endregion
+
         }
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

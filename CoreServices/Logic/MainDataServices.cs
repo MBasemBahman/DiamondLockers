@@ -24,7 +24,8 @@ namespace CoreServices.Logic
                            Id = a.Id,
                            CreatedAt = a.CreatedAt,
                            Name = otherLang ? a.CategoryLang.Name : a.Name,
-                           Order = a.Order
+                           Order = a.Order,
+                           ProductCount = a.ProductCategories.Count
                        })
                        .Search(parameters.SearchColumns, parameters.SearchTerm)
                        .Sort(parameters.OrderBy);
@@ -37,13 +38,13 @@ namespace CoreServices.Logic
             return await PagedList<CategoryModel>.ToPagedList(GetCategories(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateCategory(Category entity)
+        public void CreateCategory(Category entity)
         {
             entity.CategoryLang ??= new CategoryLang()
             {
                 Name = ""
             };
-            
+
             _repository.Category.Create(entity);
         }
 
@@ -56,7 +57,7 @@ namespace CoreServices.Logic
         {
             return GetCategories(new CategoryParameters { Id = id }, otherLang).SingleOrDefault();
         }
-        
+
         public Dictionary<string, string> GetCategoriesLookUp(CategoryParameters parameters, bool otherLang)
         {
             return GetCategories(parameters, otherLang).ToDictionary(a => a.Id.ToString(), a => a.Name);
@@ -75,7 +76,7 @@ namespace CoreServices.Logic
 
 
         #endregion
-        
+
         #region Size Services
 
         public IQueryable<SizeModel> GetSizes(SizeParameters parameters,
@@ -88,7 +89,8 @@ namespace CoreServices.Logic
                     Id = a.Id,
                     CreatedAt = a.CreatedAt,
                     Name = otherLang ? a.SizeLang.Name : a.Name,
-                    Order = a.Order
+                    Order = a.Order,
+                    ProductCount = a.ProductSizes.Count
                 })
                 .Search(parameters.SearchColumns, parameters.SearchTerm)
                 .Sort(parameters.OrderBy);
@@ -101,13 +103,13 @@ namespace CoreServices.Logic
             return await PagedList<SizeModel>.ToPagedList(GetSizes(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateSize(Size entity)
+        public void CreateSize(Size entity)
         {
             entity.SizeLang ??= new SizeLang
             {
                 Name = ""
             };
-            
+
             _repository.Size.Create(entity);
         }
 
@@ -115,7 +117,7 @@ namespace CoreServices.Logic
         {
             return await _repository.Size.FindById(id, trackChanges);
         }
-        
+
         public Dictionary<string, string> GetSizesLookUp(SizeParameters parameters, bool otherLang)
         {
             return GetSizes(parameters, otherLang).ToDictionary(a => a.Id.ToString(), a => a.Name);
@@ -139,7 +141,7 @@ namespace CoreServices.Logic
 
 
         #endregion
-        
+
         #region Color Services
 
         public IQueryable<ColorModel> GetColors(ColorParameters parameters,
@@ -152,7 +154,8 @@ namespace CoreServices.Logic
                     Id = a.Id,
                     CreatedAt = a.CreatedAt,
                     Name = otherLang ? a.ColorLang.Name : a.Name,
-                    Order = a.Order
+                    Order = a.Order,
+                    ProductCount = a.ProductColors.Count
                 })
                 .Search(parameters.SearchColumns, parameters.SearchTerm)
                 .Sort(parameters.OrderBy);
@@ -165,13 +168,13 @@ namespace CoreServices.Logic
             return await PagedList<ColorModel>.ToPagedList(GetColors(parameters, otherLang), parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task CreateColor(Color entity)
+        public void CreateColor(Color entity)
         {
             entity.ColorLang ??= new ColorLang
             {
                 Name = ""
             };
-            
+
             _repository.Color.Create(entity);
         }
 
@@ -179,7 +182,7 @@ namespace CoreServices.Logic
         {
             return await _repository.Color.FindById(id, trackChanges);
         }
-        
+
         public Dictionary<string, string> GetColorsLookUp(ColorParameters parameters, bool otherLang)
         {
             return GetColors(parameters, otherLang).ToDictionary(a => a.Id.ToString(), a => a.Name);
@@ -203,6 +206,6 @@ namespace CoreServices.Logic
 
 
         #endregion
-        
+
     }
 }

@@ -57,7 +57,7 @@
                                                     <a id="details" asp-action="Details">
                                                     </a>
                                                 }
-                                                
+
                                                 @if (accessLevel.ExportAccess)
                                                 {
                                                     <a id="export" href="export">
@@ -84,8 +84,10 @@
                                             </th>
                                             <th>@Html.DisplayNameFor(model => row.Name)</th>
                                             <th>@Html.DisplayNameFor(model => row.Order)</th>
-                                            <th>@Html.DisplayNameFor(model => row.CreatedAt)</th>
-                                            <th>
+                                            <th class="no-sort no-search">@Html.DisplayNameFor(model => row.ProductCategoriesString)</th>
+                                            <th class="no-sort no-search">@Html.DisplayNameFor(model => row.ProductSizesString)</th>
+                                            <th class="no-sort no-search">@Html.DisplayNameFor(model => row.ProductColorsString)</th>
+                                            <th class="no-sort no-search">
                                                 @Html.DisplayNameFor(model => row.Id)
                                             </th>
                                         </tr>
@@ -122,9 +124,32 @@
                     // Columns Setups
                     columns: [
                         { data: "id" },
-                        { data: "name" },
+                        {
+                            data: "name",
+                            render: function (data, type, row) {
+                                if (row.imageUrl != null) {
+
+                                    return '<div class="d-flex justify-content-left align-items-center"><div class= "avatar-wrapper" ><div class="avatar me-1">'
+                                        + '<img src="' + row.imageUrl + '" alt="" height="32" width="32">'
+                                        + '</div></div>'
+                                        + ' <div class= "d-flex flex-column">'
+                                        + '<span class= "fw-bolder">' + data + '</span>'
+                                        + '<small class= "emp_post text-muted" ></small ></div></div>';
+                                }
+                                else {
+                                    return '<div class="d-flex justify-content-left align-items-center"><div class= "avatar-wrapper" >'
+                                        + '<div class="avatar  bg-light-dark  me-1"><span class="avatar-content"></span></div>'
+                                        + '</div>'
+                                        + ' <div class= "d-flex flex-column">'
+                                        + '<span class= "fw-bolder">' + data + '</span>'
+                                        + '<small class= "emp_post text-muted" ></small ></div></div>';
+                                }
+                            }
+                        },
                         { data: "order" },
-                        { data: "createdAt" },
+                        { data: "productCategoriesString" },
+                        { data: "productSizesString" },
+                        { data: "productColorsString" },
                         { data: "id" },
                     ]
                 });

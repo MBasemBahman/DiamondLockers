@@ -11,7 +11,7 @@ public class ContactFormFilter : DtParameters
 public class ContactFormDto : ContactFormModel
 {
     [DisplayName(nameof(CreatedAt))]
-    public new string CreatedAt { get; set; }
+    public string CreatedAt { get; set; }
 
     [DisplayName(nameof(LastModifiedAt))]
     public string LastModifiedAt { get; set; }
