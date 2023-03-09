@@ -435,41 +435,41 @@
 {
     <script>
         LoadProducts();
-    
+
         $(document).on("click", ".category_btn", function() {
            let category = $(this).data("filter");
            $("input[name=Fk_Category]").val(category);
-          
+
            $(".category_btn").removeClass("active-filter");
-           
+
            resetProducts($(this));
         });
-        
+
         $(document).on("click", ".size_btn", function() {
            let size = $(this).data("filter");
            $("input[name=Fk_Size]").val(size);
-          
+
            $(".size_btn").removeClass("active-filter");
-           
+
            resetProducts($(this));
         });
-        
+
         $(document).on("click", ".color_btn", function() {
            let color = $(this).data("filter");
            $("input[name=Fk_Color]").val(color);
-          
+
            $(".color_btn").removeClass("active-filter");
-           
+
            resetProducts($(this));
         });
-    
+
         function resetProducts(element) {
             if (element.data("filter") != "0") {
                 element.addClass("active-filter");
             }
-           LoadProducts();           
+           LoadProducts();
         }
-                   
+
         function LoadProducts() {
           $.ajax({
                       type: 'get',
@@ -487,7 +487,7 @@
                       },
                       success: function (data) {
                           let products = '';
-                          
+
                            if (data.length > 0) {
                                data.forEach(product => {
                                    products += `<div class="card-item mix">
@@ -499,12 +499,11 @@
                                          </a>
                                      </div>`;
                                });
-                               
+
                                $(".photo__gallery").html(products);
                            } else {
-                               $(".photo__gallery").html(`<h1 style="padding-top: 40px;">@Localizer.Get("No Content")</h3>`);
+                               $(".photo__gallery").html(`<h3 style="padding-top: 40px;">@Localizer.Get("No Content")</h3>`);
                            }
-                           
                       }
                   });
         }

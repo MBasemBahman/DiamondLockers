@@ -25,7 +25,7 @@ namespace CoreServices.Logic
                 {
                     Id = a.Id,
                     CreatedAt = a.CreatedAt,
-                    Name = otherLang ? a.ProductLang.Name : a.Name,
+                    Name = parameters.IgnoreNoneName && a.Name.Contains("none") ? "" : otherLang ? a.ProductLang.Name : a.Name,
                     ImageUrl = a.StorageUrl + a.ImageUrl,
                     Order = a.Order,
                     ProductCategoriesString = parameters.IncludeCategories ?

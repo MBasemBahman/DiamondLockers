@@ -9,6 +9,8 @@
         public bool IncludeCategories { get; set; }
         public bool IncludeSizes { get; set; }
         public bool IncludeColors { get; set; }
+
+        public bool IgnoreNoneName { get; set; }
     }
 
     public class ProductModel

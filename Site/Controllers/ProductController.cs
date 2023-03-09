@@ -3,10 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Contracts.Constants;
 using CoreServices;
-using Entities.CoreServicesModels.MainDataModels;
 using Entities.CoreServicesModels.ProductModels;
-using Org.BouncyCastle.Ocsp;
-using Site.Models;
 
 namespace Site.Controllers
 {
@@ -23,6 +20,8 @@ namespace Site.Controllers
         public IActionResult GetProducts(ProductParameters parameters)
         {
             bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+
+            parameters.IgnoreNoneName = true;
 
             List<ProductModel> products = _unitOfWork.Product.GetProducts(parameters, otherLang).ToList();
 

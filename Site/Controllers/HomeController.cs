@@ -24,12 +24,21 @@ namespace Site.Controllers
         public IActionResult Index()
         {
             bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
-            
-            ViewData["Category"] = _unitOfWork.MainData.GetCategoriesLookUp(new CategoryParameters(), otherLang);
-            ViewData["Size"] = _unitOfWork.MainData.GetSizesLookUp(new SizeParameters(), otherLang);
-            ViewData["Color"] = _unitOfWork.MainData.GetColorsLookUp(new ColorParameters(), otherLang);
-            
-            ViewData["Product"] = _unitOfWork.Product.GetProducts(new ProductParameters(), otherLang);
+
+            ViewData["Category"] = _unitOfWork.MainData.GetCategoriesLookUp(new CategoryParameters
+            {
+                OrderBy = "order desc"
+            }, otherLang);
+
+            ViewData["Size"] = _unitOfWork.MainData.GetSizesLookUp(new SizeParameters
+            {
+                OrderBy = "order desc"
+            }, otherLang);
+
+            ViewData["Color"] = _unitOfWork.MainData.GetColorsLookUp(new ColorParameters
+            {
+                OrderBy = "order desc"
+            }, otherLang);
 
             ViewBag.Active = "Home";
 
@@ -38,11 +47,6 @@ namespace Site.Controllers
 
         public IActionResult About()
         {
-            if (_expire < DateTime.Now.Date)
-            {
-                return NotFound();
-            }
-
             ViewBag.Active = "About";
 
             return View();
