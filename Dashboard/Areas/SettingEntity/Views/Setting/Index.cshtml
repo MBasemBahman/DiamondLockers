@@ -73,8 +73,6 @@
                                                 }
 
                                             </th>
-                                            <th>@Html.DisplayNameFor(model => row.Key)</th>
-                                            <th>@Html.DisplayNameFor(model => row.Type)</th>
                                             <th>@Html.DisplayNameFor(model => row.DisplayName)</th>
                                             <th>@Html.DisplayNameFor(model => row.Value)</th>
                                             <th>
@@ -114,8 +112,6 @@
                     // Columns Setups
                     columns: [
                         { data: "id" },
-                        { data: "key" },
-                        { data: "type" },
                         { data: "displayName" },
                         { data: "value", render: function(data, row, type) {
                           if (type.type == "@DBModelsEnum.SettingTypeEnum.File") {

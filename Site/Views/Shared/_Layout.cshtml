@@ -45,7 +45,11 @@
             border-radius: 20px;
             padding: 1px;
         }
-        
+
+        .project-item{
+            height:19rem;
+        }
+
         .active-filter {
             background-color: #c9c3b0 !important;
         }
@@ -117,26 +121,26 @@
 
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link @(active == "Home"? "active": "" )" aria-current="page" asp-action="Index" asp-controller="Home">@Localizer.Get("Home")</a>
+                                <a class="nav-link @(active == "Home"? "active": "" )" aria-current="page" asp-action="Index" asp-controller="Home">@Setting.Get(Localizer.Get("home"))</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="features">@Localizer.Get("Features")</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="features">@Setting.Get(Localizer.Get("features"))</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="services">@Localizer.Get("Services")</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="services">@Setting.Get(Localizer.Get("services"))</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">@Localizer.Get("Products")</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-fragment="products">@Setting.Get(Localizer.Get("products"))</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link @(active == "About"? "active": "" )" asp-action="Index" asp-controller="Home" asp-fragment="about">@Localizer.Get("About Us")</a>
+                                <a class="nav-link @(active == "About"? "active": "" )" asp-action="Index" asp-controller="Home" asp-fragment="about">@Setting.Get(Localizer.Get("about"))</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-fragment="contact">@Localizer.Get("Contact Us")</a>
+                                <a class="nav-link" asp-fragment="contact">@Setting.Get(Localizer.Get("contact"))</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" asp-action="Culture" asp-controller="Home" asp-route-culture="@Localizer.Get("CultureVal")">@Localizer.Get("Culture")</a>
+                                <a class="nav-link" asp-action="Culture" asp-controller="Home" asp-route-culture="@Localizer.Get("CultureVal")">@Setting.Get(Localizer.Get("culture"))</a>
                             </li>
                         </ul>
                     </div>
@@ -159,9 +163,9 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="get-in-touch">
-                                <h2>@Localizer.Get("Get in touch")</h2>
+                                <h2>@Setting.Get(Localizer.Get("footerTitle"))</h2>
                                 <h3>
-                                    @Localizer.Get("Contact us today. Let us help you better manage your security.")
+                                    @Html.Raw(Setting.Get(Localizer.Get("footerDesc")))
                                 </h3>
                             </div>
                             <div class="ours-contact">
@@ -169,17 +173,16 @@
                                 <div class="soical-contact">
                                     <img src="~/assets/images/mail.png" alt="" class="img-fluid" />
                                     <div class="des">
-                                        <h2>@Localizer.Get("E-Mail")</h2>
-                                        <a href="mailto:support@diamondlockers.com">support@diamondlockers.com</a>
+                                        <h2>@Setting.Get(Localizer.Get("emailTitle"))</h2>
+                                        <a href="mailto:@Setting.Get(Localizer.Get("emailVal"))">@Setting.Get(Localizer.Get("emailVal"))</a>
                                     </div>
                                 </div>
                                 <div class="soical-contact">
                                         <img src="~/assets/images/location.png" alt="" class="img-fluid" />
                                         <div class="des">
-                                            <h2>@Localizer.Get("Our Office Location")</h2>
+                                            <h2>@Setting.Get(Localizer.Get("addressTitle"))</h2>
                                             <p>
-                                                @Localizer.Get("Riyadh"), <br />
-                                                @Localizer.Get("Saudi Arabia")
+                                                @Html.Raw(Setting.Get(Localizer.Get("addressDesc")))
                                             </p>
                                         </div>
                                     </div>
@@ -188,53 +191,53 @@
                         <div class="col-lg-6">
                             <form asp-action="Contact" id="contactForm" class="main-form border border-2 border-dark rounded p-20">
                                 <div asp-validation-summary="All" class="text-danger"></div>
-                                <label asp-for="Type"> @Localizer.Get("Type")</label>
+                                <label asp-for="Type">@Setting.Get(Localizer.Get("formTypeTitle"))</label>
                                 <select asp-for="Type" class="form-select" aria-label="Type">
-                                    <option value="Individuals">@Localizer.Get("Individuals") </option>
-                                    <option value="Companies">@Localizer.Get("Companies")</option>
+                                    <option value="Individuals">@Setting.Get(Localizer.Get("formType1")) </option>
+                                    <option value="Companies">@Setting.Get(Localizer.Get("formType2"))</option>
                                 </select>
 
                                 <label asp-for="Name">
-                                    @Localizer.Get("Name")
+                                    @Setting.Get(Localizer.Get("formPhoneTitle"))
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Name" class="text-danger"></span>
                                 </label>
-                                <input type="text" asp-for="Name" class="form-control" placeholder="@Localizer.Get("Your Name")" required />
+                                <input type="text" asp-for="Name" class="form-control" placeholder="@Setting.Get(Localizer.Get("formNameDesc"))" required />
 
                                 <label asp-for="Phone">
-                                    @Localizer.Get("Phone")
+                                    @Setting.Get(Localizer.Get("formPhoneTitle"))
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Phone" class="text-danger"></span>
                                 </label>
-                                <input type="tel" asp-for="Phone" class="form-control" placeholder="@Localizer.Get("Your Phone")" required />
+                                <input type="tel" asp-for="Phone" class="form-control" placeholder="@Setting.Get(Localizer.Get("formPhoneDesc"))" required />
 
                                 <label asp-for="Email">
-                                    @Localizer.Get("Email")
+                                    @Setting.Get(Localizer.Get("formEmailTitle"))
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </label>
-                                <input type="email" asp-for="Email" class="form-control" placeholder="@Localizer.Get("Your Email")" required />
+                                <input type="email" asp-for="Email" class="form-control" placeholder="@Setting.Get(Localizer.Get("formEmailDesc"))" required />
 
                                 <label asp-for="Service">
-                                    @Localizer.Get("Service")
+                                    @Setting.Get(Localizer.Get("formServiceTitle"))
                                 </label>
                                 <select asp-for="Service" class="form-select" aria-label="Service">
-                                    <option value="Rent">@Localizer.Get("Rent")</option>
-                                    <option value="Buy">@Localizer.Get("Buy")</option>
-                                    <option value="Enquiry">@Localizer.Get("Enquiry")</option>
+                                    <option value="Rent">@Setting.Get(Localizer.Get("formService1"))</option>
+                                    <option value="Buy">@Setting.Get(Localizer.Get("formService2"))</option>
+                                    <option value="Enquiry">@Setting.Get(Localizer.Get("formService3"))</option>
                                 </select>
 
                                 <label asp-for="Message">
-                                    @Localizer.Get("Message")
+                                    @Setting.Get(Localizer.Get("formMessageTitle"))
                                     <span class="text-danger"> *</span>
                                     <span asp-validation-for="Message" class="text-danger"></span>
                                 </label>
-                                <textarea class="form-control" placeholder="@Localizer.Get("Message")" asp-for="Message" rows="3" required></textarea>
+                                <textarea class="form-control" placeholder="@Setting.Get(Localizer.Get("formMessageDesc"))" asp-for="Message" rows="3" required></textarea>
 
-                                <button type="button" class="btn btn-primary text-white mb-10" onclick="formSubmit()">@Localizer.Get("Submit")</button>
-                                <p id="successMsg" class="text-success">@Localizer.Get("Message sent successfully!")</p>
-                                <p id="errorMsg" class="text-danger">@Localizer.Get("Something wrong please try again!")</p>
-                                <p id="incompleteMsg" class="text-danger">@Localizer.Get("Please complete the form!")</p>
+                                <button type="button" class="btn btn-primary text-white mb-10" onclick="formSubmit()">@Setting.Get(Localizer.Get("formSubmit"))</button>
+                                <p id="successMsg" class="text-success">@Setting.Get(Localizer.Get("formSuccessMsg"))</p>
+                                <p id="errorMsg" class="text-danger">@Setting.Get(Localizer.Get("formErrorMsg"))</p>
+                                <p id="incompleteMsg" class="text-danger">@Setting.Get(Localizer.Get("formIncompleteMsg"))</p>
                             </form>
                         </div>
                     </div>

@@ -3,60 +3,6 @@
 }
 <div class="aboutUs clients-work">
     <div class="container text-center">
-        @if (Localizer.Get("CultureState") == "ar")
-        {
-            <p>
-                هل سبق وفقدت مفتاح الخزنة التقليدية التي تستخدمها؟ أو كنت لا تتذكر كلمة المرور
-                الخاصة بها؟ الأمر الذي يفقدك أموالك ومقتنياتك وقد يعرض عملك للخسارة!!
-                عندما تستخدم الخزنة الذكية ستدرك الفرق الكبير بينها وبين الخزنة التقليدية والذي سيحدث فارق كبير فى حياتك.
-            </p>
-
-            <p class="mt-40">
-                من المشاكل التي تواجه مستخدمي الخزنة التقليدية أنها عديمة الكفاءة, ومكلفة, وغير عملية, فنسيان
-                كلمة المرور, وتكلفة الاستخدام الباهظة, وفقدان المفتاح, جميعها أمور تعاني منها المؤسسات
-                التي مازالت تستخدم الخزنة التقليدية.
-            </p>
-
-            <p class="mt-40">
-                والحل يكمن في الخزائن الذكية التي تعمل بدون مدخلات الحماية التقليدية وانما بالأساليب التكنولوجية الحديثة.
-                والتي ستجدها هنا فى دايموند لوكرز.
-            </p>
-
-            <p class="mt-40">
-                فعندما تستخدم الخزنة التقليدية فإنك تحتاج إلي أن يكون معك كلمة المرور أو المفتاح. فى حين أن وجود
-                سجلات استخدام الكترونية تساعد فى تعزيز عنصري الأمان والحماية.
-                فالاحتفاظ بسجلات الكترونية دقيقة يمنع السرقات ويقلل التلامس ونشر العدوى.
-            </p>
-
-            <p class="mb-40">
-                اذا أردت زيادة إنتاجية ونمو شركتك, فعليك تطوير نظام الخزائن لديك إلي نظام خزائن دايموند لوكرز.
-            </p>
-        }
-        else
-        {
-            <p>
-                @Localizer.Get("If you use traditional storage lockers with keys or passcodes, you may be losing money and putting your business at risk. When you consider the difference between standard and intelligent locker management, you will quickly understand how making the change can affect your bottom line.")
-            </p>
-            <div class="mt-40">
-                <p>
-                    @Localizer.Get("Manual storage lockers are inefficient, costly, and unsanitary. Forgotten passcodes, labor costs, and misplaced keys are ongoing issues faced by companies still using manual storage methods.")
-                </p>
-            </div>
-            <div class="mt-40">
-                <p>
-                    @Localizer.Get("Welcome to Diamond Lockers, a password-free quick storage solution transforming the locker storage industry.")
-                </p>
-            </div>
-            <div class="mt-40">
-                <p>
-                    @Localizer.Get("With traditional locker management, employees use passcodes, keys or badges, while tracking records help ensure security and safety. Keeping accurate records, preventing theft, and maintaining hygiene are ongoing challenges faced by companies using manual storage.")
-                </p>
-            </div>
-            <div class="mb-40">
-                <p>
-                    @Localizer.Get("If you want to increase your company`s productivity and growth consider upgrading your system to Diamond Lockers.")
-                </p>
-            </div>
-        }
+        @Html.Raw(Setting.Get(Localizer.Get("aboutLongDesc")))
     </div>
 </div>

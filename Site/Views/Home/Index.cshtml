@@ -9,25 +9,9 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="clients-des">
-                    @if (Localizer.Get("CultureState") == "ar")
-                    {
-                        <h2>
-                            <span class="primary-color">ألماساتك</span>
-                            في
-                            <span class="primary-color">خزائن</span>
-                            آمنة!
-                        </h2>
-
-                    }
-                    else
-                    {
-                        <h2>
-                            Your
-                            <span class="primary-color">Diamonds</span>
-                            are in secured
-                            <span class="primary-color">Lockers</span>!
-                        </h2>
-                    }
+                    <h2>
+                        @Html.Raw(Setting.Get(Localizer.Get("slider")))
+                    </h2>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -50,8 +34,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/24-hours.png" alt="" />
                     </div>
-                    <h2>@Localizer.Get("AVAILABILITY") </h2>
-                    <p>@Localizer.Get("24 / 7 lockers at your service")</p>
+                    <h2>@Setting.Get(Localizer.Get("feature1"))</h2>
+                    <p>@Setting.Get(Localizer.Get("feature1_desc"))</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -59,8 +43,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/water.png" alt="" />
                     </div>
-                    <h2>@Localizer.Get("Non-contact") </h2>
-                    <p>@Localizer.Get("Intelligent lockers are hygienic and clean")</p>
+                    <h2>@Setting.Get(Localizer.Get("feature2"))</h2>
+                    <p>@Setting.Get(Localizer.Get("feature2_desc"))</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -68,8 +52,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/save-money.png" alt="" />
                     </div>
-                    <h2>@Localizer.Get("COST REDUCTION") </h2>
-                    <p>@Localizer.Get("Unneeded human presence")</p>
+                    <h2>@Setting.Get(Localizer.Get("feature3"))</h2>
+                    <p>@Setting.Get(Localizer.Get("feature3_desc"))</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -77,8 +61,8 @@
                     <div class="about-icon">
                         <img src="~/assets/images/shield.png" alt="" />
                     </div>
-                    <h2>@Localizer.Get("Safety")</h2>
-                    <p>@Localizer.Get("Integrated camera surveillance as needed")</p>
+                    <h2>@Setting.Get(Localizer.Get("feature4"))</h2>
+                    <p>@Setting.Get(Localizer.Get("feature4_desc"))</p>
                 </div>
             </div>
         </div>
@@ -95,19 +79,10 @@
                         <div class="project-item">
                             <div class="project-title">
                                 <h2>@Localizer.Get("01")</h2>
-                                <h3>@Localizer.Get("Rent or Buy?")</h3>
+                                <h3>@Setting.Get(Localizer.Get("service1"))</h3>
                             </div>
                             <p>
-                                @Localizer.Get("Our team will be glad to support you with this decision")
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                @if (Localizer.Get("CultureState") == "ar")
-                                {
-                                    <br />
-                                }
+                                @Html.Raw(Setting.Get(Localizer.Get("service1_desc")))
                             </p>
                         </div>
                     </div>
@@ -115,15 +90,10 @@
                         <div class="project-item">
                             <div class="project-title">
                                 <h2>@Localizer.Get("02")</h2>
-                                <h3>@Localizer.Get("After Sale Service")</h3>
+                                <h3>@Setting.Get(Localizer.Get("service2"))</h3>
                             </div>
                             <p>
-                                - @Localizer.Get("2 years warranty") <br />
-                                - @Localizer.Get("Delivery to your location") <br />
-                                - @Localizer.Get("Installation") <br />
-                                - @Localizer.Get("Staff training") <br />
-                                - @Localizer.Get("Maintenance") <br />
-                                - @Localizer.Get("Spare parts")
+                                @Html.Raw(Setting.Get(Localizer.Get("service2_desc")))
                             </p>
                         </div>
                     </div>
@@ -131,19 +101,10 @@
                         <div class="project-item">
                             <div class="project-title">
                                 <h2>@Localizer.Get("03")</h2>
-                                <h3>@Localizer.Get("Guaranteed Safe & Secured")</h3>
+                                <h3>@Setting.Get(Localizer.Get("service3"))</h3>
                             </div>
                             <p>
-                                @Localizer.Get("If anything (non-consumable) goes wrong, we will cover your loss")
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                @if (Localizer.Get("CultureState") == "ar")
-                                {
-                                    <br />
-                                }
+                                @Html.Raw(Setting.Get(Localizer.Get("service3_desc")))
                             </p>
                         </div>
                     </div>
@@ -159,45 +120,10 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="service-deitals">
-                            @if (Localizer.Get("CultureState") == "ar")
-                            {
-                                <h2>
-                                    يفضل عملاء دايموند لوكرز تخصيص
-                                    <span class="primary-color">ألوان</span>  و
-                                    <span class="primary-color">خصائص</span>
-                                    <span class="primary-color">لخزائنهم</span>
-                                </h2>
-                            }
-                            else
-                            {
-                                <h2>
-                                    @Localizer.Get("Our clients love the customizable ")<span class="primary-color">@Localizer.Get("feature")</span>  @Localizer.Get("and") <span class="primary-color">@Localizer.Get("colors")</span> @Localizer.Get("of their Diamond ")
-                                    <span class="primary-color">@Localizer.Get("Lockers")</span>
-                                </h2>
-                            }
+                            @Html.Raw(Setting.Get(Localizer.Get("ServicesTitle")))
                             <div class="mt-md-50 mt-20">
                                 <p>
-                                    @Localizer.Get("Diamond Lockers allows you to keep reliable cloud-based records with multiple data options. Options include what is stored, who has access, and when to permit access.")
-                                    <br />
-                                    <br />
-                                    @if (Localizer.Get("CultureState") == "ar")
-                                    {
-                                        <Text>
-                                        إن
-                                        <span class="primary-color">@Localizer.Get(" خزائن ")</span>
-                                        الاستخدام الذاتي المدعمة بخاصية بصمة الوجه تتمتع بشريحة كبيرة من المستخدمين.
-                                        </Text>
-
-                                    }
-                                    else
-                                    {
-                                        @Localizer.Get("Our facial recognition self-service")
-                                        <span class="primary-color">@Localizer.Get(" lockers ")</span>
-                                        @Localizer.Get("have large-scale applications.")
-                                    }
-                                    <br />
-                                    <br />
-                                    @Localizer.Get("Business usage includes:")
+                                    @Html.Raw(Setting.Get(Localizer.Get("ServicesDesc")))
                                     <div class="business-types">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-6">
@@ -205,80 +131,64 @@
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-building"></i>
                                                     </div>
-                                                    <span>  @Localizer.Get("Apartment Buildings")</span>
-
+                                                    <span>@Setting.Get(Localizer.Get("ServicesItem1"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-sharp fa-solid fa-plane-departure"></i>
                                                     </div>
-                                                    <span> @Localizer.Get("Airports")</span>
-
+                                                    <span> @Setting.Get(Localizer.Get("ServicesItem2"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-briefcase"></i>
                                                     </div>
-                                                    <span> @Localizer.Get("Offices")</span>
-
+                                                    <span> @Setting.Get(Localizer.Get("ServicesItem3"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-graduation-cap"></i>
                                                     </div>
-                                                    <span> @Localizer.Get("Universities")</span>
-
+                                                    <span> @Setting.Get(Localizer.Get("ServicesItem4"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-building-columns"></i>
                                                     </div>
-                                                    <span>  @Localizer.Get("Government Institutions")</span>
-
+                                                    <span>  @Setting.Get(Localizer.Get("ServicesItem5"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-shop"></i>
                                                     </div>
-                                                    <span> @Localizer.Get("Supermarkets")</span>
-
+                                                    <span> @Setting.Get(Localizer.Get("ServicesItem6"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-cart-shopping"></i>
                                                     </div>
-                                                    <span>@Localizer.Get("Shopping Malls")</span>
-
+                                                    <span>@Setting.Get(Localizer.Get("ServicesItem7"))</span>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-6">
                                                 <div class="type">
                                                     <div class="type-icon">
                                                         <i class="fa-solid fa-water-ladder"></i>
                                                     </div>
-                                                    <span> @Localizer.Get("Recreation Centers")</span>
-
+                                                    <span> @Setting.Get(Localizer.Get("ServicesItem8"))</span>
                                                 </div>
-
                                             </div>
                                             <div id="products" class="col-lg-4 col-md-4 col-6">
                                             </div>
@@ -344,20 +254,11 @@
                 <div class="larg-circle">
                     <img src="~/assets/images/about-circle-photo.jpg" alt="" class="img-fluid" />
                     <div class="circle-des">
-                        <h2>@Localizer.Get("About Us")</h2>
-                        @if (Localizer.Get("CultureState") == "ar")
-                        {
-                            <p>
-                                إنسيابية العمليات والتحكم في الاستخدام هو ما يجعل دايموند لوكرز الأولي في إدارة الخزائن الذكية في المملكة العربية السعودية.
-                            </p>
-                        }
-                        else
-                        {
-                            <p>
-                                Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia.
-                            </p>
-                        }
-                        <div class="cus__btn"><a asp-action="about" asp-controller="Home"> @Localizer.Get("learn More")</a></div>
+                        <h2>@Setting.Get(Localizer.Get("about"))</h2>
+                        <p>
+                            @Html.Raw(Setting.Get(Localizer.Get("aboutDesc")))
+                        </p>
+                        <div class="cus__btn"><a asp-action="about" asp-controller="Home"> @Setting.Get(Localizer.Get("learnMoreBtn"))</a></div>
                     </div>
                 </div>
             </div>
@@ -371,60 +272,19 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-card">
-                        <h2>@Localizer.Get("Mission")</h2>
+                        <h2>@Setting.Get(Localizer.Get("missionTitle"))</h2>
                         <p>
-                            @Localizer.Get("To offer accessible, safe, and efficient state-of-the-art technology without compromising customer service.")
+                            @Setting.Get(Localizer.Get("missionDesc"))
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="about-card">
-                        <h2>@Localizer.Get("Vision")</h2>
+                        <h2>@Setting.Get(Localizer.Get("visionTitle"))</h2>
                         <p>
-                            @Localizer.Get("To be Saudi Arabia's number-one choice for innovation in intelligent storage locker solutions.")
+                            @Setting.Get(Localizer.Get("visionDesc"))
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="couter d-none">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="main-couter">
-                    <div class="row">
-                        <div class="col-lg-6 col-6">
-                            <div class="couter-des">
-                                <h2 class="num"><span class="numCounter">@Localizer.Get("166")</span>+</h2>
-                                <p>@Localizer.Get("Our current team count, ​vulputate enim nulla aliquet")</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-6">
-                            <div class="couter-des">
-                                <h2 class="num"><span class="numCounter">190</span>+</h2>
-                                <p>Countries ​Duis aute irure dolor in reprehenderit</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-6">
-                            <div class="couter-des">
-                                <h2 class="num"><span class="numCounter">120</span>+</h2>
-                                <p>Customer around the world within 6 years</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-6">
-                            <div class="couter-des">
-                                <h2 class="num"><span class="numCounter">13</span>+</h2>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="counter-photo">
-                    <img src="~/assets/images/counter-photo.png" alt="" class="img-fluid" />
                 </div>
             </div>
         </div>
@@ -491,7 +351,7 @@
                            if (data.length > 0) {
                                data.forEach(product => {
                                    products += `<div class="card-item mix">
-                                         <a href="${product.imageUrl}" class="photo__item d-block w-100">
+                                         <a href="${product.imageUrl}" target="_blank" class="photo__item d-block w-100">
                                              <img src="${product.imageUrl}" alt="${product.name}" class="img-fluid" />
                                              <div class="des">
                                                  <h2>${product.name}</h2>

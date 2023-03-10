@@ -50,7 +50,7 @@ namespace Dashboard.Areas.SettingEntity.Controllers
 
             SettingParameters parameters = new()
             {
-                SearchColumns = "Id,Name"
+                SearchColumns = "Value,DisplayName"
             };
 
             _ = _mapper.Map(dtParameters, parameters);

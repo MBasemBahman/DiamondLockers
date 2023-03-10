@@ -8,7 +8,6 @@
   <ItemGroup>
     <ProjectReference Include="..\BaseDB\BaseDB.csproj" />
     <ProjectReference Include="..\CoreServices\CoreServices.csproj" />
-    <ProjectReference Include="..\Dashboard\Dashboard.csproj" />
     <ProjectReference Include="..\DevelopmentDAL\DevelopmentDAL.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>

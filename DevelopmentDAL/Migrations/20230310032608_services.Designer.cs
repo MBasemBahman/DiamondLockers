@@ -4,6 +4,7 @@ using DevelopmentDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevelopmentDAL.Migrations
 {
     [DbContext(typeof(DevelopmentContext))]
-    partial class DevelopmentContextModelSnapshot : ModelSnapshot
+    [Migration("20230310032608_services")]
+    partial class services
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2590,160 +2593,6 @@ namespace DevelopmentDAL.Migrations
                             Order = 0,
                             Type = 0,
                             Value = " مراكز الترفية"
-                        },
-                        new
-                        {
-                            Id = 116,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "aboutDesc",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 2,
-                            Value = "Streamlined operations and better access control make Diamond Lockers 1st for intelligent locker storage management in Saudi Arabia. "
-                        },
-                        new
-                        {
-                            Id = 117,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "aboutDesc_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 2,
-                            Value = "إنسيابية العمليات والتحكم في الاستخدام هو ما يجعل دايموند لوكرز الأولي في إدارة الخزائن الذكية في المملكة العربية السعودية. "
-                        },
-                        new
-                        {
-                            Id = 118,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "learnMoreBtn",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "Learn More"
-                        },
-                        new
-                        {
-                            Id = 119,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "learnMoreBtn_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "للمزيد"
-                        },
-                        new
-                        {
-                            Id = 120,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "missionTitle",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "Mission"
-                        },
-                        new
-                        {
-                            Id = 121,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "missionTitle_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "مهمتنا"
-                        },
-                        new
-                        {
-                            Id = 122,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "missionDesc",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "To offer accessible, safe, and efficient state-of-the-art technology without compromising customer service. "
-                        },
-                        new
-                        {
-                            Id = 123,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "missionDesc_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = " نقدم خزائن تتميز بسهولة الاستخدام والأمان والتقنية التكنولوجية الحديثة. "
-                        },
-                        new
-                        {
-                            Id = 124,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "visionTitle",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "Vision"
-                        },
-                        new
-                        {
-                            Id = 125,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "visionTitle_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "رؤيتنا"
-                        },
-                        new
-                        {
-                            Id = 126,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "visionDesc",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "To be Saudi Arabia's number-one choice for innovation in intelligent storage locker solutions. "
-                        },
-                        new
-                        {
-                            Id = 127,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "visionDesc_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = " نكون الاختيار الأول فى المملكة العربية السعودية لحلول الخزائن الذكية."
-                        },
-                        new
-                        {
-                            Id = 128,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "aboutLongDesc",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 2,
-                            Value = "\r\n\r\nIf you use traditional storage lockers with keys or passcodes, you may be losing money and putting your business at risk. When you consider the difference between standard and intelligent locker management, you will quickly understand how making the change can affect your bottom line.\r\n\r\nManual storage lockers are inefficient, costly, and unsanitary. Forgotten passcodes, labor costs, and misplaced keys are ongoing issues faced by companies still using manual storage methods.\r\n\r\nWelcome to Diamond Lockers, a password-free quick storage solution transforming the locker storage industry.\r\n\r\nWith traditional locker management, employees use passcodes, keys or badges, while tracking records help ensure security and safety. Keeping accurate records, preventing theft, and maintaining hygiene are ongoing challenges faced by companies using manual storage.\r\n\r\nIf you want to increase your company`s productivity and growth consider upgrading your system to Diamond Lockers.\r\n"
-                        },
-                        new
-                        {
-                            Id = 129,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "عن الشركة",
-                            Key = "aboutLongDesc_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 2,
-                            Value = " \r\n\r\nهل سبق وفقدت مفتاح الخزنة التقليدية التي تستخدمها؟ أو كنت لا تتذكر كلمة المرور الخاصة بها؟ الأمر الذي يفقدك أموالك ومقتنياتك وقد يعرض عملك للخسارة!! عندما تستخدم الخزنة الذكية ستدرك الفرق الكبير بينها وبين الخزنة التقليدية والذي سيحدث فارق كبير فى حياتك.\r\n\r\nمن المشاكل التي تواجه مستخدمي الخزنة التقليدية أنها عديمة الكفاءة, ومكلفة, وغير عملية, فنسيان كلمة المرور, وتكلفة الاستخدام الباهظة, وفقدان المفتاح, جميعها أمور تعاني منها المؤسسات التي مازالت تستخدم الخزنة التقليدية.\r\n\r\nوالحل يكمن في الخزائن الذكية التي تعمل بدون مدخلات الحماية التقليدية وانما بالأساليب التكنولوجية الحديثة. والتي ستجدها هنا فى دايموند لوكرز.\r\n\r\nفعندما تستخدم الخزنة التقليدية فإنك تحتاج إلي أن يكون معك كلمة المرور أو المفتاح. فى حين أن وجود سجلات استخدام الكترونية تساعد فى تعزيز عنصري الأمان والحماية. فالاحتفاظ بسجلات الكترونية دقيقة يمنع السرقات ويقلل التلامس ونشر العدوى.\r\n\r\nاذا أردت زيادة إنتاجية ونمو شركتك, فعليك تطوير نظام الخزائن لديك إلي نظام خزائن دايموند لوكرز.\r\n"
                         });
                 });
 
@@ -2898,7 +2747,7 @@ namespace DevelopmentDAL.Migrations
                             EmailAddress = "user@mail.com",
                             LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Developer",
-                            Password = "$2a$11$dUgHcIX4/hyN/UPh/D4OqOK/AOUOfSBHi4XxvWvdxSPis90hNI2Y.",
+                            Password = "$2a$11$T9EF1cY1UCbYktq6iXdQtuz/IBodOa7m9Qm/ROqjzAIxWZmcC5Bei",
                             UserName = "Developer"
                         });
                 });

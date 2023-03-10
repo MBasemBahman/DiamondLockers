@@ -7,7 +7,6 @@ using System.Reflection;
 using BaseDB;
 using Contracts.Constants;
 using CoreServices;
-using Dashboard.Middlewares;
 using DevelopmentDAL;
 using Entities.AuthenticationModels;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +14,7 @@ using Repository;
 using Services;
 using Site.Services;
 using TenantConfiguration;
+using Site.Middlewares;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -65,7 +65,7 @@ if (config.Tenant == TenantData.TenantEnvironments.Development)
 }
 
 builder.Services.AddSingleton<LocalizationManager>();
-builder.Services.AddSingleton<SettingsService>();
+builder.Services.AddScoped<SettingsService>();
 
 WebApplication app = builder.Build();
 

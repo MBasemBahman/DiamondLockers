@@ -126,8 +126,8 @@
   <data name="24" xml:space="preserve">
     <value>٢٤</value>
   </data>
-  <data name="24 / 7 lockers at your service" xml:space="preserve">
-    <value>24/7 الخزائن في خدمتك</value>
+  <data name="feature1_desc" xml:space="preserve">
+    <value>feature1_desc_lang</value>
   </data>
   <data name="36" xml:space="preserve">
     <value>٣٦</value>
@@ -138,8 +138,8 @@
   <data name="6" xml:space="preserve">
     <value>٦</value>
   </data>
-  <data name="About Us" xml:space="preserve">
-    <value>عن دايموند لوكرز</value>
+  <data name="about" xml:space="preserve">
+    <value>about_lang</value>
   </data>
   <data name="After Sale Service" xml:space="preserve">
     <value>خدمات ما بعد البيع</value>
@@ -153,8 +153,8 @@
   <data name="Apartment Buildings" xml:space="preserve">
     <value>الشقق السكنية</value>
   </data>
-  <data name="AVAILABILITY" xml:space="preserve">
-    <value>الخدمة</value>
+  <data name="feature1" xml:space="preserve">
+    <value>feature1_lang</value>
   </data>
   <data name="Beige" xml:space="preserve">
     <value>بيج</value>
@@ -177,8 +177,8 @@
   <data name="Companies" xml:space="preserve">
     <value>شركات</value>
   </data>
-  <data name="Contact Us" xml:space="preserve">
-    <value>إتصل بنا</value>
+  <data name="contact" xml:space="preserve">
+    <value>contact_lang</value>
   </data>
   <data name="Contact us today. Let us help you better manage your security, storage, and data." xml:space="preserve">
     <value>اتصل بنا اليوم. لنساعدك فى تحسين إدارة أماناتك.</value>
@@ -192,8 +192,8 @@
   <data name="COST REDUCTION" xml:space="preserve">
     <value>تكلفة أقل</value>
   </data>
-  <data name="Culture" xml:space="preserve">
-    <value>EN</value>
+  <data name="culture" xml:space="preserve">
+    <value>culture_lang</value>
   </data>
   <data name="CultureState" xml:space="preserve">
     <value>ar</value>
@@ -222,8 +222,8 @@
   <data name="Enquiry" xml:space="preserve">
     <value>استفسار</value>
   </data>
-  <data name="Features" xml:space="preserve">
-    <value>الخصائص</value>
+  <data name="features" xml:space="preserve">
+    <value>features_lang</value>
   </data>
   <data name="Filter by category" xml:space="preserve">
     <value>النوع</value>
@@ -249,8 +249,8 @@
   <data name="Guaranteed Safe &amp; Secured" xml:space="preserve">
     <value>أمان وحماية مضمونة</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>الرئيسيه</value>
+  <data name="home" xml:space="preserve">
+    <value>home_lang</value>
   </data>
   <data name="If anything (non-consumable) goes wrong, we will cover your loss" xml:space="preserve">
     <value>في حال حدوث خلل تصنيع, فنحن متكفلون بتعويضك</value>
@@ -324,8 +324,8 @@
   <data name="Please complete the form!" xml:space="preserve">
     <value>يرجى ملء النموذج!</value>
   </data>
-  <data name="Products" xml:space="preserve">
-    <value>المنتجات</value>
+  <data name="products" xml:space="preserve">
+    <value>products_lang</value>
   </data>
   <data name="Recreation Centers" xml:space="preserve">
     <value>مراكز الترفية</value>
@@ -354,8 +354,8 @@
   <data name="Service" xml:space="preserve">
     <value>الخدمه</value>
   </data>
-  <data name="Services" xml:space="preserve">
-    <value>الخدمات</value>
+  <data name="services" xml:space="preserve">
+    <value>services_lang</value>
   </data>
   <data name="Shopping Malls" xml:space="preserve">
     <value>المول</value>
@@ -422,5 +422,170 @@
   </data>
   <data name="No Content" xml:space="preserve">
     <value>لم يتم العثور على نتائج!</value>
+  </data>
+  <data name="feature2" xml:space="preserve">
+    <value>feature2_lang</value>
+  </data>
+  <data name="feature2_desc" xml:space="preserve">
+    <value>feature2_desc_lang</value>
+  </data>
+  <data name="feature3" xml:space="preserve">
+    <value>feature3_lang</value>
+  </data>
+  <data name="feature3_desc" xml:space="preserve">
+    <value>feature3_desc_lang</value>
+  </data>
+  <data name="feature4" xml:space="preserve">
+    <value>feature4_lang</value>
+  </data>
+  <data name="feature4_desc" xml:space="preserve">
+    <value>feature4_desc_lang</value>
+  </data>
+  <data name="service1" xml:space="preserve">
+    <value>service1_lang</value>
+  </data>
+  <data name="service1_desc" xml:space="preserve">
+    <value>service1_desc_lang</value>
+  </data>
+  <data name="service2" xml:space="preserve">
+    <value>service2_lang</value>
+  </data>
+  <data name="service2_desc" xml:space="preserve">
+    <value>service2_desc_lang</value>
+  </data>
+  <data name="service3" xml:space="preserve">
+    <value>service3_lang</value>
+  </data>
+  <data name="service3_desc" xml:space="preserve">
+    <value>service3_desc_lang</value>
+  </data>
+  <data name="slider" xml:space="preserve">
+    <value>slider_lang</value>
+  </data>
+  <data name="aboutDesc" xml:space="preserve">
+    <value>aboutDesc_lang</value>
+  </data>
+  <data name="aboutLongDesc" xml:space="preserve">
+    <value>aboutLongDesc_lang</value>
+  </data>
+  <data name="addressDesc" xml:space="preserve">
+    <value>addressDesc_lang</value>
+  </data>
+  <data name="addressTitle" xml:space="preserve">
+    <value>addressTitle_lang</value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>copyright_lang</value>
+  </data>
+  <data name="emailTitle" xml:space="preserve">
+    <value>emailTitle_lang</value>
+  </data>
+  <data name="footerDesc" xml:space="preserve">
+    <value>footerDesc_lang</value>
+  </data>
+  <data name="footerTitle" xml:space="preserve">
+    <value>footerTitle_lang</value>
+  </data>
+  <data name="formEmailDesc" xml:space="preserve">
+    <value>formEmailDesc_lang</value>
+  </data>
+  <data name="formEmailTitle" xml:space="preserve">
+    <value>formEmailTitle_lang</value>
+  </data>
+  <data name="formErrorMsg" xml:space="preserve">
+    <value>formErrorMsg_lang</value>
+  </data>
+  <data name="formIncompleteMsg" xml:space="preserve">
+    <value>formIncompleteMsg_lang</value>
+  </data>
+  <data name="formMessageDesc" xml:space="preserve">
+    <value>formMessageDesc_lang</value>
+  </data>
+  <data name="formMessageTitle" xml:space="preserve">
+    <value>formMessageTitle_lang</value>
+  </data>
+  <data name="formNameDesc" xml:space="preserve">
+    <value>formNameDesc_lang</value>
+  </data>
+  <data name="formNameTitle" xml:space="preserve">
+    <value>formNameTitle_lang</value>
+  </data>
+  <data name="formPhoneDesc" xml:space="preserve">
+    <value>formPhoneDesc_lang</value>
+  </data>
+  <data name="formPhoneTitle" xml:space="preserve">
+    <value>formPhoneTitle_lang</value>
+  </data>
+  <data name="formService1" xml:space="preserve">
+    <value>formService1_lang</value>
+  </data>
+  <data name="formService2" xml:space="preserve">
+    <value>formService2_lang</value>
+  </data>
+  <data name="formService3" xml:space="preserve">
+    <value>formService3_lang</value>
+  </data>
+  <data name="formServiceTitle" xml:space="preserve">
+    <value>formServiceTitle_lang</value>
+  </data>
+  <data name="formSubmit" xml:space="preserve">
+    <value>formSubmit_lang</value>
+  </data>
+  <data name="formSuccessMsg" xml:space="preserve">
+    <value>formSuccessMsg_lang</value>
+  </data>
+  <data name="formType1" xml:space="preserve">
+    <value>formType1_lang</value>
+  </data>
+  <data name="formType2" xml:space="preserve">
+    <value>formType2_lang</value>
+  </data>
+  <data name="formTypeTitle" xml:space="preserve">
+    <value>formTypeTitle_lang</value>
+  </data>
+  <data name="learnMoreBtn" xml:space="preserve">
+    <value>learnMoreBtn_lang</value>
+  </data>
+  <data name="missionDesc" xml:space="preserve">
+    <value>missionDesc_lang</value>
+  </data>
+  <data name="missionTitle" xml:space="preserve">
+    <value>missionTitle_lang</value>
+  </data>
+  <data name="ServicesDesc" xml:space="preserve">
+    <value>ServicesDesc_lang</value>
+  </data>
+  <data name="ServicesItem1" xml:space="preserve">
+    <value>ServicesItem1_lang</value>
+  </data>
+  <data name="ServicesItem2" xml:space="preserve">
+    <value>ServicesItem2_lang</value>
+  </data>
+  <data name="ServicesItem3" xml:space="preserve">
+    <value>ServicesItem3_lang</value>
+  </data>
+  <data name="ServicesItem4" xml:space="preserve">
+    <value>ServicesItem4_lang</value>
+  </data>
+  <data name="ServicesItem5" xml:space="preserve">
+    <value>ServicesItem5_lang</value>
+  </data>
+  <data name="ServicesItem6" xml:space="preserve">
+    <value>ServicesItem6_lang</value>
+  </data>
+  <data name="ServicesItem7" xml:space="preserve">
+    <value>ServicesItem7_lang</value>
+  </data>
+  <data name="ServicesItem8" xml:space="preserve">
+    <value>ServicesItem8_lang</value>
+  </data>
+  <data name="ServicesTitle" xml:space="preserve">
+    <value>ServicesTitle_lang</value>
+  </data>
+  <data name="visionDesc" xml:space="preserve">
+    <value>visionDesc_lang</value>
+  </data>
+  <data name="visionTitle" xml:space="preserve">
+    <value>visionTitle_lang</value>
   </data>
 </root>

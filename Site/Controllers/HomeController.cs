@@ -4,8 +4,6 @@ using System.Diagnostics;
 using Contracts.Constants;
 using CoreServices;
 using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.ProductModels;
-using Org.BouncyCastle.Ocsp;
 using Site.Models;
 
 namespace Site.Controllers
@@ -55,6 +53,16 @@ namespace Site.Controllers
         [HttpPost]
         public IActionResult Contact(ContactForm model)
         {
+            _unitOfWork.ContactForm.CreateContactForm(new Entities.DBModels.ContactFormModels.ContactForm
+            {
+                Type = model.Type,
+                Email = model.Email,
+                Message = model.Message,
+                Name = model.Name,
+                Phone = model.Phone,
+                Service = model.Service,
+            });
+            _unitOfWork.Save();
 
             return Ok();
         }

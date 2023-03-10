@@ -1,9 +1,5 @@
 using CoreServices;
 using Entities.CoreServicesModels.SettingModels;
-using Entities.DBModels.SettingModels;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Site.Services;
 
@@ -18,13 +14,6 @@ public class SettingsService
         
         _settingsDictionary = unitOfWork.Setting.GetSettingsLookUp(new SettingParameters());
     }
-
-    // public string this[string var] => GetSettingValue(var);
-    //
-    // private string GetSettingValue(string var)
-    // {
-    //     return _settingsDictionary[var];
-    // }
     
     public string Get(string var)
     {
