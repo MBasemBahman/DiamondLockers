@@ -1,5 +1,5 @@
-﻿using System.ComponentModel;
-using Entities.CoreServicesModels.ContactFormModels;
+﻿using Entities.CoreServicesModels.ContactFormModels;
+using System.ComponentModel;
 
 namespace Dashboard.Areas.ContactFormEntity.Models;
 

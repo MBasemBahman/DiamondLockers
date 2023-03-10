@@ -34,7 +34,7 @@
             ContactForm = 16,
             Setting = 17
         }
-        
+
         public enum SettingTypeEnum
         {
             Input,

@@ -46,7 +46,7 @@ namespace Dashboard.Areas.SettingEntity.Controllers
         [HttpPost]
         public async Task<IActionResult> LoadTable([FromBody] SettingFilter dtParameters)
         {
-            bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+            _ = (bool)Request.HttpContext.Items[ApiConstants.Language];
 
             SettingParameters parameters = new()
             {
@@ -68,7 +68,7 @@ namespace Dashboard.Areas.SettingEntity.Controllers
 
         public IActionResult Details(int id)
         {
-            bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+            _ = (bool)Request.HttpContext.Items[ApiConstants.Language];
 
             SettingDto data = _mapper.Map<SettingDto>(_unitOfWork.Setting.GetSettingById(id));
 

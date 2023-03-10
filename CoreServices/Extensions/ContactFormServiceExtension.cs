@@ -1,5 +1,4 @@
-﻿using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.ContactFormModels;
+﻿using Entities.CoreServicesModels.ContactFormModels;
 
 namespace CoreServices.Extensions
 {

@@ -54,7 +54,7 @@ namespace BaseDB
         #region Audit Models
         public DbSet<Audit> Audits { get; set; }
         #endregion
-        
+
         #region MainData Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Size> Sizes { get; set; }
@@ -66,13 +66,13 @@ namespace BaseDB
         public DbSet<Product> Products { get; set; }
 
         #endregion
-        
+
         #region ContactForm Models
 
         public DbSet<ContactForm> ContactForms { get; set; }
 
         #endregion
-        
+
         #region Setting Models
 
         public DbSet<Setting> Settings { get; set; }
@@ -115,8 +115,8 @@ namespace BaseDB
             _ = modelBuilder.ApplyConfiguration(new DashboardAccessLevelLangConfiguration());
             _ = modelBuilder.ApplyConfiguration(new DashboardAdministrationRoleConfiguration());
             _ = modelBuilder.ApplyConfiguration(new DashboardAdministrationRoleLangConfiguration());
-            _ = modelBuilder.ApplyConfiguration(new AdministrationRolePremissionConfiguration());
             _ = modelBuilder.ApplyConfiguration(new DashboardAdministratorConfiguration());
+            _ = modelBuilder.ApplyConfiguration(new AdministrationRolePremissionConfiguration());
 
             #endregion
 

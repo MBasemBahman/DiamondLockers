@@ -1,8 +1,7 @@
 ﻿using Contracts.Logger;
 using Dashboard.Areas.ContactFormEntity.Models;
-using Entities.CoreServicesModels.MainDataModels;
 using Entities.CoreServicesModels.ContactFormModels;
-using Entities.DBModels.MainDataModels;
+using Entities.CoreServicesModels.MainDataModels;
 using Entities.DBModels.ContactFormModels;
 using Entities.RequestFeatures;
 
@@ -48,7 +47,7 @@ namespace Dashboard.Areas.ContactFormEntity.Controllers
         [HttpPost]
         public async Task<IActionResult> LoadTable([FromBody] ContactFormFilter dtParameters)
         {
-            bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+            _ = (bool)Request.HttpContext.Items[ApiConstants.Language];
 
             ContactFormParameters parameters = new()
             {
@@ -70,7 +69,7 @@ namespace Dashboard.Areas.ContactFormEntity.Controllers
 
         public IActionResult Details(int id)
         {
-            bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
+            _ = (bool)Request.HttpContext.Items[ApiConstants.Language];
 
             ContactFormDto data = _mapper.Map<ContactFormDto>(_unitOfWork.ContactForm.GetContactFormById(id));
 
@@ -99,7 +98,7 @@ namespace Dashboard.Areas.ContactFormEntity.Controllers
         private void SetViewData(int id)
         {
             bool otherLang = (bool)Request.HttpContext.Items[ApiConstants.Language];
-            
+
             ViewData["id"] = id;
             ViewData["Categories"] = _unitOfWork.MainData.GetCategoriesLookUp(new CategoryParameters(), otherLang);
             ViewData["Sizes"] = _unitOfWork.MainData.GetSizesLookUp(new SizeParameters(), otherLang);

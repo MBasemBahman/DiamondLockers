@@ -11,7 +11,7 @@ namespace Entities.CoreServicesModels.ProductModels
     public class ProductCategoryModel
     {
         public int Id { get; set; }
-        
+
         [DisplayName(nameof(Product))]
         [ForeignKey(nameof(Product))]
         public int Fk_Product { get; set; }

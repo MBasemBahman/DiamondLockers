@@ -18,7 +18,7 @@ namespace Repository.DBModels.MainDataModels
 
 
         }
-        
+
         public async Task<Color> FindById(int id, bool trackChanges)
         {
             return id == 0
@@ -27,7 +27,7 @@ namespace Repository.DBModels.MainDataModels
                     .Include(a => a.ColorLang)
                     .SingleOrDefaultAsync();
         }
-        
+
     }
 
     public static class ColorRepositoryExtensions
@@ -36,7 +36,7 @@ namespace Repository.DBModels.MainDataModels
             this IQueryable<Color> categories,
             int id)
         {
-            return categories.Where(a => (id == 0 || a.Id == id));
+            return categories.Where(a => id == 0 || a.Id == id);
         }
 
 

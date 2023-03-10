@@ -1,7 +1,5 @@
 ﻿using Entities.CoreServicesModels.ContactFormModels;
-using Entities.CoreServicesModels.MainDataModels;
 using Entities.DBModels.ContactFormModels;
-using Entities.DBModels.MainDataModels;
 
 namespace Repository.DBModels.ContactFormModels
 {
@@ -20,7 +18,7 @@ namespace Repository.DBModels.ContactFormModels
 
 
         }
-        
+
         public async Task<ContactForm> FindById(int id, bool trackChanges)
         {
             return id == 0
@@ -28,7 +26,7 @@ namespace Repository.DBModels.ContactFormModels
                 : await FindByCondition(a => a.Id == id, trackChanges: trackChanges)
                          .SingleOrDefaultAsync();
         }
-        
+
     }
 
     public static class ContactFormRepositoryExtensions
@@ -37,7 +35,7 @@ namespace Repository.DBModels.ContactFormModels
             this IQueryable<ContactForm> categories,
             int id)
         {
-            return categories.Where(a => (id == 0 || a.Id == id));
+            return categories.Where(a => id == 0 || a.Id == id);
         }
 
 

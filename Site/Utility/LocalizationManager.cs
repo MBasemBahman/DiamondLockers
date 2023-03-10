@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Localization;
-using System.Reflection;
 using Site.Resources;
+using System.Reflection;
 
 namespace Site.Utility
 {

@@ -21,7 +21,7 @@ namespace Repository.DBModels.ProductModels
 
 
         }
-        
+
         public async Task<ProductColor> FindById(int id, bool trackChanges)
         {
             return id == 0
@@ -29,7 +29,7 @@ namespace Repository.DBModels.ProductModels
                 : await FindByCondition(a => a.Id == id, trackChanges: trackChanges)
                     .SingleOrDefaultAsync();
         }
-        
+
     }
 
     public static class ProductColorRepositoryExtensions
@@ -42,7 +42,7 @@ namespace Repository.DBModels.ProductModels
         {
             return categories.Where(a => (id == 0 || a.Id == id) &&
                                          (fk_Product == 0 || a.Fk_Product == fk_Product) &&
-                                         (fk_Color == 0 || a.Fk_Color == fk_Color) );
+                                         (fk_Color == 0 || a.Fk_Color == fk_Color));
         }
 
 

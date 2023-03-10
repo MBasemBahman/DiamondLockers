@@ -151,43 +151,43 @@ namespace Dashboard.MappingProfileCls
 
             #region Category
             _ = CreateMap<Category, CategoryCreateOrEditModel>();
-            
+
             _ = CreateMap<CategoryCreateOrEditModel, Category>();
-            
+
             _ = CreateMap<CategoryModel, CategoryDto>();
-            
+
             _ = CreateMap<CategoryFilter, CategoryParameters>();
-            
+
             _ = CreateMap<CategoryLang, CategoryLangModel>();
-            
+
             _ = CreateMap<CategoryLangModel, CategoryLang>();
             #endregion
-            
+
             #region Size
             _ = CreateMap<Size, SizeCreateOrEditModel>();
-            
+
             _ = CreateMap<SizeCreateOrEditModel, Size>();
-            
+
             _ = CreateMap<SizeModel, SizeDto>();
-            
+
             _ = CreateMap<SizeFilter, SizeParameters>();
-            
+
             _ = CreateMap<SizeLang, SizeLangModel>();
-            
+
             _ = CreateMap<SizeLangModel, SizeLang>();
             #endregion
-            
+
             #region Color
             _ = CreateMap<Color, ColorCreateOrEditModel>();
-            
+
             _ = CreateMap<ColorCreateOrEditModel, Color>();
-            
+
             _ = CreateMap<ColorModel, ColorDto>();
-            
+
             _ = CreateMap<ColorFilter, ColorParameters>();
-            
+
             _ = CreateMap<ColorLang, ColorLangModel>();
-            
+
             _ = CreateMap<ColorLangModel, ColorLang>();
             #endregion
 
@@ -198,16 +198,16 @@ namespace Dashboard.MappingProfileCls
             #region Product
             _ = CreateMap<Product, ProductCreateOrEditModel>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.Ignore());
-            
+
             _ = CreateMap<ProductCreateOrEditModel, Product>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.Ignore());
-            
+
             _ = CreateMap<ProductModel, ProductDto>();
-            
+
             _ = CreateMap<ProductFilter, ProductParameters>();
-            
+
             _ = CreateMap<ProductLang, ProductLangModel>();
-            
+
             _ = CreateMap<ProductLangModel, ProductLang>();
             #endregion
 
@@ -218,25 +218,25 @@ namespace Dashboard.MappingProfileCls
             _ = CreateMap<ContactForm, ContactFormCreateOrEditModel>();
 
             _ = CreateMap<ContactFormCreateOrEditModel, ContactForm>();
-            
+
             _ = CreateMap<ContactFormModel, ContactFormDto>();
-            
+
             _ = CreateMap<ContactFormFilter, ContactFormParameters>();
 
             #endregion
-            
+
             #region Setting Model
 
             _ = CreateMap<Setting, SettingCreateOrEditModel>();
 
             _ = CreateMap<SettingCreateOrEditModel, Setting>();
-            
+
             _ = CreateMap<SettingModel, SettingDto>();
-            
+
             _ = CreateMap<SettingFilter, SettingParameters>();
 
             #endregion
-            
+
             #region Audit Models
 
             #region Audit

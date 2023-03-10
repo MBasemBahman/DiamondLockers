@@ -10,7 +10,7 @@
         public int Id { get; set; }
         [DisplayName(nameof(Name))]
         public string Name { get; set; }
-        
+
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
 

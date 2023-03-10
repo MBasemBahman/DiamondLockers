@@ -1,20 +1,19 @@
-using Site.Resources;
-using Site.Utility;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Options;
-using System.Globalization;
-using System.Reflection;
 using BaseDB;
 using Contracts.Constants;
 using CoreServices;
 using DevelopmentDAL;
 using Entities.AuthenticationModels;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Repository;
-using Services;
-using Site.Services;
-using TenantConfiguration;
 using Site.Middlewares;
+using Site.Resources;
+using Site.Services;
+using Site.Utility;
+using System.Globalization;
+using System.Reflection;
+using TenantConfiguration;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -49,9 +48,9 @@ builder.Services.AddDbContext<BaseContext, DevelopmentContext>(options => option
 
 if (config.Tenant == TenantData.TenantEnvironments.Development)
 {
-    builder.Services.AddScoped(_ =>
+    _ = builder.Services.AddScoped(_ =>
     {
-        var httpContext = new HttpContextAccessor().HttpContext;
+        HttpContext httpContext = new HttpContextAccessor().HttpContext;
 
         return new UserAuthenticatedDto
         {
@@ -59,9 +58,9 @@ if (config.Tenant == TenantData.TenantEnvironments.Development)
             EmailAddress = httpContext?.Request.Cookies[ViewDataConstants.AccountEmail] ?? "",
         };
     });
-    
-    builder.Services.AddScoped<RepositoryManager, RepositoryManager>();
-    builder.Services.AddScoped<UnitOfWork, UnitOfWork>();
+
+    _ = builder.Services.AddScoped<RepositoryManager, RepositoryManager>();
+    _ = builder.Services.AddScoped<UnitOfWork, UnitOfWork>();
 }
 
 builder.Services.AddSingleton<LocalizationManager>();

@@ -1,5 +1,4 @@
-﻿using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.SettingModels;
+﻿using Entities.CoreServicesModels.SettingModels;
 
 namespace CoreServices.Extensions
 {

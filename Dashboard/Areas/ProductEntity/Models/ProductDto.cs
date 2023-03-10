@@ -1,6 +1,5 @@
-﻿using System.ComponentModel;
-using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.ProductModels;
+﻿using Entities.CoreServicesModels.ProductModels;
+using System.ComponentModel;
 
 namespace Dashboard.Areas.ProductEntity.Models;
 

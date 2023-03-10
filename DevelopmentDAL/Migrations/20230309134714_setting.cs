@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-#nullable disable
 
 namespace DevelopmentDAL.Migrations
 {
@@ -11,7 +9,7 @@ namespace DevelopmentDAL.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
+            _ = migrationBuilder.CreateTable(
                 name: "Settings",
                 columns: table => new
                 {
@@ -29,14 +27,14 @@ namespace DevelopmentDAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Settings", x => x.Id);
+                    _ = table.PrimaryKey("PK_Settings", x => x.Id);
                 });
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
+            _ = migrationBuilder.DropTable(
                 name: "Settings");
         }
     }

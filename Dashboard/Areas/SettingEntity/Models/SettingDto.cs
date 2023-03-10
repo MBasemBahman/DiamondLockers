@@ -1,5 +1,5 @@
-﻿using System.ComponentModel;
-using Entities.CoreServicesModels.SettingModels;
+﻿using Entities.CoreServicesModels.SettingModels;
+using System.ComponentModel;
 
 namespace Dashboard.Areas.SettingEntity.Models;
 

@@ -627,7 +627,7 @@ namespace ModelBuilderConfig.Configurations.SettingModels
                 DisplayName = "الخصائص",
                 Type = SettingTypeEnum.Input
             });
-           
+
             _ = builder.HasData(new Setting
             {
                 Id = id++,
@@ -665,7 +665,7 @@ namespace ModelBuilderConfig.Configurations.SettingModels
                 DisplayName = "الخصائص",
                 Type = SettingTypeEnum.Input
             });
-           
+
             _ = builder.HasData(new Setting
             {
                 Id = id++,

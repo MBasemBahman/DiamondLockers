@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using Contracts.Constants;
+﻿using Contracts.Constants;
 using CoreServices;
 using Entities.CoreServicesModels.MainDataModels;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Site.Models;
+using System.Diagnostics;
 
 namespace Site.Controllers
 {
@@ -62,7 +62,7 @@ namespace Site.Controllers
                 Phone = model.Phone,
                 Service = model.Service,
             });
-            _unitOfWork.Save();
+            _ = _unitOfWork.Save();
 
             return Ok();
         }

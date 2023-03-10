@@ -17,7 +17,7 @@ namespace CoreServices.Extensions
 
             return data.Where(expression);
         }
-        
+
         public static IQueryable<SizeModel> Search(this IQueryable<SizeModel> data, string searchColumns, string searchTerm)
         {
             if (string.IsNullOrWhiteSpace(searchTerm) || string.IsNullOrWhiteSpace(searchColumns))
@@ -61,7 +61,7 @@ namespace CoreServices.Extensions
 
             return data.OrderBy(orderQuery);
         }
-        
+
         public static IQueryable<SizeModel> Sort(this IQueryable<SizeModel> data, string orderByQueryString)
         {
             if (string.IsNullOrWhiteSpace(orderByQueryString))

@@ -61,7 +61,7 @@ namespace CoreServices
                 return _auditServices;
             }
         }
-        
+
         public MainDataServices MainData
         {
             get
@@ -70,7 +70,7 @@ namespace CoreServices
                 return _mainDataServices;
             }
         }
-        
+
         public ProductServices Product
         {
             get
@@ -79,7 +79,7 @@ namespace CoreServices
                 return _productServices;
             }
         }
-        
+
         public ContactFormServices ContactForm
         {
             get
@@ -88,7 +88,7 @@ namespace CoreServices
                 return _contactFormServices;
             }
         }
-        
+
         public SettingServices Setting
         {
             get
@@ -97,6 +97,6 @@ namespace CoreServices
                 return _settingServices;
             }
         }
-        
+
     }
 }

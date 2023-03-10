@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using Contracts.Constants;
+﻿using Contracts.Constants;
 using CoreServices;
 using Entities.CoreServicesModels.ProductModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Site.Controllers
 {
@@ -27,6 +25,6 @@ namespace Site.Controllers
 
             return Ok(products);
         }
-        
+
     }
 }

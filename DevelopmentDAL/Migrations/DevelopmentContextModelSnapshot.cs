@@ -52,7 +52,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Audits");
+                    b.ToTable("Audits", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.ContactFormModels.ContactForm", b =>
@@ -106,7 +106,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContactForms");
+                    b.ToTable("ContactForms", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.DashboardAdministrationModels.AdministrationRolePremission", b =>
@@ -140,144 +140,93 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_DashboardAdministrationRole", "Fk_DashboardView")
                         .IsUnique();
 
-                    b.ToTable("AdministrationRolePremissions");
+                    b.ToTable("AdministrationRolePremissions", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 1
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 2
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 3
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 4
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 5
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 6
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 7
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 8
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 9
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 10
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 11
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 12
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 13
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 14
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 15
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 16
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAccessLevel = 1,
-                            FkDashboardAdministrationRole = 1,
-                            FkDashboardView = 17
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -321,7 +270,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("DashboardAccessLevels");
+                    b.ToTable("DashboardAccessLevels", (string)null);
 
                     b.HasData(
                         new
@@ -384,28 +333,25 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("DashboardAccessLevelLang");
+                    b.ToTable("DashboardAccessLevelLang", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 1,
                             Name = "FullAccess"
                         },
                         new
                         {
                             Id = 2,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 2,
                             Name = "DataControl"
                         },
                         new
                         {
                             Id = 3,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 3,
                             Name = "Viewer"
                         });
                 });
@@ -435,7 +381,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("DashboardAdministrationRoles");
+                    b.ToTable("DashboardAdministrationRoles", (string)null);
 
                     b.HasData(
                         new
@@ -471,14 +417,13 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("DashboardAdministrationRoleLang");
+                    b.ToTable("DashboardAdministrationRoleLang", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 1,
                             Name = "Developer"
                         });
                 });
@@ -525,15 +470,13 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_User")
                         .IsUnique();
 
-                    b.ToTable("DashboardAdministrators");
+                    b.ToTable("DashboardAdministrators", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkDashboardAdministrationRole = 1,
-                            FkUser = 1,
                             JobTitle = "Developer",
                             LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -571,7 +514,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("ViewPath")
                         .IsUnique();
 
-                    b.ToTable("DashboardViews");
+                    b.ToTable("DashboardViews", (string)null);
 
                     b.HasData(
                         new
@@ -720,126 +663,109 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("DashboardViewLang");
+                    b.ToTable("DashboardViewLang", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 1,
                             Name = "Home"
                         },
                         new
                         {
                             Id = 2,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 2,
                             Name = "User"
                         },
                         new
                         {
                             Id = 3,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 3,
                             Name = "DashboardAdministrator"
                         },
                         new
                         {
                             Id = 4,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 4,
                             Name = "DashboardAccessLevel"
                         },
                         new
                         {
                             Id = 5,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 5,
                             Name = "DashboardAdministrationRole"
                         },
                         new
                         {
                             Id = 6,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 6,
                             Name = "DashboardView"
                         },
                         new
                         {
                             Id = 7,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 7,
                             Name = "RefreshToken"
                         },
                         new
                         {
                             Id = 8,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 8,
                             Name = "UserDevice"
                         },
                         new
                         {
                             Id = 9,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 9,
                             Name = "Verification"
                         },
                         new
                         {
                             Id = 10,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 10,
                             Name = "DBLogs"
                         },
                         new
                         {
                             Id = 11,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 11,
                             Name = "Audit"
                         },
                         new
                         {
                             Id = 12,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 12,
                             Name = "Category"
                         },
                         new
                         {
                             Id = 13,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 13,
                             Name = "Size"
                         },
                         new
                         {
                             Id = 14,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 14,
                             Name = "Color"
                         },
                         new
                         {
                             Id = 15,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 15,
                             Name = "Product"
                         },
                         new
                         {
                             Id = 16,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 16,
                             Name = "ContactForm"
                         },
                         new
                         {
                             Id = 17,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FkSource = 17,
                             Name = "Setting"
                         });
                 });
@@ -871,7 +797,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Logs");
+                    b.ToTable("Logs", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.Category", b =>
@@ -914,7 +840,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.CategoryLang", b =>
@@ -942,7 +868,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("CategoryLang");
+                    b.ToTable("CategoryLang", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.Color", b =>
@@ -985,7 +911,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Colors");
+                    b.ToTable("Colors", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.ColorLang", b =>
@@ -1013,7 +939,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("ColorLang");
+                    b.ToTable("ColorLang", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.Size", b =>
@@ -1056,7 +982,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Sizes");
+                    b.ToTable("Sizes", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.MainDataModels.SizeLang", b =>
@@ -1084,7 +1010,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("SizeLang");
+                    b.ToTable("SizeLang", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.ProductModels.Product", b =>
@@ -1127,7 +1053,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.ProductModels.ProductCategory", b =>
@@ -1167,7 +1093,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasIndex("Fk_Product");
 
-                    b.ToTable("ProductCategory");
+                    b.ToTable("ProductCategory", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.ProductModels.ProductColor", b =>
@@ -1207,7 +1133,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasIndex("Fk_Product");
 
-                    b.ToTable("ProductColor");
+                    b.ToTable("ProductColor", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.ProductModels.ProductLang", b =>
@@ -1235,7 +1161,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Fk_Source")
                         .IsUnique();
 
-                    b.ToTable("ProductLang");
+                    b.ToTable("ProductLang", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.ProductModels.ProductSize", b =>
@@ -1275,7 +1201,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasIndex("Fk_Size");
 
-                    b.ToTable("ProductSize");
+                    b.ToTable("ProductSize", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.SettingModels.Setting", b =>
@@ -1323,7 +1249,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
 
                     b.HasData(
                         new
@@ -2786,7 +2712,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("NotificationToken")
                         .IsUnique();
 
-                    b.ToTable("Devices");
+                    b.ToTable("Devices", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.UserModels.RefreshToken", b =>
@@ -2835,7 +2761,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("Token")
                         .IsUnique();
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.UserModels.User", b =>
@@ -2888,7 +2814,7 @@ namespace DevelopmentDAL.Migrations
                     b.HasIndex("UserName")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasData(
                         new
@@ -2940,7 +2866,7 @@ namespace DevelopmentDAL.Migrations
 
                     b.HasIndex("Fk_User");
 
-                    b.ToTable("Verifications");
+                    b.ToTable("Verifications", (string)null);
                 });
 
             modelBuilder.Entity("Entities.DBModels.DashboardAdministrationModels.AdministrationRolePremission", b =>

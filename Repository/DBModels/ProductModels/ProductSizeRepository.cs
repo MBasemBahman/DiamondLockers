@@ -21,7 +21,7 @@ namespace Repository.DBModels.ProductModels
 
 
         }
-        
+
         public async Task<ProductSize> FindById(int id, bool trackChanges)
         {
             return id == 0
@@ -29,7 +29,7 @@ namespace Repository.DBModels.ProductModels
                 : await FindByCondition(a => a.Id == id, trackChanges: trackChanges)
                     .SingleOrDefaultAsync();
         }
-        
+
     }
 
     public static class ProductSizeRepositoryExtensions
@@ -42,7 +42,7 @@ namespace Repository.DBModels.ProductModels
         {
             return categories.Where(a => (id == 0 || a.Id == id) &&
                                          (fk_Product == 0 || a.Fk_Product == fk_Product) &&
-                                         (fk_Size == 0 || a.Fk_Size == fk_Size) );
+                                         (fk_Size == 0 || a.Fk_Size == fk_Size));
         }
 
 

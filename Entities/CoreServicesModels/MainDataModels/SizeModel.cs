@@ -10,7 +10,7 @@
         public int Id { get; set; }
         [DisplayName(nameof(Name))]
         public string Name { get; set; }
-        
+
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
 
@@ -26,7 +26,7 @@
         [Required(ErrorMessage = PropertyAttributeConstants.RequiredMsg)]
         [DisplayName($"{nameof(Name)}{PropertyAttributeConstants.ArLang}")]
         public string Name { get; set; }
-        
+
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿using Contracts.Constants;
-using Microsoft.AspNetCore.Localization;
 using Contracts.Extensions;
+using Microsoft.AspNetCore.Localization;
 namespace Site.Middlewares
 {
     public class CultureMiddleware

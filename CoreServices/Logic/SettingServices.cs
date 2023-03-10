@@ -1,6 +1,4 @@
-﻿using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.SettingModels;
-using Entities.DBModels.MainDataModels;
+﻿using Entities.CoreServicesModels.SettingModels;
 using Entities.DBModels.SettingModels;
 using Entities.EnumData;
 using Microsoft.AspNetCore.Http;
@@ -73,7 +71,7 @@ namespace CoreServices.Logic
             FileUploader uploader = new(rootPath);
             return await uploader.UploudFile(file, "Upload/Setting");
         }
-        
+
         public SettingModel GetSettingById(int id)
         {
             return GetSettings(new SettingParameters { Id = id }).SingleOrDefault();

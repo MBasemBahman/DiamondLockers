@@ -17,14 +17,14 @@ namespace Entities.CoreServicesModels.SettingModels
 
         [DisplayName(nameof(Value))]
         public string Value { get; set; }
-    
+
         [DisplayName(nameof(Type))]
         public DBModelsEnum.SettingTypeEnum Type { get; set; }
-    
+
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
     }
-    
+
     public class SettingCreateOrEditModel
     {
         [DisplayName(nameof(Key))]
@@ -37,11 +37,11 @@ namespace Entities.CoreServicesModels.SettingModels
 
         [DisplayName(nameof(Value))]
         public string Value { get; set; }
-    
+
         [DisplayName(nameof(Type))]
         [Required(ErrorMessage = PropertyAttributeConstants.RequiredMsg)]
         public DBModelsEnum.SettingTypeEnum Type { get; set; }
-    
+
         [DisplayName(nameof(Order))]
         public int Order { get; set; }
     }

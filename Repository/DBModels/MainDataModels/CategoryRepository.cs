@@ -18,7 +18,7 @@ namespace Repository.DBModels.MainDataModels
 
 
         }
-        
+
         public async Task<Category> FindById(int id, bool trackChanges)
         {
             return id == 0
@@ -27,7 +27,7 @@ namespace Repository.DBModels.MainDataModels
                     .Include(a => a.CategoryLang)
                     .SingleOrDefaultAsync();
         }
-        
+
     }
 
     public static class CategoryRepositoryExtensions
@@ -36,7 +36,7 @@ namespace Repository.DBModels.MainDataModels
             this IQueryable<Category> categories,
             int id)
         {
-            return categories.Where(a => (id == 0 || a.Id == id));
+            return categories.Where(a => id == 0 || a.Id == id);
         }
 
 

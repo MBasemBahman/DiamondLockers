@@ -55,11 +55,11 @@ namespace Repository
         private ContactFormRepository _contactFormRepository;
 
         #endregion
-        
+
         #region Setting Models
         private SettingRepository _settingRepository;
         #endregion
-        
+
         #region Audit Models
         private AuditRepository _auditRepository;
         #endregion
@@ -190,7 +190,7 @@ namespace Repository
             }
         }
         #endregion
-        
+
         #region MainData Models
         public CategoryRepository Category
         {
@@ -200,7 +200,7 @@ namespace Repository
                 return _categoryRepository;
             }
         }
-        
+
         public SizeRepository Size
         {
             get
@@ -209,7 +209,7 @@ namespace Repository
                 return _sizeRepository;
             }
         }
-        
+
         public ColorRepository Color
         {
             get
@@ -218,7 +218,7 @@ namespace Repository
                 return _colorRepository;
             }
         }
-        
+
         #endregion
 
         #region Product Models
@@ -231,7 +231,7 @@ namespace Repository
                 return _productRepository;
             }
         }
-        
+
         public ProductCategoryRepository ProductCategory
         {
             get
@@ -240,7 +240,7 @@ namespace Repository
                 return _productCategoryRepository;
             }
         }
-        
+
         public ProductSizeRepository ProductSize
         {
             get
@@ -249,7 +249,7 @@ namespace Repository
                 return _productSizeRepository;
             }
         }
-        
+
         public ProductColorRepository ProductColor
         {
             get
@@ -273,7 +273,7 @@ namespace Repository
         }
 
         #endregion
-        
+
         #region Setting Models
 
         public SettingRepository Setting
@@ -286,7 +286,7 @@ namespace Repository
         }
 
         #endregion
-        
+
         #endregion
     }
 }

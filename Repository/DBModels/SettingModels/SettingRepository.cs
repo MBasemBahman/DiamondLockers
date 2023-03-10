@@ -18,7 +18,7 @@ namespace Repository.DBModels.SettingModels
 
 
         }
-        
+
         public async Task<Setting> FindById(int id, bool trackChanges)
         {
             return id == 0
@@ -26,7 +26,7 @@ namespace Repository.DBModels.SettingModels
                 : await FindByCondition(a => a.Id == id, trackChanges: trackChanges)
                          .SingleOrDefaultAsync();
         }
-        
+
     }
 
     public static class SettingRepositoryExtensions
@@ -35,7 +35,7 @@ namespace Repository.DBModels.SettingModels
             this IQueryable<Setting> categories,
             int id)
         {
-            return categories.Where(a => (id == 0 || a.Id == id));
+            return categories.Where(a => id == 0 || a.Id == id);
         }
 
 

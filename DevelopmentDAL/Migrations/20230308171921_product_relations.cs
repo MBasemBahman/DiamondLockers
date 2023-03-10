@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-#nullable disable
 
 namespace DevelopmentDAL.Migrations
 {
@@ -11,7 +9,7 @@ namespace DevelopmentDAL.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
+            _ = migrationBuilder.CreateTable(
                 name: "ProductCategory",
                 columns: table => new
                 {
@@ -28,14 +26,14 @@ namespace DevelopmentDAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductCategory", x => x.Id);
-                    table.ForeignKey(
+                    _ = table.PrimaryKey("PK_ProductCategory", x => x.Id);
+                    _ = table.ForeignKey(
                         name: "FK_ProductCategory_Categories_Fk_Category",
                         column: x => x.FkCategory,
                         principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
+                    _ = table.ForeignKey(
                         name: "FK_ProductCategory_Products_Fk_Product",
                         column: x => x.FkProduct,
                         principalTable: "Products",
@@ -43,7 +41,7 @@ namespace DevelopmentDAL.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
+            _ = migrationBuilder.CreateTable(
                 name: "ProductColor",
                 columns: table => new
                 {
@@ -60,14 +58,14 @@ namespace DevelopmentDAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductColor", x => x.Id);
-                    table.ForeignKey(
+                    _ = table.PrimaryKey("PK_ProductColor", x => x.Id);
+                    _ = table.ForeignKey(
                         name: "FK_ProductColor_Colors_Fk_Color",
                         column: x => x.FkColor,
                         principalTable: "Colors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
+                    _ = table.ForeignKey(
                         name: "FK_ProductColor_Products_Fk_Product",
                         column: x => x.FkProduct,
                         principalTable: "Products",
@@ -75,7 +73,7 @@ namespace DevelopmentDAL.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
+            _ = migrationBuilder.CreateTable(
                 name: "ProductSize",
                 columns: table => new
                 {
@@ -92,65 +90,65 @@ namespace DevelopmentDAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductSize", x => x.Id);
-                    table.ForeignKey(
+                    _ = table.PrimaryKey("PK_ProductSize", x => x.Id);
+                    _ = table.ForeignKey(
                         name: "FK_ProductSize_Products_Fk_Product",
                         column: x => x.FkProduct,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
+                    _ = table.ForeignKey(
                         name: "FK_ProductSize_Sizes_Fk_Size",
                         column: x => x.FkSize,
                         principalTable: "Sizes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-            
 
-            migrationBuilder.CreateIndex(
+
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductCategory_Fk_Category",
                 table: "ProductCategory",
                 column: "Fk_Category");
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductCategory_Fk_Product",
                 table: "ProductCategory",
                 column: "Fk_Product");
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductCategory_Name",
                 table: "ProductCategory",
                 column: "Name",
                 unique: true);
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductColor_Fk_Color",
                 table: "ProductColor",
                 column: "Fk_Color");
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductColor_Fk_Product",
                 table: "ProductColor",
                 column: "Fk_Product");
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductColor_Name",
                 table: "ProductColor",
                 column: "Name",
                 unique: true);
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductSize_Fk_Product",
                 table: "ProductSize",
                 column: "Fk_Product");
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductSize_Fk_Size",
                 table: "ProductSize",
                 column: "Fk_Size");
 
-            migrationBuilder.CreateIndex(
+            _ = migrationBuilder.CreateIndex(
                 name: "IX_ProductSize_Name",
                 table: "ProductSize",
                 column: "Name",
@@ -160,13 +158,13 @@ namespace DevelopmentDAL.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
+            _ = migrationBuilder.DropTable(
                 name: "ProductCategory");
 
-            migrationBuilder.DropTable(
+            _ = migrationBuilder.DropTable(
                 name: "ProductColor");
 
-            migrationBuilder.DropTable(
+            _ = migrationBuilder.DropTable(
                 name: "ProductSize");
         }
     }

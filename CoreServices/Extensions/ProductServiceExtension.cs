@@ -1,5 +1,4 @@
-﻿using Entities.CoreServicesModels.MainDataModels;
-using Entities.CoreServicesModels.ProductModels;
+﻿using Entities.CoreServicesModels.ProductModels;
 
 namespace CoreServices.Extensions
 {
@@ -18,7 +17,7 @@ namespace CoreServices.Extensions
 
             return data.Where(expression);
         }
-        
+
         public static IQueryable<ProductCategoryModel> Search(this IQueryable<ProductCategoryModel> data, string searchColumns, string searchTerm)
         {
             if (string.IsNullOrWhiteSpace(searchTerm) || string.IsNullOrWhiteSpace(searchColumns))
@@ -32,7 +31,7 @@ namespace CoreServices.Extensions
 
             return data.Where(expression);
         }
-        
+
         public static IQueryable<ProductSizeModel> Search(this IQueryable<ProductSizeModel> data, string searchColumns, string searchTerm)
         {
             if (string.IsNullOrWhiteSpace(searchTerm) || string.IsNullOrWhiteSpace(searchColumns))
@@ -46,7 +45,7 @@ namespace CoreServices.Extensions
 
             return data.Where(expression);
         }
-        
+
         public static IQueryable<ProductColorModel> Search(this IQueryable<ProductColorModel> data, string searchColumns, string searchTerm)
         {
             if (string.IsNullOrWhiteSpace(searchTerm) || string.IsNullOrWhiteSpace(searchColumns))
@@ -60,7 +59,7 @@ namespace CoreServices.Extensions
 
             return data.Where(expression);
         }
-       
+
     }
 
     public static class ProductSortExtension
@@ -76,7 +75,7 @@ namespace CoreServices.Extensions
 
             return data.OrderBy(orderQuery);
         }
-        
+
         public static IQueryable<ProductCategoryModel> Sort(this IQueryable<ProductCategoryModel> data, string orderByQueryString)
         {
             if (string.IsNullOrWhiteSpace(orderByQueryString))
@@ -88,7 +87,7 @@ namespace CoreServices.Extensions
 
             return data.OrderBy(orderQuery);
         }
-        
+
         public static IQueryable<ProductSizeModel> Sort(this IQueryable<ProductSizeModel> data, string orderByQueryString)
         {
             if (string.IsNullOrWhiteSpace(orderByQueryString))
@@ -100,7 +99,7 @@ namespace CoreServices.Extensions
 
             return data.OrderBy(orderQuery);
         }
-        
+
         public static IQueryable<ProductColorModel> Sort(this IQueryable<ProductColorModel> data, string orderByQueryString)
         {
             if (string.IsNullOrWhiteSpace(orderByQueryString))
