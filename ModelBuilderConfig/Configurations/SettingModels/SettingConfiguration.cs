@@ -1180,6 +1180,104 @@ namespace ModelBuilderConfig.Configurations.SettingModels
             });
 
             #endregion
+
+            #region Products
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "categoryFilter",
+                Value = "Filter by category\r\n",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.TextArea
+            });
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "categoryFilter_lang",
+                Value = "النوع",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "sizeFilter",
+                Value = "Filter by size\r\n",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "sizeFilter_lang",
+                Value = "الحجم",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "colorFilter",
+                Value = "Filter by color\r\n",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "colorFilter_lang",
+                Value = "اللون",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "allFilter",
+                Value = "All",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "allFilter_lang",
+                Value = "الكل",
+                DisplayName = "المنتجات",
+                Type = SettingTypeEnum.Input
+            });
+
+            #endregion
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "phoneTitle",
+                Value = "Phone",
+                DisplayName = "بيانات التواصل",
+                Type = SettingTypeEnum.Input
+            });
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "phoneTitle_lang",
+                Value = "الهاتف",
+                DisplayName = "بيانات التواصل",
+                Type = SettingTypeEnum.Input
+            });
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "phoneVal",
+                Value = "00966531097333",
+                DisplayName = "بيانات التواصل",
+                Type = SettingTypeEnum.Input
+            });
         }
     }
 }

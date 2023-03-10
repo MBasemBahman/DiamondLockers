@@ -5,7 +5,7 @@
 
     }
 
-    public class ContactFormModel
+    public class ContactFormModel : AuditEntity
     {
         [DisplayName(nameof(Id))]
         public int Id { get; set; }

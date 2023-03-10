@@ -27,7 +27,8 @@ namespace CoreServices.Logic
                     Message = a.Message,
                     Phone = a.Phone,
                     Service = a.Service,
-                    Type = a.Type
+                    Type = a.Type,
+                    CreatedAt = a.CreatedAt,
                 })
                 .Search(parameters.SearchColumns, parameters.SearchTerm)
                 .Sort(parameters.OrderBy);

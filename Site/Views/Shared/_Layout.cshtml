@@ -178,14 +178,21 @@
                                     </div>
                                 </div>
                                 <div class="soical-contact">
-                                        <img src="~/assets/images/location.png" alt="" class="img-fluid" />
-                                        <div class="des">
-                                            <h2>@Setting.Get(Localizer.Get("addressTitle"))</h2>
-                                            <p>
-                                                @Html.Raw(Setting.Get(Localizer.Get("addressDesc")))
-                                            </p>
-                                        </div>
+                                    <img src="~/assets/images/phone-call.png" alt="" class="img-fluid" />
+                                    <div class="des">
+                                        <h2>@Setting.Get(Localizer.Get("phoneTitle"))</h2>
+                                        <a href="tel:@Setting.Get(Localizer.Get("phoneVal"))">@Setting.Get(Localizer.Get("phoneVal"))</a>
                                     </div>
+                                </div>
+                                <div class="soical-contact">
+                                    <img src="~/assets/images/location.png" alt="" class="img-fluid" />
+                                    <div class="des">
+                                        <h2>@Setting.Get(Localizer.Get("addressTitle"))</h2>
+                                        <p>
+                                            @Html.Raw(Setting.Get(Localizer.Get("addressDesc")))
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6">

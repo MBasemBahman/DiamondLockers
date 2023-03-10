@@ -588,4 +588,19 @@
   <data name="visionTitle" xml:space="preserve">
     <value>visionTitle_lang</value>
   </data>
+  <data name="allFilter" xml:space="preserve">
+    <value>allFilter_lang</value>
+  </data>
+  <data name="categoryFilter" xml:space="preserve">
+    <value>categoryFilter_lang</value>
+  </data>
+  <data name="colorFilter" xml:space="preserve">
+    <value>colorFilter_lang</value>
+  </data>
+  <data name="sizeFilter" xml:space="preserve">
+    <value>sizeFilter_lang</value>
+  </data>
+  <data name="phoneTitle" xml:space="preserve">
+    <value>phoneTitle_lang</value>
+  </data>
 </root>

@@ -4,6 +4,7 @@ using DevelopmentDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevelopmentDAL.Migrations
 {
     [DbContext(typeof(DevelopmentContext))]
-    partial class DevelopmentContextModelSnapshot : ModelSnapshot
+    [Migration("20230310130332_mdksmdkmd")]
+    partial class mdksmdkmd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2832,39 +2835,6 @@ namespace DevelopmentDAL.Migrations
                             Order = 0,
                             Type = 0,
                             Value = "الكل"
-                        },
-                        new
-                        {
-                            Id = 138,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "بيانات التواصل",
-                            Key = "phoneTitle",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "Phone"
-                        },
-                        new
-                        {
-                            Id = 139,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "بيانات التواصل",
-                            Key = "phoneTitle_lang",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "الهاتف"
-                        },
-                        new
-                        {
-                            Id = 140,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayName = "بيانات التواصل",
-                            Key = "phoneVal",
-                            LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Order = 0,
-                            Type = 0,
-                            Value = "00966531097333"
                         });
                 });
 
@@ -3019,7 +2989,7 @@ namespace DevelopmentDAL.Migrations
                             EmailAddress = "user@mail.com",
                             LastModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Developer",
-                            Password = "$2a$11$npMndmE6JBBFhKIHAZH/DuNkJgvRhdPs3kM4SwvQlFMeHXBo6COxq",
+                            Password = "$2a$11$On7ZxCGbf1K4qmWR0Fv08OSJsutQk1N87H6yzFt//3zPWzlaBqpA.",
                             UserName = "Developer"
                         });
                 });
