@@ -362,7 +362,7 @@
 
                                $(".photo__gallery").html(products);
                            } else {
-                               $(".photo__gallery").html(`<h3 style="padding-top: 40px;">@Localizer.Get("No Content")</h3>`);
+                               $(".photo__gallery").html(`<h3 style="padding-top: 40px;">@Setting.Get(Localizer.Get("NoContent"))</h3>`);
                            }
                       }
                   });

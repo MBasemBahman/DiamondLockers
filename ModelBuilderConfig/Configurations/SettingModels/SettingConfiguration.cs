@@ -1278,6 +1278,24 @@ namespace ModelBuilderConfig.Configurations.SettingModels
                 DisplayName = "بيانات التواصل",
                 Type = SettingTypeEnum.Input
             });
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "NoContent",
+                Value = "Available upon request!",
+                DisplayName = "غير متاح منتجات",
+                Type = SettingTypeEnum.Input
+            });
+
+            _ = builder.HasData(new Setting
+            {
+                Id = id++,
+                Key = "NoContent_lang",
+                Value = "متاحه عند الطلب!",
+                DisplayName = "غير متاح منتجات",
+                Type = SettingTypeEnum.Input
+            });
         }
     }
 }

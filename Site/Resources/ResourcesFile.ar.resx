@@ -603,4 +603,7 @@
   <data name="phoneTitle" xml:space="preserve">
     <value>phoneTitle_lang</value>
   </data>
+  <data name="NoContent" xml:space="preserve">
+    <value>NoContent_lang</value>
+  </data>
 </root>

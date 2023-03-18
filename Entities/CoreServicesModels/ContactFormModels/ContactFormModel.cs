@@ -8,7 +8,7 @@
     public class ContactFormModel : AuditEntity
     {
         [DisplayName(nameof(Id))]
-        public int Id { get; set; }
+        public new int Id { get; set; }
 
         [DisplayName(nameof(Type))]
         public string Type { get; set; }
