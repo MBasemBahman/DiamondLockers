@@ -30,7 +30,6 @@ The platform provides an **interactive product display, secure transactions, and
 | Technology      | Description  |
 |----------------|-------------|
 | **Backend**    | ASP.NET Core |
-| **Frontend**   | Flutter |
 | **Database**   | SQL Server |
 | **Cloud**      | Azure |
 | **Authentication** | OAuth & JWT |
